@@ -4,11 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// Класс для описания улучшения
+[System.Serializable]
+public class Upgrade
+{
+    public Button button; // Кнопка улучшения
+    public float clickMultiplier; // Множитель для улучшения клика
+}
+
 // Класс для описания здания
 [System.Serializable]
 public class Building
 {
     public Button button; // Кнопка здания для клика
+    public Upgrade[] upgrades; // Массив улучшений для данного типа здания
 }
 
 // Главный класс, управляющий градостроительным кликером
@@ -43,6 +52,12 @@ public class CityClicker : MonoBehaviour
 
             // Для каждой кнопки здания добавляем слушатель события клика
             building.button.onClick.AddListener(() => ClickBuilding(resourceText, ref tempResourceCounter));
+           
+            // Добавляем слушатели событий клика для каждого улучшения здания
+            foreach (Upgrade upgrade in building.upgrades)
+            {
+                upgrade.button.onClick.AddListener(() => UpgradeClick(resourceText, ref tempResourceCounter, upgrade));
+            }
 
             resourceCounter = tempResourceCounter; // Присваиваем измененное значение обратно resourceCounter
         }
@@ -64,4 +79,15 @@ public class CityClicker : MonoBehaviour
         // Обновляем текстовое поле с учетом текущего количества ресурсов
         resourceText.text = " " + resourceCounter;
     }
+    
+    // Метод вызывается при клике по улучшению здания
+    void UpgradeClick(TextMeshProUGUI resourceText, ref int resourceCounter, Upgrade upgrade)
+    {
+        // Увеличиваем множитель клика на основе улучшения
+        resourceCounter += Mathf.FloorToInt(upgrade.clickMultiplier);
+
+        // Обновляем текстовое поле с количеством ресурсов
+        UpdateResourceText(resourceText, resourceCounter);
+    }
 }
+
