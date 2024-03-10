@@ -39,7 +39,7 @@ public class CityClicker : MonoBehaviour
     {
         foreach (Building building in buildings)
         {
-            int tempResourceCounter = resourceCounter; // Создаем временную переменную
+            int tempResourceCounter = resourceCounter;
 
             // Для каждой кнопки здания добавляем слушатель события клика
             building.button.onClick.AddListener(() => ClickBuilding(resourceText, ref tempResourceCounter));
