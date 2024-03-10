@@ -768,8 +768,6 @@ GameObject:
   - component: {fileID: 764630113}
   - component: {fileID: 764630112}
   - component: {fileID: 764630111}
-  - component: {fileID: 764630115}
-  - component: {fileID: 764630114}
   m_Layer: 5
   m_Name: ButtonWood
   m_TagString: Untagged
@@ -878,32 +876,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764630109}
   m_CullTransparentMesh: 1
---- !u!114 &764630114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764630109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3bdacb1293c4603479abbb918b94bb8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buildingPanelPrefab: {fileID: 0}
---- !u!114 &764630115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764630109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a3c7e237a64cd4ea409a4cd53fb10a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panelManager: {fileID: 0}
 --- !u!1 &815863088
 GameObject:
   m_ObjectHideFlags: 0
