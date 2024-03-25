@@ -1132,7 +1132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1252795684}
-  - component: {fileID: 1252795683}
   - component: {fileID: 1252795685}
   m_Layer: 0
   m_Name: Scripts
@@ -1141,18 +1140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1252795683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1252795682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95947247aafe5347a162bfaec161cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1252795684
 Transform:
   m_ObjectHideFlags: 0
@@ -2144,7 +2131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1655582486935217348, guid: 29b86ee971238eb44bbf2fb832a20009, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -312.99994
+      value: -312.9999
       objectReference: {fileID: 0}
     - target: {fileID: 1655582486935217348, guid: 29b86ee971238eb44bbf2fb832a20009, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
