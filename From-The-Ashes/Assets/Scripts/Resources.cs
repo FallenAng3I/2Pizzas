@@ -14,30 +14,3 @@ public class Resources : MonoBehaviour
     public int Iron { get; set; }
     public int Oil { get; set; }
 }
-
-public class Wood : MonoBehaviour
-{
-    // Метод для увеличения количества древесины
-    public void IncreaseWood(int amount)
-    {
-        GetComponent<Resources>().Wood += amount;
-    }
-}
-
-public class Iron : MonoBehaviour
-{
-    // Метод для увеличения количества железа
-    public void IncreaseIron(int amount)
-    {
-        GetComponent<Resources>().Iron += amount;
-    }
-}
-
-public class Oil : MonoBehaviour
-{
-    // Метод для увеличения количества нефти
-    public void IncreaseOil(int amount)
-    {
-        GetComponent<Resources>().Oil += amount;
-    }
-}

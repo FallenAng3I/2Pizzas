@@ -1,57 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class Clicker : MonoBehaviour
 {
-    // Ссылки на кнопки, которые будут отвечать за добычу ресурсов
-    [FormerlySerializedAs("sawmillButton")] public Button Sawmill;
-    [FormerlySerializedAs("mineButton")] public Button Mine;
-    [FormerlySerializedAs("oilWellButton")] public Button OilWell;
+    public Resources resources;
 
+    public Button[] Sawmill;
+    public Button[] Mine;
+    public Button[] OilWell;
 
-    public Resources resources; // Ссылка на скрипт Resources для доступа к текстовым полям с ресурсами
-
-    void Start()
-    {
-        // Добавляем слушателей на кнопки для обработки нажатий
-        Sawmill.onClick.AddListener(IncreaseWood);
-        Mine.onClick.AddListener(IncreaseIron);
-        OilWell.onClick.AddListener(IncreaseOil);
-    }
-    
-    public void IncreaseWood() // Метод для увеличения счётчика ресурса wood при нажатии на кнопку Sawmill
+    public void IncreaseWoodFromSawmill()
     {
         resources.Wood++;
-        UpdateWoodUI(); // Обновляем отображение счётчика wood на экране
+        resources.txtWOOD.text = " " + resources.Wood.ToString();
     }
-    
-    public void IncreaseIron()
+
+    public void IncreaseIronFromMine()
     {
         resources.Iron++;
-        UpdateIronUI(); // Обновляем отображение счётчика iron на экране
+        resources.txtIRON.text = " " + resources.Iron.ToString();
     }
-    
-    public void IncreaseOil()
+
+    public void IncreaseOilFromOilWell()
     {
         resources.Oil++;
-        UpdateOilUI(); // Обновляем отображение счётчика oil на экране
+        resources.txtOIL.text = " " + resources.Oil.ToString();
     }
-    
-    private void UpdateWoodUI()
-    {
-        resources.txtWOOD.text = resources.Wood.ToString();
-    }
-    
-    private void UpdateIronUI()
-    {
-        resources.txtIRON.text = resources.Iron.ToString();
-    }
-    
-    private void UpdateOilUI()
-    {
-        resources.txtOIL.text = resources.Oil.ToString();
-    }
-}
+}    
