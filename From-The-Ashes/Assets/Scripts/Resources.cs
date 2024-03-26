@@ -8,9 +8,11 @@ public class Resources : MonoBehaviour
     public Text txtWOOD;
     public Text txtIRON;
     public Text txtOIL;
-
-    // Свойства для хранения значений ресурсов
+    
     public int Wood { get; set; }
     public int Iron { get; set; }
     public int Oil { get; set; }
+    public int Fuel { get; set; }
+    public int Steel { get; set; }
+    public int Ammos { get; set; }
 }
