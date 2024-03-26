@@ -5,41 +5,39 @@ using UnityEngine.UI;
 
 public class Resources : MonoBehaviour
 {
-    
+    public Text txtWOOD;
+    public Text txtIRON;
+    public Text txtOIL;
+
+    // Свойства для хранения значений ресурсов
+    public int Wood { get; set; }
+    public int Iron { get; set; }
+    public int Oil { get; set; }
 }
 
-public class Wood : Resources
+public class Wood : MonoBehaviour
 {
-    public int wood;
-
-    public Text txtWOOD;
-
-    void Update()
+    // Метод для увеличения количества древесины
+    public void IncreaseWood(int amount)
     {
-        txtWOOD.text = ": " + wood.ToString();
+        GetComponent<Resources>().Wood += amount;
     }
 }
 
-public class Iron : Resources
+public class Iron : MonoBehaviour
 {
-    public int iron;
-
-    public Text txtIRON;
-
-    void Update()
+    // Метод для увеличения количества железа
+    public void IncreaseIron(int amount)
     {
-        txtIRON.text = ": " + iron.ToString();
-    } 
+        GetComponent<Resources>().Iron += amount;
+    }
 }
 
-public class Oil : Resources
+public class Oil : MonoBehaviour
 {
-    public int oil;
-
-    public Text txtOIL;
-
-    void Update()
+    // Метод для увеличения количества нефти
+    public void IncreaseOil(int amount)
     {
-        txtOIL.text = ": " + oil.ToString();
+        GetComponent<Resources>().Oil += amount;
     }
 }
