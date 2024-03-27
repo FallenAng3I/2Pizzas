@@ -24,7 +24,7 @@ public class Clicker : MonoBehaviour
     public void ClickMine()
     {
         resources.Iron++;
-        resources.txtIRON.text = " " + resources.Iron.ToString();
+        resources.txtOIL.text = " " + resources.Oil.ToString();
     }
 
     public void ClickOilWell()
@@ -35,37 +35,34 @@ public class Clicker : MonoBehaviour
 
     public void ClickOilFactory()
     {
-        if (resources.Oil < 2)
+        if (resources.Oil >= 2)
         {
-            //код, означающий, что кнопка не нажимается.
+            resources.Fuel++;
+            resources.Oil -=  2;
+            resources.txtFUEL.text = " " + resources.Fuel.ToString();
+            resources.txtOIL.text = " " + resources.Oil.ToString();
         }
-        
-        resources.Fuel++;
-        resources.Oil -=  2;
-        resources.txtFUEL.text = " " + resources.Fuel.ToString();
     }
 
     public void ClickSteelFactory()
     {
-        if (resources.Iron < 3)
+        if (resources.Iron >= 3)
         {
-            //код, означающий, что кнопка не нажимается.
+            resources.Steel++;
+            resources.Iron -= 3;
+            resources.txtSTEEL.text = " " + resources.Steel.ToString();
+            resources.txtWOOD.text = " " + resources.Wood.ToString();
         }
-
-        resources.Steel++;
-        resources.Oil -= 2;
-        resources.txtSTEEL.text = " " + resources.Steel.ToString();
     }
 
     public void ClickMilitaryFactory()
     {
-        if (resources.Steel < 2)
+        if (resources.Steel >= 2)
         {
-            //код, означающий, что кнопка не нажимается.
+            resources.Ammos += 15;
+            resources.Steel -= 2;
+            resources.txtAMMOS.text = " " + resources.Ammos.ToString();
+            resources.txtSTEEL.text = " " + resources.Steel.ToString();
         }
-
-        resources.Ammos += 15;
-        resources.Steel -= 2;
-        resources.txtAMMOS.text = " " + resources.Ammos.ToString();
     }
-}    
+}
