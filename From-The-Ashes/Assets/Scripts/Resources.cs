@@ -8,6 +8,9 @@ public class Resources : MonoBehaviour
     public Text txtWOOD;
     public Text txtIRON;
     public Text txtOIL;
+    public Text txtFUEL;
+    public Text txtSTEEL;
+    public Text txtAMMOS;
     
     public int Wood { get; set; }
     public int Iron { get; set; }

@@ -42,6 +42,7 @@ public class Clicker : MonoBehaviour
         
         resources.Fuel++;
         resources.Oil -=  2;
+        resources.txtFUEL.text = " " + resources.Fuel.ToString();
     }
 
     public void ClickSteelFactory()
@@ -53,6 +54,7 @@ public class Clicker : MonoBehaviour
 
         resources.Steel++;
         resources.Oil -= 2;
+        resources.txtSTEEL.text = " " + resources.Steel.ToString();
     }
 
     public void ClickMilitaryFactory()
@@ -64,5 +66,6 @@ public class Clicker : MonoBehaviour
 
         resources.Ammos += 15;
         resources.Steel -= 2;
+        resources.txtAMMOS.text = " " + resources.Ammos.ToString();
     }
 }    
