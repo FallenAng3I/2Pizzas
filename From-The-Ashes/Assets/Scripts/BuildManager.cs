@@ -5,21 +5,21 @@ using UnityEngine.UI;
 
 public class BuildingManager : MonoBehaviour
 {
-    public Clicker build;
+    public Buildings build;
     
-    public Button[] buildingButtons;
+    public Button[] typeButtons;
     
-    public void AssignBuildingMethod(int buildingIndex)
+    public void AssignBuildingMethod(int buildingID)
     {
-        if (buildingIndex < 0 || buildingIndex >= buildingButtons.Length)
+        if (buildingID < 0 || buildingID >= typeButtons.Length)
         {
             Debug.LogError("Invalid building index!");
             return;
         }
         
-        Button selectedBuildingButton = buildingButtons[buildingIndex];
+        Button selectedBuildingButton = typeButtons[buildingID];
         
-        switch (buildingIndex)
+        switch (buildingID)
         {
             case 0: // Sawmill / Лесопилка
                 selectedBuildingButton.onClick.AddListener(build.ClickSawmill);

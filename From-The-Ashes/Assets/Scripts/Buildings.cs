@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Clicker : MonoBehaviour
+public class Buildings : MonoBehaviour
 {
     public Resources resources;
 
@@ -14,6 +14,8 @@ public class Clicker : MonoBehaviour
     public Button[] OilFactory;
     public Button[] SteelFactory;
     public Button[] MilitaryFactory;
+
+    public bool upgrade2x;
 
     public void ClickSawmill()
     {
