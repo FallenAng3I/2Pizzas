@@ -1,18 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ContextMenuScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ContextMenuItem _contextMenu;
+
+    private void Awake()
     {
-        
+        SelectedAreaBuild.OnBuildingSelected.AddListener(OnSelected);
+        SelectedAreaBuild.OnBuildingDeselected.AddListener(OnDeselected);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnSelected(SelectedAreaBuild view)
     {
-        
+        gameObject.SetActive(true);
+    }
+
+    private void OnDeselected(SelectedAreaBuild view)
+    {
+        gameObject.SetActive(false);
     }
 }
