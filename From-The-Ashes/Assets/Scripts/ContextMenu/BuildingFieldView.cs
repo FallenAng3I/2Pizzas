@@ -11,16 +11,15 @@ public class BuildingFieldView : MonoBehaviour, ISelectHandler, IDeselectHandler
     public static UnityEvent<BuildingFieldView> OnBuildingSelected { get; } = new UnityEvent<BuildingFieldView>();
     public static UnityEvent<BuildingFieldView> OnBuildingDeselected { get; } = new UnityEvent<BuildingFieldView>();
 
-    
-    public void OnSelect(BaseEventData eventData)
-    {
-        SelectedBuildingField = this;
-        OnBuildingSelected.Invoke(this); 
-    }
-    
     public void OnDeselect(BaseEventData eventData)
     {
         SelectedBuildingField = null;
         OnBuildingSelected.Invoke(this);
+    }
+     
+    public void OnSelect(BaseEventData eventData)
+    {
+        SelectedBuildingField = this;
+        OnBuildingSelected.Invoke(this); 
     }
 }
