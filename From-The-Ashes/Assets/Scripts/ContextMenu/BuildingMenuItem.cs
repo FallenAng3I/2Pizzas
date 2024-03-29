@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ContextMenuItem : MonoBehaviour
+public class BuildingMenuItem : MonoBehaviour
 {
     [SerializeField] private Text _title;
     [SerializeField] private Button _buildButton;
