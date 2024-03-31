@@ -14,13 +14,16 @@ public class BuildingMenuView : MonoBehaviour
         gameObject.SetActive(false);
     }
     
-    private void OnDeselected(BuildingFieldView view)
-    {
-        gameObject.SetActive(false);
-    }
-    
     private void OnSelected(BuildingFieldView view)
     {
         gameObject.SetActive(true);
+    }   
+    
+    private void OnDeselected(BuildingFieldView view)
+    {
+        if (view == null)
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

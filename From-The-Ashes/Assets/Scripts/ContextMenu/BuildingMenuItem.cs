@@ -5,5 +5,12 @@ using UnityEngine.UI;
 
 public class BuildingMenuItem : MonoBehaviour
 {
+    [SerializeField] private Text _title;
     [SerializeField] private Button _buildButton;
+
+    public string Text
+    {
+        get => _title.text;
+        set => _title.text = value;
+    }
 }
