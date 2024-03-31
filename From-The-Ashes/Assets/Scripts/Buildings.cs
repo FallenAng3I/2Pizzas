@@ -53,7 +53,7 @@ public class Buildings : MonoBehaviour
             resources.Steel++;
             resources.Iron -= 3;
             resources.txtSTEEL.text = " " + resources.Steel.ToString();
-            resources.txtWOOD.text = " " + resources.Wood.ToString();
+            resources.txtIRON.text = " " + resources.Iron.ToString();
         }
     }
 
@@ -76,12 +76,12 @@ public class Buildings : MonoBehaviour
 
     public void ClickMilitaryFactory()
     {
-        if (resources.Steel >= 2)
+        if (resources.Lead >= 2)
         {
             resources.Ammos += 15;
-            resources.Steel -= 2;
+            resources.Lead -= 2;
             resources.txtAMMOS.text = " " + resources.Ammos.ToString();
-            resources.txtSTEEL.text = " " + resources.Steel.ToString();
+            resources.txtLEAD.text = " " + resources.Lead.ToString();
         }
     }
 }
