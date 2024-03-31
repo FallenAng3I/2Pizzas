@@ -13,9 +13,9 @@ public class Buildings : MonoBehaviour
     public Button[] OilWell;
     public Button[] OilFactory;
     public Button[] SteelFactory;
+    public Button[] LeadMine;
+    public Button[] LeadFactory;
     public Button[] MilitaryFactory;
-
-    public bool upgrade2x;
 
     public void ClickSawmill()
     {
@@ -26,7 +26,7 @@ public class Buildings : MonoBehaviour
     public void ClickMine()
     {
         resources.Iron++;
-        resources.txtOIL.text = " " + resources.Oil.ToString();
+        resources.txtIRON.text = " " + resources.Iron.ToString();
     }
 
     public void ClickOilWell()
@@ -54,6 +54,23 @@ public class Buildings : MonoBehaviour
             resources.Iron -= 3;
             resources.txtSTEEL.text = " " + resources.Steel.ToString();
             resources.txtWOOD.text = " " + resources.Wood.ToString();
+        }
+    }
+
+    public void ClickLeadMine()
+    {
+        resources.LeadOre++;
+        resources.txtLEADORE.text = " " + resources.LeadOre.ToString();
+    }
+
+    public void ClickLeadFactory()
+    {
+        if (resources.LeadOre >= 3) 
+        {          
+            resources.Lead++;
+            resources.LeadOre -= 3;
+            resources.txtLEAD.text = " " + resources.Lead.ToString();
+            resources.txtLEADORE.text = " " + resources.LeadOre.ToString();            
         }
     }
 

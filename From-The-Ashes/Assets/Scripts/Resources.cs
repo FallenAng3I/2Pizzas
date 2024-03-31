@@ -10,6 +10,8 @@ public class Resources : MonoBehaviour
     public Text txtOIL;
     public Text txtFUEL;
     public Text txtSTEEL;
+    public Text txtLEADORE;
+    public Text txtLEAD;
     public Text txtAMMOS;
     
     public int Wood { get; set; }
@@ -17,5 +19,7 @@ public class Resources : MonoBehaviour
     public int Oil { get; set; }
     public int Fuel { get; set; }
     public int Steel { get; set; }
+    public int LeadOre { get; set; }
+    public int Lead { get; set; }
     public int Ammos { get; set; }
 }
