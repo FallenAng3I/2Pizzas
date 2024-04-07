@@ -4,16 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Resources : MonoBehaviour
-{
-    public Text txtWOOD;
-    public Text txtIRON;
-    public Text txtOIL;
-    public Text txtFUEL;
-    public Text txtSTEEL;
-    public Text txtLEADORE;
-    public Text txtLEAD;
-    public Text txtAMMOS;
-    
+{ 
     public int Wood { get; set; }
     public int Iron { get; set; }
     public int Oil { get; set; }
@@ -22,4 +13,14 @@ public class Resources : MonoBehaviour
     public int LeadOre { get; set; }
     public int Lead { get; set; }
     public int Ammos { get; set; }
+    
+    
+    public Text txtWOOD;
+    public Text txtIRON;
+    public Text txtOIL;
+    public Text txtFUEL;
+    public Text txtSTEEL;
+    public Text txtLEADORE;
+    public Text txtLEAD;
+    public Text txtAMMOS;
 }

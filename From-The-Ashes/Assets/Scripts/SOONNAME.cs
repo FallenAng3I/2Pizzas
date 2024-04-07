@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BuildingManager : MonoBehaviour
+public class SOONNAME : MonoBehaviour
 {
     public Buildings build;
     
