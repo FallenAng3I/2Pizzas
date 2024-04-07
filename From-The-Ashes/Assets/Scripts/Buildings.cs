@@ -2,15 +2,29 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public class Buildings : MonoBehaviour
 {
     public Resources resources;
+    public UpgradeManager upgrade;
+    
+    public void Sawmill()
+    {
+        resources.Wood++;
+        resources.txtWOOD.text = " " + resources.Wood.ToString();
+    }
 
     public void ClickSawmill()
     {
         resources.Wood++;
         resources.txtWOOD.text = " " + resources.Wood.ToString();
+
+        if (upgrade.doubleClick == true) //улучшение "дабл клик"
+        {
+            resources.Wood++;
+            resources.txtWOOD.text = " " + resources.Wood.ToString();
+        }
     }
 
     public void ClickMine()
