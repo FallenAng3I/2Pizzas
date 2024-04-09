@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -26,9 +27,22 @@ public class Buildings : MonoBehaviour
             resources.txtWOOD.text = " " + resources.Wood.ToString();
         }
     }
+    public void passive()
+    {
+        //InvokeRepeating(add, 1f, 1f) ;
+
+    }
+
+    private void InvokeRepeating(Action add, float v1, float v2)
+    {
+        resources.Wood++;
+        resources.txtWOOD.text = " " + resources.Wood.ToString();
+    }
+
 
     public void ClickMine()
     {
+        Debug.Log(resources);
         resources.Iron++;
         resources.txtIRON.text = " " + resources.Iron.ToString();
     }
