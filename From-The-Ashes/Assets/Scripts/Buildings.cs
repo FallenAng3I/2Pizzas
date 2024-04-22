@@ -10,39 +10,15 @@ public class Buildings : MonoBehaviour
     public Resources resources;
     public UpgradeManager upgrade;
     
-    public void Sawmill()
-    {
-        resources.Wood++;
-        resources.txtWOOD.text = " " + resources.Wood.ToString();
-    }
-
     public void ClickSawmill()
     {
         resources.Wood++;
         resources.txtWOOD.text = " " + resources.Wood.ToString();
-
-        if (upgrade.doubleClick == true) //улучшение "дабл клик"
-        {
-            resources.Wood++;
-            resources.txtWOOD.text = " " + resources.Wood.ToString();
-        }
     }
-    public void passive()
-    {
-        //InvokeRepeating(add, 1f, 1f) ;
-
-    }
-
-    private void InvokeRepeating(Action add, float v1, float v2)
-    {
-        resources.Wood++;
-        resources.txtWOOD.text = " " + resources.Wood.ToString();
-    }
-
+    
 
     public void ClickMine()
     {
-        Debug.Log(resources);
         resources.Iron++;
         resources.txtIRON.text = " " + resources.Iron.ToString();
     }

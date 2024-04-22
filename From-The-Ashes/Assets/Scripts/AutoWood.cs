@@ -55,7 +55,7 @@ public class WoodProduction : MonoBehaviour
     public void IncreaseWood(int amount)
     {
         // Увеличиваем количество дерева
-        ResourceManager.instance.AddResource(ResourceType.Wood, amount);
+        //ResourceManager.instance.AddResource(ResourceType.Wood, amount);
 
         // Обновляем текстовое поле с количеством дерева
         UpdateWoodText();
