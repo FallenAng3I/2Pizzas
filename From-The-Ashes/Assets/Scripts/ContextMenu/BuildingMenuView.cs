@@ -9,8 +9,8 @@ public class BuildingMenuView : MonoBehaviour
 
     private void Awake()
     {
-        BuildingFieldView.OnBuildingSelected.AddListener(OnSelected);
-        BuildingFieldView.OnBuildingDeselected.AddListener(OnDeselected);
+        //BuildingFieldView.OnBuildingSelected.AddListener(OnSelected);
+        //BuildingFieldView.OnBuildingDeselected.AddListener(OnDeselected);
         gameObject.SetActive(false);
     }
     
