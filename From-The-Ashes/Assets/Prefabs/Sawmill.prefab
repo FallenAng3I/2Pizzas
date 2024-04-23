@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 6775092105413703927}
   - component: {fileID: 7170239392182321569}
   - component: {fileID: 7352800873026668214}
+  - component: {fileID: 2064203091524851291}
   m_Layer: 5
   m_Name: Sawmill
   m_TagString: Untagged
@@ -213,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2064203091524851291}
+        m_TargetAssemblyTypeName: ContextMenu, Assembly-CSharp
+        m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7352800873026668214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +240,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 0}
   upgrade: {fileID: 0}
+--- !u!114 &2064203091524851291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181138813689665545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}

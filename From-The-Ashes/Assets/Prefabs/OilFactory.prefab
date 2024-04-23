@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2082205253269191871}
   - component: {fileID: 1841733158344168026}
   - component: {fileID: 7178072544313822966}
+  - component: {fileID: 4591172015214902023}
   m_Layer: 5
   m_Name: OilFactory
   m_TagString: Untagged
@@ -213,6 +214,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ContextMenu, Assembly-CSharp
+        m_MethodName: CloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7178072544313822966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,3 +240,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 0}
   upgrade: {fileID: 0}
+--- !u!114 &4591172015214902023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5572953645587087907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 0}

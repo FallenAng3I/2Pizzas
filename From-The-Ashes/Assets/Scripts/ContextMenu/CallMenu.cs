@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BuildingFieldView : MonoBehaviour, ISelectHandler, IDeselectHandler
+public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
     public ContextMenu menu;
 

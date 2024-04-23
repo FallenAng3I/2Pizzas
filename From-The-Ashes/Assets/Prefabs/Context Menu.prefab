@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8793798937547578911}
   - component: {fileID: 4614729069952370300}
   - component: {fileID: 5316159569729731803}
+  - component: {fileID: 5124671155145041243}
+  - component: {fileID: 2238117012716015127}
   m_Layer: 5
   m_Name: Build Sawmill
   m_TagString: Untagged
@@ -120,6 +122,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5124671155145041243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017498205752729561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97be7a9294f46354ca2d8a663d9bb598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2238117012716015127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017498205752729561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &2660499964354455299
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +160,7 @@ GameObject:
   - component: {fileID: 4356576592429642752}
   - component: {fileID: 569794611937245680}
   - component: {fileID: 6927642816150283451}
+  - component: {fileID: 2342165305564383772}
   m_Layer: 5
   m_Name: Build Military Factory
   m_TagString: Untagged
@@ -254,6 +282,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &2342165305564383772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2660499964354455299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &2826203475276334215
 GameObject:
   m_ObjectHideFlags: 0
@@ -267,6 +308,7 @@ GameObject:
   - component: {fileID: 5672653981531705376}
   - component: {fileID: 1285204851209457100}
   - component: {fileID: 2801390232714568225}
+  - component: {fileID: 7063324951455274126}
   m_Layer: 5
   m_Name: Build Mine
   m_TagString: Untagged
@@ -388,6 +430,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &7063324951455274126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2826203475276334215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &2899517712044300800
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +456,7 @@ GameObject:
   - component: {fileID: 6775685412916650749}
   - component: {fileID: 8656322380682749117}
   - component: {fileID: 6008015504247645319}
+  - component: {fileID: 5311236305866125152}
   m_Layer: 5
   m_Name: Build Lead Mine
   m_TagString: Untagged
@@ -522,6 +578,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &5311236305866125152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2899517712044300800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &3816605348270536817
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +604,7 @@ GameObject:
   - component: {fileID: 5807439712178676015}
   - component: {fileID: 6725644213971106489}
   - component: {fileID: 785858493595414135}
+  - component: {fileID: 5615681104492984475}
   m_Layer: 5
   m_Name: Build Lead Factory
   m_TagString: Untagged
@@ -656,6 +726,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &5615681104492984475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3816605348270536817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &4822158313573104163
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +752,7 @@ GameObject:
   - component: {fileID: 2941980448216984577}
   - component: {fileID: 8919399931113331994}
   - component: {fileID: 281588923074228147}
+  - component: {fileID: 4232874047261347012}
   m_Layer: 5
   m_Name: Build Steel Factory
   m_TagString: Untagged
@@ -790,6 +874,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &4232874047261347012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4822158313573104163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &5661958310815941352
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +900,7 @@ GameObject:
   - component: {fileID: 195689771296719304}
   - component: {fileID: 7444469040154833732}
   - component: {fileID: 7327205642988666170}
+  - component: {fileID: 7557014524654841564}
   m_Layer: 5
   m_Name: Build Oil Well
   m_TagString: Untagged
@@ -924,6 +1022,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &7557014524654841564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5661958310815941352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
 --- !u!1 &6780081646890244317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,6 +1131,7 @@ GameObject:
   - component: {fileID: 3513988401138105696}
   - component: {fileID: 2436901440239424159}
   - component: {fileID: 7532223379834167161}
+  - component: {fileID: 5984611406220019610}
   m_Layer: 5
   m_Name: Build Oil Factory
   m_TagString: Untagged
@@ -1141,3 +1253,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
+--- !u!114 &5984611406220019610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353458178915090865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Context_Menu: {fileID: 6780081646890244317}
