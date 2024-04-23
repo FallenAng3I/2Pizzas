@@ -16,4 +16,16 @@ public class ContextMenu : MonoBehaviour
     {
         Context_Menu.SetActive(false);
     }
+    
+    public void OnButtonClick()
+    {
+        StartCoroutine(CloseMenuAfterDelay());
+    }
+
+    private IEnumerator CloseMenuAfterDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        
+        CloseMenu();
+    }
 }
