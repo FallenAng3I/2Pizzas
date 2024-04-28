@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5316159569729731803}
   - component: {fileID: 5124671155145041243}
   - component: {fileID: 2238117012716015127}
-  - component: {fileID: 5218595568760445449}
   m_Layer: 5
   m_Name: Build Sawmill
   m_TagString: Untagged
@@ -148,27 +147,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Context_Menu: {fileID: 6780081646890244317}
---- !u!114 &5218595568760445449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017498205752729561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb0dfa6785fdafe44ac4a91ad880fa2a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!1 &2660499964354455299
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,14 +282,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &2342165305564383772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -460,14 +430,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &7063324951455274126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,14 +578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &5311236305866125152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -772,14 +726,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &5615681104492984475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -928,14 +874,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &4232874047261347012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1084,14 +1022,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &7557014524654841564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,14 +1253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menu: {fileID: 0}
-  Sawmill: {fileID: 0}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
 --- !u!114 &5984611406220019610
 MonoBehaviour:
   m_ObjectHideFlags: 0

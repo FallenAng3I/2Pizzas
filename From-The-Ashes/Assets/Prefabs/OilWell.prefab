@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8337fc906ead104baf73f0471c0a66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resources: {fileID: 8013103860660889957, guid: 9c0c6f2ffa6fa6545bb468d2d74464d4, type: 3}
+  resources: {fileID: 0}
   upgrade: {fileID: 0}
 --- !u!114 &8520721905939127656
 MonoBehaviour:
