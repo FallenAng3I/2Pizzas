@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8337fc906ead104baf73f0471c0a66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resources: {fileID: 0}
+  resources: {fileID: 8310810470896043436, guid: 066e87f2875978046b1e63726d5e40d7, type: 3}
   upgrade: {fileID: 0}
 --- !u!114 &619212875764977968
 MonoBehaviour:
@@ -252,4 +252,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fc3e7f2ea8f9a47bfd74f741c190cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Context_Menu: {fileID: 0}
+  Context_Menu: {fileID: 6780081646890244317, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
