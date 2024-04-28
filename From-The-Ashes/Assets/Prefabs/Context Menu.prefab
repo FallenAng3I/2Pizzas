@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4614729069952370300}
   - component: {fileID: 5316159569729731803}
   - component: {fileID: 5124671155145041243}
+  - component: {fileID: 8661634905781946409}
   - component: {fileID: 2238117012716015127}
   m_Layer: 5
   m_Name: Build Sawmill
@@ -134,6 +135,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97be7a9294f46354ca2d8a663d9bb598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8661634905781946409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017498205752729561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0dfa6785fdafe44ac4a91ad880fa2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 0}
 --- !u!114 &2238117012716015127
 MonoBehaviour:
   m_ObjectHideFlags: 0

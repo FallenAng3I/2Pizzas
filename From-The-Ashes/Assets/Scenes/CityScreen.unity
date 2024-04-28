@@ -1601,11 +1601,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 0}
   upgrade: {fileID: 0}
---- !u!1 &660577356 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1017498205752729561, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
-  m_PrefabInstance: {fileID: 2967467506420199939}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &670097344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1794,13 +1789,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 904401901}
   Sawmill: {fileID: 8181138813689665545, guid: 060db4c87ef68d641a792bb2cbaf44b3, type: 3}
-  Mine: {fileID: 0}
-  OilWell: {fileID: 0}
-  OilFactory: {fileID: 0}
-  SteelFactory: {fileID: 0}
-  LeadMine: {fileID: 0}
-  LeadFactory: {fileID: 0}
-  MilitaryFactory: {fileID: 0}
+  Mine: {fileID: 2240905744817049587, guid: 03511820accfe3244a719e3aba3dc1e1, type: 3}
+  OilWell: {fileID: 6723821257479292243, guid: 74c204fd689614c49ad6e632a775b65c, type: 3}
+  OilFactory: {fileID: 5572953645587087907, guid: 7100eb67dbb282144b1f1a87afe025a0, type: 3}
+  SteelFactory: {fileID: 7456015889858965253, guid: 830e3b3c276be894cb37112348df98b2, type: 3}
+  LeadMine: {fileID: 1877574388909621112, guid: cd8bc0b3b8429cf4abab1a2773f574fd, type: 3}
+  LeadFactory: {fileID: 6281643563578291506, guid: 7ad8161110dd55047add8d5a407fab08, type: 3}
+  MilitaryFactory: {fileID: 410830683895732994, guid: 0b60f6e9d5c014d4488f11e5bb707a14, type: 3}
 --- !u!4 &704652622
 Transform:
   m_ObjectHideFlags: 0
@@ -1897,19 +1892,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6780081646890244317, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
   m_PrefabInstance: {fileID: 2967467506420199939}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &782099072
+--- !u!114 &782099072 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8661634905781946409, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
+  m_PrefabInstance: {fileID: 2967467506420199939}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660577356}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb0dfa6785fdafe44ac4a91ad880fa2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
 --- !u!224 &791377573 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 143755701306611849, guid: cd8bc0b3b8429cf4abab1a2773f574fd, type: 3}
@@ -5368,9 +5361,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6780081646890244317, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1208066638}
-    - targetCorrespondingSourceObject: {fileID: 1017498205752729561, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 782099072}
   m_SourcePrefab: {fileID: 100100000, guid: ccc0bdc0bbdde6c43a1c53a138649949, type: 3}
 --- !u!1001 &5231490303885234014
 PrefabInstance:
