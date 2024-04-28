@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -9,20 +10,12 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
     public ContextMenu menu;
 
-    public GameObject Sawmill;
-    public GameObject Mine;
-    public GameObject OilWell;
-    public GameObject OilFactory;
-    public GameObject SteelFactory;
-    public GameObject LeadMine;
-    public GameObject LeadFactory;
-    public GameObject MilitaryFactory;
-
     public void OnDeselect(BaseEventData eventData)
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
             menu.CloseMenu();
+            AreasManager.Instance.currentSelection = null;
         }
     }
      
@@ -32,12 +25,7 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
         {
             
             menu.OpenMenu();
+            AreasManager.Instance.currentSelection = EventSystem.current.currentSelectedGameObject;
         }
-    }
-
-    public void ToBuildSawmill()
-    {
-        GameObject selectedObject = EventSystem.current.currentSelectedGameObject;
-        Destroy(selectedObject);
     }
 }
