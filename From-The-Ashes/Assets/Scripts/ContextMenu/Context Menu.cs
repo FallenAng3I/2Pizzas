@@ -7,17 +7,17 @@ public class ContextMenu : MonoBehaviour
 {
     public GameObject Context_Menu;
     
-    public void OpenMenu()
+    public void OpenMenu()         //открыть меню
     {
         Context_Menu.SetActive(true);
     }
     
-    public void CloseMenu()
+    public void CloseMenu()        //закрыть меню
     {
         Context_Menu.SetActive(false);
     }
     
-    public void OnButtonClick()
+    public void OnButtonClick()     // кулдаун до закрытия, чтобы кнопки в меню успевали сработать
     {
         StartCoroutine(CloseMenuAfterDelay());
     }

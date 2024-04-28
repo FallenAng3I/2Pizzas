@@ -28,9 +28,8 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
      
     public void OnSelect(BaseEventData eventData)
     {
-        if (!eventData.selectedObject.CompareTag("Build"))
+        if (eventData.selectedObject.CompareTag("Area"))
         {
-            
             menu.OpenMenu();
         }
     }
