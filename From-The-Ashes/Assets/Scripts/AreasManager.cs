@@ -34,6 +34,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(Sawmill, pos, Quaternion.identity, canvas.transform);
+            //добавить ссылку на UI со суены для передачи данных и их синхронизации
             Destroy(currentSelection);
         }
         

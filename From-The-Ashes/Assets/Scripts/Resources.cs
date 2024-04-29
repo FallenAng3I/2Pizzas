@@ -24,16 +24,5 @@ public class Resources : MonoBehaviour
     public Text txtLEADORE;
     public Text txtLEAD;
     public Text txtAMMOS;
-
-    public void Update()
-    {
-        txtWOOD.text = " " + Wood.ToString();
-        txtIRON.text = " " + Iron.ToString();
-        txtOIL.text = " " + Oil.ToString();
-        txtFUEL.text = " " + Fuel.ToString();
-        txtSTEEL.text = " " + Steel.ToString();
-        txtLEADORE.text = " " + LeadOre.ToString();
-        txtLEAD.text = " " + Lead.ToString();
-        txtAMMOS.text = " " + Ammos.ToString();
-    }
+    
 }

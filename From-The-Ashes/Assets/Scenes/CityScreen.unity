@@ -1212,6 +1212,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8615919301135976008, guid: 066e87f2875978046b1e63726d5e40d7, type: 3}
   m_PrefabInstance: {fileID: 6328315148987739084}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &815863090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4371616689285559675, guid: 066e87f2875978046b1e63726d5e40d7, type: 3}
+  m_PrefabInstance: {fileID: 6328315148987739084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2338033a409de644d960f6e06f730134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904401901
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,7 +2748,7 @@ PrefabInstance:
     - target: {fileID: 7352800873026668214, guid: 060db4c87ef68d641a792bb2cbaf44b3, type: 3}
       propertyPath: resources
       value: 
-      objectReference: {fileID: 4371616689285559675, guid: 066e87f2875978046b1e63726d5e40d7, type: 3}
+      objectReference: {fileID: 815863090}
     - target: {fileID: 8181138813689665545, guid: 060db4c87ef68d641a792bb2cbaf44b3, type: 3}
       propertyPath: m_Name
       value: Sawmill
