@@ -8,7 +8,6 @@ using UnityEngine.PlayerLoop;
 public class Buildings : MonoBehaviour
 {
     public Resources resources;
-    public UpgradeManager upgrade;
     
     public void ClickSawmill()
     {
