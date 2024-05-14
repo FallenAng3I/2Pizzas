@@ -4,27 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-/*   инструкция, чтобы добавить новый ресурс:
- *   1) добавить новое приватное поле:  private int _ВашРесурс       (обязательно с _ )
- *   2) добавить новое публичное поле класса:
- * 
- *   public int ВашРесурс
- *   {
- *       get => _ВашРесурс;
- *       set
- *       }
- *           _ВашРесурс = value;
- *           txtВАШРЕСУРС.text = " " + _ВашРесурс;
- *       {
- *   }
- *   
- *   3) добавить новое текстовое поле для отображения вашего ресурса: public Text txtВАШРЕСУРС.
- * 
- *   Готово.   
- */  
-
 public class Resources : MonoBehaviour
 {
+    public Text txtWOOD;
+    public Text txtIRON;
+    public Text txtOIL;
+    public Text txtFUEL;
+    public Text txtSTEEL;
+    public Text txtLEADORE;
+    public Text txtLEAD;
+    public Text txtAMMOS;
+    
     private int _wood;
     private int _iron;
     private int _oil;
@@ -114,12 +104,24 @@ public class Resources : MonoBehaviour
         }
     }
     
-    public Text txtWOOD;
-    public Text txtIRON;
-    public Text txtOIL;
-    public Text txtFUEL;
-    public Text txtSTEEL;
-    public Text txtLEADORE;
-    public Text txtLEAD;
-    public Text txtAMMOS;
+    
+    
+    /*   инструкция, чтобы добавить новый ресурс:
+     *   1) добавить новое приватное поле:  private int _ВашРесурс       (обязательно с _ )
+     *   2) добавить новое публичное поле класса:
+     *
+     *   public int ВашРесурс
+     *   {
+     *       get => _ВашРесурс;
+     *       set
+     *       }
+     *           _ВашРесурс = value;
+     *           txtВАШРЕСУРС.text = " " + _ВашРесурс;
+     *       {
+     *   }
+     *
+     *   3) добавить новое текстовое поле для отображения вашего ресурса: public Text txtВАШРЕСУРС.
+     *
+     *   Готово.
+     */  
 }
