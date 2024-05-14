@@ -135,7 +135,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8520721905939127656}
         m_TargetAssemblyTypeName: ContextMenu, Assembly-CSharp
         m_MethodName: CloseMenu
         m_Mode: 1
@@ -160,7 +160,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resources: {fileID: 4371616689285559675, guid: 066e87f2875978046b1e63726d5e40d7, type: 3}
-  upgrade: {fileID: 0}
 --- !u!114 &8520721905939127656
 MonoBehaviour:
   m_ObjectHideFlags: 0

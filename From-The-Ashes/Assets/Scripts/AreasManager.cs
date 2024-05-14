@@ -6,6 +6,9 @@ namespace DefaultNamespace
 {
     public class AreasManager : MonoBehaviour
     {
+        public Buildings Building;
+        public GameObject UI;
+        
         [SerializeField] private GameObject canvas;
         public static AreasManager Instance;
         
@@ -34,7 +37,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(Sawmill, pos, Quaternion.identity, canvas.transform);
-            //добавить ссылку на UI со суены для передачи данных и их синхронизации
+            
             Destroy(currentSelection);
         }
         
@@ -42,6 +45,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(Mine, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
         
@@ -49,6 +53,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(OilWell, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
         
@@ -56,6 +61,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(OilFactory, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
         
@@ -63,6 +69,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(SteelFactory, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
         
@@ -70,6 +77,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(LeadMine, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
         
@@ -77,6 +85,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(LeadFactory, pos, Quaternion.identity, canvas.transform);
+
             Destroy(currentSelection);
         }
         
@@ -84,6 +93,7 @@ namespace DefaultNamespace
         {
             var pos = currentSelection.transform.position;
             Instantiate(MilitaryFactory, pos, Quaternion.identity, canvas.transform);
+            
             Destroy(currentSelection);
         }
     }
