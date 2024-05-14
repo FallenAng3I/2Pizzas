@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 123135074}
   - component: {fileID: 123135073}
   m_Layer: 5
-  m_Name: Area (3)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 194202402}
   - component: {fileID: 194202401}
   m_Layer: 5
-  m_Name: Area (4)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,7 +1278,7 @@ GameObject:
   - component: {fileID: 352599965}
   - component: {fileID: 352599964}
   m_Layer: 5
-  m_Name: Area (11)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1592,7 +1592,7 @@ GameObject:
   - component: {fileID: 518866861}
   - component: {fileID: 518866860}
   m_Layer: 5
-  m_Name: Area (8)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2596,18 +2596,18 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2143452370}
-  - {fileID: 1397969980}
-  - {fileID: 194202400}
   - {fileID: 518866859}
-  - {fileID: 1227729211}
-  - {fileID: 1653325143}
   - {fileID: 2097646161}
-  - {fileID: 2118188391}
-  - {fileID: 1238078493}
   - {fileID: 1069053010}
-  - {fileID: 123135071}
-  - {fileID: 1695499150}
   - {fileID: 352599963}
+  - {fileID: 194202400}
+  - {fileID: 1653325143}
+  - {fileID: 1238078493}
+  - {fileID: 1695499150}
+  - {fileID: 1397969980}
+  - {fileID: 1227729211}
+  - {fileID: 2118188391}
+  - {fileID: 123135071}
   - {fileID: 1208066637}
   - {fileID: 1940298894}
   - {fileID: 2128830530}
@@ -3027,7 +3027,7 @@ GameObject:
   - component: {fileID: 1069053012}
   - component: {fileID: 1069053011}
   m_Layer: 5
-  m_Name: Area (10)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3356,7 +3356,7 @@ GameObject:
   - component: {fileID: 1227729214}
   - component: {fileID: 1227729213}
   m_Layer: 5
-  m_Name: Area (1)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3512,7 +3512,7 @@ GameObject:
   - component: {fileID: 1238078495}
   - component: {fileID: 1238078494}
   m_Layer: 5
-  m_Name: Area (6)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4589,7 +4589,7 @@ GameObject:
   - component: {fileID: 1653325145}
   - component: {fileID: 1653325144}
   m_Layer: 5
-  m_Name: Area (5)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4611,7 +4611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -594.021, y: 53.983994}
+  m_AnchoredPosition: {x: -594.021, y: 53.98398}
   m_SizeDelta: {x: 107.952, y: 107.952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653325144
@@ -4878,7 +4878,7 @@ GameObject:
   - component: {fileID: 1695499152}
   - component: {fileID: 1695499151}
   m_Layer: 5
-  m_Name: Area (7)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5615,7 +5615,7 @@ GameObject:
   - component: {fileID: 2097646163}
   - component: {fileID: 2097646162}
   m_Layer: 5
-  m_Name: Area (9)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5847,7 +5847,7 @@ GameObject:
   - component: {fileID: 2118188394}
   - component: {fileID: 2118188393}
   m_Layer: 5
-  m_Name: Area (2)
+  m_Name: Area
   m_TagString: Area
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
