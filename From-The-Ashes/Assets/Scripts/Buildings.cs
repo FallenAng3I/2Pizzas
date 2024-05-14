@@ -5,6 +5,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
+/*   инструкция, чтобы добавить механику нового типа здания:
+ *
+ *   1) добавить метод для реализации логики вашего здания:
+ *
+ *   public void ClickЗДАНИЕ()
+ *   {
+ *      *логика вашего здания. например:
+ *      resources.ВашРесурс++;
+ *   }
+ *
+ *   Готово.
+ *   Для реализации логики сложнее примера, обратитесь к лиду или адаптируйте из существующих механик.
+ */
+
+
 public class Buildings : MonoBehaviour
 {
     public Resources resources;
@@ -18,13 +33,11 @@ public class Buildings : MonoBehaviour
     public void ClickMine()
     {
         resources.Iron++;
-        resources.txtIRON.text = " " + resources.Iron.ToString();
     }
 
     public void ClickOilWell()
     {
         resources.Oil++;
-        resources.txtOIL.text = " " + resources.Oil.ToString();
     }
 
     public void ClickOilFactory()
@@ -33,8 +46,6 @@ public class Buildings : MonoBehaviour
         {
             resources.Fuel++;
             resources.Oil -=  2;
-            resources.txtFUEL.text = " " + resources.Fuel.ToString();
-            resources.txtOIL.text = " " + resources.Oil.ToString();
         }
     }
 
@@ -44,15 +55,12 @@ public class Buildings : MonoBehaviour
         {
             resources.Steel++;
             resources.Iron -= 3;
-            resources.txtSTEEL.text = " " + resources.Steel.ToString();
-            resources.txtIRON.text = " " + resources.Iron.ToString();
         }
     }
 
     public void ClickLeadMine()
     {
         resources.LeadOre++;
-        resources.txtLEADORE.text = " " + resources.LeadOre.ToString();
     }
 
     public void ClickLeadFactory()
@@ -61,8 +69,6 @@ public class Buildings : MonoBehaviour
         {          
             resources.Lead++;
             resources.LeadOre -= 3;
-            resources.txtLEAD.text = " " + resources.Lead.ToString();
-            resources.txtLEADORE.text = " " + resources.LeadOre.ToString();            
         }
     }
 
@@ -72,8 +78,6 @@ public class Buildings : MonoBehaviour
         {
             resources.Ammos += 15;
             resources.Lead -= 2;
-            resources.txtAMMOS.text = " " + resources.Ammos.ToString();
-            resources.txtLEAD.text = " " + resources.Lead.ToString();
         }
     }
 }

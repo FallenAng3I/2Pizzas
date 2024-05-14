@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace DefaultNamespace
@@ -7,6 +8,7 @@ namespace DefaultNamespace
     public class AreasManager : MonoBehaviour
     {
         public Resources UI;
+        public GameObject Menu;
         
         [SerializeField] private GameObject canvas;
         public static AreasManager Instance;
@@ -37,6 +39,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(Sawmill, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -45,6 +48,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(Mine, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -53,6 +57,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(OilWell, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -61,6 +66,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(OilFactory, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -69,6 +75,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(SteelFactory, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -77,6 +84,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(LeadMine, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -85,6 +93,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(LeadFactory, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
         
@@ -93,6 +102,7 @@ namespace DefaultNamespace
             var pos = currentSelection.transform.position;
             GameObject instance = Instantiate(MilitaryFactory, pos, Quaternion.identity, canvas.transform);
             instance.GetComponent<Buildings>().resources = UI;
+            instance.GetComponent<ContextMenu>().Context_Menu = Menu;
             Destroy(currentSelection);
         }
     }
