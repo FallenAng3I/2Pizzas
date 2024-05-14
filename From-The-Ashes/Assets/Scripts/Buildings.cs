@@ -12,7 +12,6 @@ public class Buildings : MonoBehaviour
     public void ClickSawmill()
     {
         resources.Wood++;
-        resources.txtWOOD.text = " " + resources.Wood.ToString();
     }
     
 

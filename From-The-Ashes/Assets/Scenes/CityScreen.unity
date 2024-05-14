@@ -1710,8 +1710,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa81653dce24f69b8f771ec2c0a676a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Building: {fileID: 0}
-  UI: {fileID: 0}
+  UI: {fileID: 2128830531}
   canvas: {fileID: 904401901}
   Sawmill: {fileID: 8181138813689665545, guid: 060db4c87ef68d641a792bb2cbaf44b3, type: 3}
   Mine: {fileID: 2240905744817049587, guid: 03511820accfe3244a719e3aba3dc1e1, type: 3}

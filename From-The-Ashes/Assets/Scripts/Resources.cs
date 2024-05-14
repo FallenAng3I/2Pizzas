@@ -5,8 +5,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Resources : MonoBehaviour
-{ 
-    public int Wood { get; set; }
+{
+    public int Wood
+    {
+        get => _wood;
+        set
+        {
+            _wood = value;
+            txtWOOD.text = " " + _wood;
+        }
+    }
+
     public int Iron { get; set; }
     public int Oil { get; set; }
     public int Fuel { get; set; }
@@ -25,4 +34,5 @@ public class Resources : MonoBehaviour
     public Text txtLEAD;
     public Text txtAMMOS;
     
+    private int _wood;
 }

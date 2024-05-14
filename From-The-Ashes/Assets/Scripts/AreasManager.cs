@@ -6,8 +6,7 @@ namespace DefaultNamespace
 {
     public class AreasManager : MonoBehaviour
     {
-        public Buildings Building;
-        public GameObject UI;
+        public Resources UI;
         
         [SerializeField] private GameObject canvas;
         public static AreasManager Instance;
@@ -36,64 +35,64 @@ namespace DefaultNamespace
         public void ToBuildSawmill()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(Sawmill, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(Sawmill, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildMine()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(Mine, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(Mine, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildOilWell()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(OilWell, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(OilWell, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildOilFactory()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(OilFactory, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(OilFactory, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildSteelFactory()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(SteelFactory, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(SteelFactory, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildLeadMine()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(LeadMine, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(LeadMine, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildLeadFactory()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(LeadFactory, pos, Quaternion.identity, canvas.transform);
-
+            GameObject instance = Instantiate(LeadFactory, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
         
         public void ToBuildMilitaryFactory()
         {
             var pos = currentSelection.transform.position;
-            Instantiate(MilitaryFactory, pos, Quaternion.identity, canvas.transform);
-            
+            GameObject instance = Instantiate(MilitaryFactory, pos, Quaternion.identity, canvas.transform);
+            instance.GetComponent<Buildings>().resources = UI;
             Destroy(currentSelection);
         }
     }
