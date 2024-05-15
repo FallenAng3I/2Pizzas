@@ -10,7 +10,7 @@ public class UpgradeMenu : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI buildingNameText;
 
-    // Кнопки улучшений и поля стоимости улучшений
+    // РљРЅРѕРїРєРё СѓР»СѓС‡С€РµРЅРёР№ Рё РїРѕР»СЏ СЃС‚РѕРёРјРѕСЃС‚Рё СѓР»СѓС‡С€РµРЅРёР№
     [SerializeField] private Button passiveUpgradeButton;
     [SerializeField] private TextMeshProUGUI passiveUpgradeCostText;
     [SerializeField] private Button doubleUpgradeButton;
@@ -23,7 +23,7 @@ public class UpgradeMenu : MonoBehaviour
         CloseMenu();
     }
 
-    // Закрываем меню, заполняем поля информации о здании, назначаем здание для кнопок апргредов и устанавливаем цену апгрейдов
+    // Р—Р°РєСЂС‹РІР°РµРј РјРµРЅСЋ, Р·Р°РїРѕР»РЅСЏРµРј РїРѕР»СЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ Р·РґР°РЅРёРё, РЅР°Р·РЅР°С‡Р°РµРј Р·РґР°РЅРёРµ РґР»СЏ РєРЅРѕРїРѕРє Р°РїСЂРіСЂРµРґРѕРІ Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РµРЅСѓ Р°РїРіСЂРµР№РґРѕРІ
     public void OpenMenu(Building newBuilding)
     {
         CloseMenu();
@@ -40,7 +40,7 @@ public class UpgradeMenu : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    // Очищаем информацию о здании и закрываем меню
+    // РћС‡РёС‰Р°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ Р·РґР°РЅРёРё Рё Р·Р°РєСЂС‹РІР°РµРј РјРµРЅСЋ
     public void CloseMenu()
     {
         building = null;
