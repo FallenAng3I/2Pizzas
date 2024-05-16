@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Sawmill
   buildingDescription: Here wood Is produced
-  CostInWood: 15
+  CostInWood: 0
+  CurrentCostInWood: 10
   CostInWoodIncrease: 5
   CostInSteel: 0
+  CurrentCostInSteel: 0
   CostInSteelIncrease: 0
   CostInFuel: 0
+  CurrentCostInFuel: 0
   CostInFuelIncrease: 0
   CostInLead: 0
+  CurrentCostInLead: 0
   CostInLeadIncrease: 0

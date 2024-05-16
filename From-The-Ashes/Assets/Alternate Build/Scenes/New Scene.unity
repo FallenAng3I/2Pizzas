@@ -5096,6 +5096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1300142524}
   - component: {fileID: 1300142523}
+  - component: {fileID: 1300142525}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -5146,6 +5147,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1300142525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300142522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac077fe38d8a07c4cba8ee31bea93cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1319293367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6163,30 +6176,14 @@ MonoBehaviour:
   leadMineButton: {fileID: 1051700282}
   leadFactoryButton: {fileID: 838914991}
   militaryFactoryButton: {fileID: 1059961426}
-  sawmillPrefab: {fileID: 7326496106897631071, guid: 7f11c5920bfb43f478ef616bb8a576cf, type: 3}
-  ironMinePrefab: {fileID: 7677474000619163691, guid: 372119a8ff29ecb4780f008dafe397fe, type: 3}
-  steelFactoryPrefab: {fileID: -1347926651496876402, guid: c7e8d60c96f8f1a4ba8c04ee9d02203b, type: 3}
-  oilWellPrefab: {fileID: 2614288250697394546, guid: efa5da8bbb7271b4dae0d2bc50d9b3b5, type: 3}
-  fuelFactoryPrefab: {fileID: 5373994778167810110, guid: ae86e0ff671cc5e4e9c0707d7e9c6be8, type: 3}
-  leadMinePrefab: {fileID: 1982392247280585793, guid: f7c1cf44f3fe11440a50c4e0af9124e4, type: 3}
-  leadFactoryPrefab: {fileID: 6833353730631312755, guid: e3413526df6be644ca8004c403d89978, type: 3}
-  militaryFactoryPrefab: {fileID: 3394517265491359811, guid: 1fa2fae2cd0f862429a5de18042dbc95, type: 3}
-  woodForSawmill: 0
-  woodForSawmillIncrease: 5
-  woodForIronMine: 5
-  woodForIronMineIncrease: 5
-  woodForSteelFactory: 5
-  woodForSteelFactoryIncrease: 5
-  woodForOilWell: 5
-  woodForOilWellIncrease: 5
-  woodForFuelFactory: 5
-  woodForFuelFactoryIncrease: 5
-  woodForLeadMine: 5
-  woodForLeadMineIncrease: 5
-  woodForLeadFactory: 5
-  woodForLeadFactoryIncrease: 5
-  woodForAmmunitionFactory: 5
-  woodForAmmunitionFactoryIncrease: 5
+  sawmillPrefab: {fileID: 7611532508930268203, guid: 7f11c5920bfb43f478ef616bb8a576cf, type: 3}
+  ironMinePrefab: {fileID: 8982829551102412467, guid: 372119a8ff29ecb4780f008dafe397fe, type: 3}
+  steelFactoryPrefab: {fileID: 968856873819787221, guid: c7e8d60c96f8f1a4ba8c04ee9d02203b, type: 3}
+  oilWellPrefab: {fileID: 6788860056785064516, guid: efa5da8bbb7271b4dae0d2bc50d9b3b5, type: 3}
+  fuelFactoryPrefab: {fileID: 7919523958677286249, guid: ae86e0ff671cc5e4e9c0707d7e9c6be8, type: 3}
+  leadMinePrefab: {fileID: 6987639300319862208, guid: f7c1cf44f3fe11440a50c4e0af9124e4, type: 3}
+  leadFactoryPrefab: {fileID: 1962994578247280214, guid: e3413526df6be644ca8004c403d89978, type: 3}
+  militaryFactoryPrefab: {fileID: 8914259449174699803, guid: 1fa2fae2cd0f862429a5de18042dbc95, type: 3}
 --- !u!114 &1514154471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6608,7 +6605,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -6622,6 +6627,18 @@ PrefabInstance:
     - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7089192561604616199, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_AnchoredPosition.x
