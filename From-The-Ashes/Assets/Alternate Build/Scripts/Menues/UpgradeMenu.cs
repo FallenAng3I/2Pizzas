@@ -30,7 +30,7 @@ public class UpgradeMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingName;
+        buildingNameText.text = building.buildingInformation.buildingName;
 
         passiveUpgradeButton.onClick.AddListener(() => { building.productionBuilding.UpgradePassive(); UpdateCostText(); });
         doubleUpgradeButton.onClick.AddListener(() => { building.productionBuilding.UpgradeClick(); UpdateCostText(); });
@@ -58,6 +58,6 @@ public class UpgradeMenu : MonoBehaviour
     private void UpdateCostText()
     {
         passiveUpgradeCostText.text = building.productionBuilding.PassiveUpgradeCostInWood.ToString() + " wood";
-        doubleUpgradeCostText.text = building.productionBuilding.DoubleUpgradeCostInWood.ToString() + " wood";
+        doubleUpgradeCostText.text = building.productionBuilding.ClickUpgradeCostInWood.ToString() + " wood";
     }
 }

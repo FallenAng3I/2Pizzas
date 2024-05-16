@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: buildingDescription
       value: Here wood is produced
       objectReference: {fileID: 0}
+    - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: buildingInformation
+      value: 
+      objectReference: {fileID: 11400000, guid: 74946a6c475797e46ac009cf0c17f30b, type: 2}
     m_RemovedComponents:
     - {fileID: -7863437814905891128, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
     m_RemovedGameObjects: []
@@ -158,7 +162,8 @@ MonoBehaviour:
   clickProductionQuantityIncrease: 1
   clickUpgradeCostInWood: 5
   clickUpgradeCostInWoodIncrease: 5
-  passiveProduction: 0
+  passiveProductionUpgraded: 0
+  passiveProductionEnabled: 1
   passiveProductionTime: 1
   passiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1

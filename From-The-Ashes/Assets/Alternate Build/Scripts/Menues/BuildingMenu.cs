@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class BuildingMenu : MonoBehaviour
 {
+    private Building building = null;
+
     [SerializeField] private UpgradeMenu upgradeMenu;
     [SerializeField] private ConstructionMenu constructionMenu;
 
     [SerializeField] private Button closeButton;
 
-    private Building building;
-
-    // Поля информации о здании
+    [Header("Building Information")]
     [SerializeField] private Image buildingImage;
     [SerializeField] private TextMeshProUGUI buildingNameText;
     [SerializeField] private TextMeshProUGUI buildingDescriptionText;
 
-    // Кнопки управления зданием
+    [Header("Building Control Buttons")]
     [SerializeField] private Button produceButton;
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button stopButton;
@@ -39,19 +39,19 @@ public class BuildingMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingName;
-        buildingDescriptionText.text = building.buildingDescription;
+        buildingNameText.text = building.buildingInformation.buildingDescription;
+        buildingDescriptionText.text = building.buildingInformation.buildingDescription;
         UpdateStopButton();
 
         produceButton.onClick.AddListener(building.productionBuilding.InvokeAction);
         upgradeButton.onClick.AddListener(() => upgradeMenu.OpenMenu(building));
-        stopButton.onClick.AddListener(() => { building.productionBuilding.TogglePassiveProduction(); UpdateStopButton(); });
+        stopButton.onClick.AddListener(TogglePassiveProduction);
         replaceButton.onClick.AddListener(() => constructionMenu.OpenMenu(building.GetComponentInParent<ConstructionSlot>()));
 
         gameObject.SetActive(true);
     }
 
-    // Очищаем информацию о здании и закрываем меню
+    // Очищаем всю информацию о здании, очищаем действия с кнопок, закрываем другие меню, связанные со зданием
     public void CloseMenu()
     {
         building = null;
@@ -61,11 +61,24 @@ public class BuildingMenu : MonoBehaviour
         buildingDescriptionText.text = "";
 
         produceButton.onClick.RemoveAllListeners();
+        upgradeButton.onClick.RemoveAllListeners();
+        stopButton.onClick.RemoveAllListeners();
+        replaceButton.onClick.RemoveAllListeners();
 
-        gameObject.SetActive(false);
         upgradeMenu.CloseMenu();
+        constructionMenu.CloseMenu();
+ 
+        gameObject.SetActive(false);
     }
 
+    // При нажатии на кнопку остановки переключаем пассиноые производство и обновляем кнопку остановки
+    private void TogglePassiveProduction()
+    {
+        building.productionBuilding.TogglePassiveProduction();
+        UpdateStopButton();
+    }
+
+    // Текст кнопки остановки изменяется в зависимости от того, остановлено здание или нет
     private void UpdateStopButton()
     {
         if (building.productionBuilding.passiveProductionEnabled)

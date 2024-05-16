@@ -4,16 +4,13 @@ using UnityEngine.UI;
 
 public class Building : MonoBehaviour
 {
-    public string buildingName;
-    public string buildingDescription;
-
-    [SerializeField] private Button buildingButton;
-
+    public BuildingInformation buildingInformation;
     public ProductionBuilding productionBuilding;
 
+    [SerializeField] private Button buildingButton;
     public static Action<Building> BuildingButtonClicked;
 
-    private void Awake()
+    private void Start()
     {
         productionBuilding = GetComponent<ProductionBuilding>();
 

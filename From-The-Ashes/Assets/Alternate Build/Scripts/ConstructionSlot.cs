@@ -1,29 +1,43 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ConstructionSlot : MonoBehaviour
 {
-    [SerializeField] private BuildingMenu buildingMenu;
-
-    [SerializeField] private Button button;
-
+    [SerializeField] private Button slotButton;
+    [SerializeField] private GameObject SelectionIndicator;
     public static Action<ConstructionSlot> ConstructionSlotSelected;
 
     public readonly ProductionBuilding productionBuilding;
 
     private void Start()
     {
-        buildingMenu = FindAnyObjectByType<BuildingMenu>();
+        DeSelectSlot();
 
-        button.onClick.AddListener(SelectSlot);
+        slotButton.onClick.AddListener(() => ConstructionSlotSelected(this));
+
+        ConstructionSlotSelected += CheckIfSelected;
+        Building.BuildingButtonClicked += (clickedBuilding) => CheckIfSelected(clickedBuilding.GetComponentInParent<ConstructionSlot>());
+    }
+
+    private void CheckIfSelected(ConstructionSlot slot)
+    {
+        if (slot == this)
+        {
+            SelectSlot();
+            return;
+        }
+
+        DeSelectSlot();
     }
 
     private void SelectSlot()
     {
-        buildingMenu.CloseMenu();
-        ConstructionSlotSelected?.Invoke(this);
+        SelectionIndicator.SetActive(true);
+    }
+
+    private void DeSelectSlot()
+    {
+        SelectionIndicator.SetActive(false);
     }
 }

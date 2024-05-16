@@ -3,13 +3,13 @@ using UnityEngine;
 
 public abstract class ProductionBuilding : MonoBehaviour
 {
-    // Производство по клику
+    [Header("Production For Click")]
     [SerializeField] protected int clickProductionQuantity;
     [SerializeField] protected int clickProductionQuantityIncrease;
     [SerializeField] protected int clickUpgradeCostInWood; // Можно добавить цены в других ресурсах
     [SerializeField] protected int clickUpgradeCostInWoodIncrease;
 
-    // Пассивное производство
+    [Header("Passive Production")]
     [SerializeField] protected bool passiveProductionUpgraded;
     [SerializeField] public bool passiveProductionEnabled = true;
     [SerializeField] protected int passiveProductionTime;
@@ -18,7 +18,7 @@ public abstract class ProductionBuilding : MonoBehaviour
     [SerializeField] protected int passiveUpgradeCostInWood; // Можно добавить цены в других ресурсах
     [SerializeField] protected int passiveUpgradeCostInWoodIncrease;
 
-    public int DoubleUpgradeCostInWood { get { return clickUpgradeCostInWood; } }
+    public int ClickUpgradeCostInWood { get { return clickUpgradeCostInWood; } }
     public int PassiveUpgradeCostInWood { get { return passiveUpgradeCostInWood; } }
 
     protected IEnumerator ProductionCycle()

@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: buildingDescription
       value: Here steel is produced from iron ore
       objectReference: {fileID: 0}
+    - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: buildingInformation
+      value: 
+      objectReference: {fileID: 11400000, guid: 83d31f645a2f0934fadac3b32ee164c4, type: 2}
     m_RemovedComponents:
     - {fileID: -7863437814905891128, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
     m_RemovedGameObjects: []
@@ -150,7 +154,8 @@ MonoBehaviour:
   clickProductionQuantityIncrease: 1
   clickUpgradeCostInWood: 10
   clickUpgradeCostInWoodIncrease: 10
-  passiveProduction: 0
+  passiveProductionUpgraded: 0
+  passiveProductionEnabled: 1
   passiveProductionTime: 2
   passiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1

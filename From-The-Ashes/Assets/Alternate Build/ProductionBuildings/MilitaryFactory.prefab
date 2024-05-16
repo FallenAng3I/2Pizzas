@@ -120,6 +120,10 @@ PrefabInstance:
       propertyPath: buildingDescription
       value: Here ammunition is produced, using lead and steel
       objectReference: {fileID: 0}
+    - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: buildingInformation
+      value: 
+      objectReference: {fileID: 11400000, guid: 5906d2f2525b5dd428cf0396c0b59f9b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -149,7 +153,8 @@ MonoBehaviour:
   clickProductionQuantityIncrease: 1
   clickUpgradeCostInWood: 50
   clickUpgradeCostInWoodIncrease: 50
-  passiveProduction: 0
+  passiveProductionUpgraded: 0
+  passiveProductionEnabled: 1
   passiveProductionTime: 1
   passiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1
