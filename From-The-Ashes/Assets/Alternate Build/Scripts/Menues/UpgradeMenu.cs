@@ -13,8 +13,8 @@ public class UpgradeMenu : MonoBehaviour
     // Кнопки улучшений и поля стоимости улучшений
     [SerializeField] private Button passiveUpgradeButton;
     [SerializeField] private TextMeshProUGUI passiveUpgradeCostText;
-    [SerializeField] private Button doubleUpgradeButton;
-    [SerializeField] private TextMeshProUGUI doubleUpgradeCostText;
+    [SerializeField] private Button clickUpgradeButton;
+    [SerializeField] private TextMeshProUGUI clickUpgradeCostText;
 
     private void Start()
     {
@@ -30,12 +30,12 @@ public class UpgradeMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingInformation.buildingName;
+        buildingNameText.text = building.buildingInformation.BuildingName;
 
-        passiveUpgradeButton.onClick.AddListener(() => { building.productionBuilding.UpgradePassive(); UpdateCostText(); });
-        doubleUpgradeButton.onClick.AddListener(() => { building.productionBuilding.UpgradeClick(); UpdateCostText(); });
+        passiveUpgradeButton.onClick.AddListener(() => { Debug.Log("1"); building.productionBuilding.UpgradePassive(); UpdateCost(); });
+        clickUpgradeButton.onClick.AddListener(() => { Debug.Log("2"); building.productionBuilding.UpgradeClick(); UpdateCost(); });
         
-        UpdateCostText();
+        UpdateCost();
 
         gameObject.SetActive(true);
     }
@@ -49,15 +49,49 @@ public class UpgradeMenu : MonoBehaviour
 
         passiveUpgradeButton.onClick.RemoveAllListeners();
         passiveUpgradeCostText.text = "";
-        doubleUpgradeButton.onClick.RemoveAllListeners();
-        doubleUpgradeCostText.text = "";
+        clickUpgradeButton.onClick.RemoveAllListeners();
+        clickUpgradeCostText.text = "";
 
         gameObject.SetActive(false);
     }
 
-    private void UpdateCostText()
+    private void UpdateCost()
     {
-        passiveUpgradeCostText.text = building.productionBuilding.PassiveUpgradeCostInWood.ToString() + " wood";
-        doubleUpgradeCostText.text = building.productionBuilding.ClickUpgradeCostInWood.ToString() + " wood";
+        int clickCostInWood = building.buildingInformation.ClickUpgradeCostInWood;
+        int clickCostInSteel = building.buildingInformation.ClickUpgradeCostInSteel;
+        int clickCostInFuel = building.buildingInformation.ClickUpgradeCostInFuel;
+        int clickCostInLead = building.buildingInformation.ClickUpgradeCostInLead;
+
+        int passiveCostInWood = building.buildingInformation.PassiveUpgradeCostInWood;
+        int passiveCostInSteel = building.buildingInformation.PassiveUpgradeCostInSteel;
+        int passiveCostInFuel = building.buildingInformation.PassiveUpgradeCostInFuel;
+        int passiveCostInLead = building.buildingInformation.PassiveUpgradeCostInLead;
+
+        UpdateCostText(clickCostInWood, clickCostInSteel, clickCostInFuel, clickCostInLead, clickUpgradeCostText);
+        UpdateCostText(passiveCostInWood, passiveCostInSteel, passiveCostInFuel, passiveCostInLead, passiveUpgradeCostText);
+    }
+
+    public void UpdateCostText(int costInWood, int costInSteel, int costInFuel, int costInLead, TextMeshProUGUI costTextObject)
+    {
+        string costText = "";
+
+        if (costInWood != 0)
+        {
+            costText += $"Wood: {costInWood}\r\n";
+        }
+        if (costInSteel != 0)
+        {
+            costText += $"Steel: {costInSteel}\r\n";
+        }
+        if (costInFuel != 0)
+        {
+            costText += $"Fuel: {costInFuel}\r\n";
+        }
+        if (costInLead != 0)
+        {
+            costText += $"Lead: {costInLead}\r\n";
+        }
+
+        costTextObject.text = costText;
     }
 }

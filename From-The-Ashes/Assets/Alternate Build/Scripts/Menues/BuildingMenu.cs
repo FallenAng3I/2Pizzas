@@ -39,8 +39,8 @@ public class BuildingMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingInformation.buildingDescription;
-        buildingDescriptionText.text = building.buildingInformation.buildingDescription;
+        buildingNameText.text = building.buildingInformation.BuildingName;
+        buildingDescriptionText.text = building.buildingInformation.BuildingDescription;
         UpdateStopButton();
 
         produceButton.onClick.AddListener(building.productionBuilding.InvokeAction);

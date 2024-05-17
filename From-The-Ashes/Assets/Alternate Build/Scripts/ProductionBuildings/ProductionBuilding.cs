@@ -1,40 +1,27 @@
-using System;
 using System.Collections;
 using UnityEngine;
+
 public abstract class ProductionBuilding : MonoBehaviour
 {
-    [Header("Production On Click")]
-    [SerializeField] protected int clickProductionQuantity;
-    [SerializeField] protected int clickProductionQuantityIncrease;
+    protected BuildingInformation buildingInformation;
 
-    [Header("Click Upgrade Cost")]
-    [SerializeField] protected int clickUpgradeCostInWood;
-    [SerializeField] protected int clickUpgradeCostInWoodIncrease;
-    [SerializeField] protected int clickUpgradeCostInSteel;
-    [SerializeField] protected int clickUpgradeCostInSteelIncrease;
-    [SerializeField] protected int clickUpgradeCostInFuel;
-    [SerializeField] protected int clickUpgradeCostInFuelIncrease;
-    [SerializeField] protected int clickUpgradeCostInLead;
-    [SerializeField] protected int clickUpgradeCostInLeadIncrease;
-    // ћожно добавить цены в других ресурсах
+    protected int clickProductionQuantity;
 
-    [Header("Passive Production")]
-    [SerializeField] protected bool passiveProductionUpgraded;
-    [SerializeField] public bool passiveProductionEnabled = true;
-    [SerializeField] protected int passiveProductionTime;
-    [SerializeField] protected int passiveProductionQuantity;
-    [SerializeField] protected int passiveProductionQuantityIncrease;
+    protected int clickUpgradeCostInWood;
+    protected int clickUpgradeCostInSteel;
+    protected int clickUpgradeCostInFuel;
+    protected int clickUpgradeCostInLead;
 
-    [Header("Passive Upgrade Cost")]
-    [SerializeField] protected int passiveUpgradeCostInWood;
-    [SerializeField] protected int passiveUpgradeCostInWoodIncrease;
-    [SerializeField] protected int passiveUpgradeCostInSteel;
-    [SerializeField] protected int passiveUpgradeCostInSteelIncrease;
-    [SerializeField] protected int passiveUpgradeCostInFuel;
-    [SerializeField] protected int passiveUpgradeCostInFuelIncrease;
-    [SerializeField] protected int passiveUpgradeCostInLead;
-    [SerializeField] protected int passiveUpgradeCostInLeadIncrease;
-    // ћожно добавить цены в других ресурсах
+    protected bool passiveProductionUpgraded;
+    public bool passiveProductionEnabled = true;
+
+    protected int passiveProductionTime;
+    protected int passiveProductionQuantity;
+
+    protected int passiveUpgradeCostInWood;
+    protected int passiveUpgradeCostInSteel;
+    protected int passiveUpgradeCostInFuel;
+    protected int passiveUpgradeCostInLead;
 
     public int ClickUpgradeCostInWood { get { return clickUpgradeCostInWood; } }
     public int PassiveUpgradeCostInWood { get { return passiveUpgradeCostInWood; } }
@@ -50,7 +37,30 @@ public abstract class ProductionBuilding : MonoBehaviour
 
     protected void Start()
     {
-        StartCoroutine(ProductionCycle());
+        buildingInformation = GetComponent<Building>().buildingInformation;
+
+        clickProductionQuantity = buildingInformation.BaseClickProductionQuantity;
+
+        clickUpgradeCostInWood = buildingInformation.ClickUpgradeCostInWood;
+        clickUpgradeCostInSteel = buildingInformation.ClickUpgradeCostInSteel;
+        clickUpgradeCostInFuel = buildingInformation.ClickUpgradeCostInFuel;
+        clickUpgradeCostInLead = buildingInformation.ClickUpgradeCostInLead;
+
+        passiveProductionTime = buildingInformation.PassiveProductionTime;
+        passiveProductionQuantity = buildingInformation.PassiveProductionQuantity;
+
+        passiveUpgradeCostInWood = buildingInformation.PassiveUpgradeCostInWood;
+        passiveUpgradeCostInSteel = buildingInformation.PassiveUpgradeCostInSteel;
+        passiveUpgradeCostInFuel = buildingInformation.PassiveUpgradeCostInFuel;
+        passiveUpgradeCostInLead = buildingInformation.PassiveUpgradeCostInLead;
+
+
+    StartCoroutine(ProductionCycle());
+    }
+
+    protected void SetParametres()
+    {
+
     }
 
     protected void ProduceOnClick()
@@ -68,26 +78,42 @@ public abstract class ProductionBuilding : MonoBehaviour
 
     public void UpgradeClick()
     {
-        bool enoughResources = NewResources.WoodNeeded.Invoke(clickUpgradeCostInWood);
+        bool enoughResources = NewResources.WoodNeeded.Invoke(clickUpgradeCostInWood)
+            && NewResources.SteelNeeded.Invoke(clickUpgradeCostInSteel)
+            && NewResources.FuelNeeded.Invoke(clickUpgradeCostInFuel)
+            && NewResources.LeadNeeded.Invoke(clickUpgradeCostInLead);
 
         if (enoughResources)
         {
             NewResources.WoodConsumed.Invoke(clickUpgradeCostInWood);
+            NewResources.SteelConsumed.Invoke(clickUpgradeCostInSteel);
+            NewResources.FuelConsumed.Invoke(clickUpgradeCostInFuel);
+            NewResources.LeadConsumed.Invoke(clickUpgradeCostInLead);
 
-            // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
-            clickProductionQuantity += clickProductionQuantityIncrease;
+            clickProductionQuantity += buildingInformation.ClickProductionQuantityIncrease;// ћожно использовать другую форму апгрейда, например, удваивать количество продукта
 
-            clickUpgradeCostInWood += clickUpgradeCostInWoodIncrease;
+            clickUpgradeCostInWood += buildingInformation.ClickUpgradeCostInWoodIncrease;
+            clickUpgradeCostInSteel += buildingInformation.ClickUpgradeCostInSteel;
+            clickUpgradeCostInFuel += buildingInformation.ClickUpgradeCostInFuel;
+            clickUpgradeCostInLead += buildingInformation.ClickUpgradeCostInLead;
         }
     }
 
     public void UpgradePassive()
     {
-        bool enoughResources = NewResources.WoodNeeded.Invoke(passiveUpgradeCostInWood);
+        bool enoughResources = NewResources.WoodNeeded.Invoke(passiveUpgradeCostInWood)
+            && NewResources.SteelNeeded.Invoke(passiveUpgradeCostInSteel)
+            && NewResources.FuelNeeded.Invoke(passiveUpgradeCostInFuel)
+            && NewResources.LeadNeeded.Invoke(passiveUpgradeCostInLead);
+
+        
 
         if (enoughResources)
         {
             NewResources.WoodConsumed.Invoke(passiveUpgradeCostInWood);
+            NewResources.SteelConsumed.Invoke(passiveUpgradeCostInSteel);
+            NewResources.FuelConsumed.Invoke(passiveUpgradeCostInFuel);
+            NewResources.LeadConsumed.Invoke(passiveUpgradeCostInLead);
 
             if (!passiveProductionUpgraded)
             {
@@ -95,11 +121,13 @@ public abstract class ProductionBuilding : MonoBehaviour
             }
             else
             {
-                // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
-                passiveProductionQuantity += passiveProductionQuantityIncrease;
+                passiveProductionQuantity += buildingInformation.PassiveProductionQuantityIncrease; // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
             }
 
-            passiveUpgradeCostInWood += passiveUpgradeCostInWoodIncrease;
+            passiveUpgradeCostInWood += buildingInformation.PassiveUpgradeCostInWoodIncrease;
+            passiveUpgradeCostInSteel += buildingInformation.PassiveUpgradeCostInSteel;
+            passiveUpgradeCostInFuel += buildingInformation.PassiveUpgradeCostInFuel;
+            passiveUpgradeCostInLead += buildingInformation.PassiveUpgradeCostInLead;
         }
     }
 
