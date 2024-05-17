@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Oil Well
   buildingDescription: Here oil is pumped from the ground
-  CostInWood: 10
-  CostInWoodIncrease: 5
-  CostInSteel: 5
+  BaseCostInWood: 30
+  CostInWoodIncrease: 15
+  CurrentCostInWood: 30
+  BaseCostInSteel: 10
   CostInSteelIncrease: 5
-  CostInFuel: 0
+  CurrentCostInSteel: 10
+  BaseCostInFuel: 0
   CostInFuelIncrease: 0
-  CostInLead: 0
+  CurrentCostInFuel: 0
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

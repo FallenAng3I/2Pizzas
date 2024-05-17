@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Lead Mine
   buildingDescription: Here lead ore is mined
-  CostInWood: 10
-  CostInWoodIncrease: 5
-  CostInSteel: 10
-  CostInSteelIncrease: 5
-  CostInFuel: 0
-  CostInFuelIncrease: 0
-  CostInLead: 0
+  BaseCostInWood: 50
+  CostInWoodIncrease: 25
+  CurrentCostInWood: 50
+  BaseCostInSteel: 30
+  CostInSteelIncrease: 15
+  CurrentCostInSteel: 30
+  BaseCostInFuel: 10
+  CostInFuelIncrease: 5
+  CurrentCostInFuel: 10
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

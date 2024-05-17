@@ -8,7 +8,7 @@ public class ConstructionSlot : MonoBehaviour
     [SerializeField] private GameObject SelectionIndicator;
     public static Action<ConstructionSlot> ConstructionSlotSelected;
 
-    public readonly ProductionBuilding productionBuilding;
+    [HideInInspector] public Building building;
 
     private void Start()
     {

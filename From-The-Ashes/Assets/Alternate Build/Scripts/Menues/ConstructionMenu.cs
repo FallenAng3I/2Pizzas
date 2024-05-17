@@ -41,7 +41,7 @@ public class ConstructionMenu : MonoBehaviour
         militaryFactoryButton.onClick.AddListener(() => ConstructBuilding(militaryFactoryPrefab, militaryFactoryButton));
 
         UpdatePopUpWindow(sawmillButton, sawmillPrefab);
-        UpdatePopUpWindow(ironMineButton, leadMinePrefab);
+        UpdatePopUpWindow(ironMineButton, ironMinePrefab);
         UpdatePopUpWindow(steelFactoryButton, steelFactoryPrefab);
         UpdatePopUpWindow(oilWellButton, oilWellPrefab);
         UpdatePopUpWindow(fuelFactoryButton, fuelFactoryPrefab);
@@ -64,18 +64,30 @@ public class ConstructionMenu : MonoBehaviour
         constructionSlot = null;
     }
     
-    // Проверяем, не занят ли слот строительства, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
+    // Проверяем, не занят ли слот строительства таким же зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
     private void ConstructBuilding(Building buildingPrefab, Button constructionButton)
     {
-        if (constructionSlot.productionBuilding == null)
+        if (constructionSlot.building == null || constructionSlot.building.buildingInformation != buildingPrefab.buildingInformation)
         {
-            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.buildingInformation.CurrentCostInWood);
+            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.buildingInformation.CurrentCostInWood) 
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInSteel)
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInFuel)
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInLead);
 
             if (enoughResources)
             {
                 NewResources.WoodConsumed(buildingPrefab.buildingInformation.CurrentCostInWood);
+                NewResources.SteelConsumed(buildingPrefab.buildingInformation.CurrentCostInSteel);
+                NewResources.FuelConsumed(buildingPrefab.buildingInformation.CurrentCostInFuel);
+                NewResources.LeadConsumed(buildingPrefab.buildingInformation.CurrentCostInLead);
+
+                if (constructionSlot.building != null)
+                {
+                    constructionSlot.building.Demolish();
+                }
 
                 Building building = Instantiate(buildingPrefab, constructionSlot.transform);
+                constructionSlot.building = building;
 
                 buildingPrefab.buildingInformation.IncreaseCost();
                 UpdatePopUpWindow(constructionButton, buildingPrefab);

@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Iron Mine
   buildingDescription: Here iron ore is mined
-  CostInWood: 5
-  CurrentCostInWood: 0
+  BaseCostInWood: 10
   CostInWoodIncrease: 5
-  CostInSteel: 0
-  CurrentCostInSteel: 0
+  CurrentCostInWood: 10
+  BaseCostInSteel: 0
   CostInSteelIncrease: 0
-  CostInFuel: 0
-  CurrentCostInFuel: 0
+  CurrentCostInSteel: 0
+  BaseCostInFuel: 0
   CostInFuelIncrease: 0
-  CostInLead: 0
-  CurrentCostInLead: 0
+  CurrentCostInFuel: 0
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 public class SteelFactory : ProductionBuilding
@@ -7,11 +6,6 @@ public class SteelFactory : ProductionBuilding
     [SerializeField] private int ironForSteel;
 
     public static Action ProduceSteel;
-
-    protected override void Awake()
-    {
-        ProduceSteel += () => Produce(clickProductionQuantity);
-    }
 
     public override void InvokeAction()
     {
@@ -27,5 +21,15 @@ public class SteelFactory : ProductionBuilding
             NewResources.IronOreConsumed.Invoke(ironForSteel * quantity);
             NewResources.SteelProduced.Invoke(quantity);
         }
+    }
+
+    protected override void OnEnable()
+    {
+        ProduceSteel += ProduceOnClick;
+    }
+
+    protected override void OnDisable()
+    {
+        ProduceSteel -= ProduceOnClick;
     }
 }

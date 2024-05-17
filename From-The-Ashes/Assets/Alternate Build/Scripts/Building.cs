@@ -16,4 +16,10 @@ public class Building : MonoBehaviour
 
         buildingButton.onClick.AddListener(() => BuildingButtonClicked(this));
     }
+
+    public void Demolish()
+    {
+        buildingInformation.DecreaseCost();
+        Destroy(gameObject);
+    }
 }

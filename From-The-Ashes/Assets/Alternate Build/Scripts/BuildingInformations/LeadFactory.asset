@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Lead Factory
   buildingDescription: Here lead is produced, using lead ore
-  CostInWood: 10
-  CostInWoodIncrease: 10
-  CostInSteel: 10
-  CostInSteelIncrease: 5
-  CostInFuel: 0
-  CostInFuelIncrease: 0
-  CostInLead: 0
+  BaseCostInWood: 60
+  CostInWoodIncrease: 30
+  CurrentCostInWood: 60
+  BaseCostInSteel: 40
+  CostInSteelIncrease: 20
+  CurrentCostInSteel: 40
+  BaseCostInFuel: 20
+  CostInFuelIncrease: 10
+  CurrentCostInFuel: 20
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

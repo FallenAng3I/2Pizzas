@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -40}
-  m_SizeDelta: {x: 100, y: 50}
+  m_SizeDelta: {x: 100, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4836492821525715126
 CanvasRenderer:
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 8125980056526707144}
   - component: {fileID: 5554652970819426018}
   - component: {fileID: 2477917760967161870}
-  - component: {fileID: 2716321778666029917}
+  - component: {fileID: 2370442066466338614}
   m_Layer: 5
   m_Name: Construction Button
   m_TagString: Untagged
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2716321778666029917
+--- !u!114 &2370442066466338614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400,7 +400,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6025219684749105764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1345e690da056ed4cb9d4a320a3347b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d7ec6cca4f95140ad937ed362ef64e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   windowObject: {fileID: 6640691134720395268}
@@ -437,10 +437,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 176870568678523107}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: -50, y: -100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2594216124781263878
 CanvasRenderer:
@@ -576,7 +576,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 225}
-  m_SizeDelta: {x: 150, y: 200}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5094320962541490518
 CanvasRenderer:

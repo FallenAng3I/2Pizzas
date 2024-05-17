@@ -6,25 +6,27 @@ public class BuildingInformation : ScriptableObject
     [SerializeField] public string buildingName;
     [SerializeField] public string buildingDescription;
 
-    [SerializeField] private int CostInWood;
-    [HideInInspector] public int CurrentCostInWood;
+    [Header("Construction Cost")]
+    [SerializeField] private int BaseCostInWood;
     [SerializeField] private int CostInWoodIncrease;
-    [SerializeField] private int CostInSteel;
-    [HideInInspector] public int CurrentCostInSteel;
+    [HideInInspector] public int CurrentCostInWood;
+    [SerializeField] private int BaseCostInSteel;
     [SerializeField] private int CostInSteelIncrease;
-    [SerializeField] private int CostInFuel;
-    [HideInInspector] public int CurrentCostInFuel;
+    [HideInInspector] public int CurrentCostInSteel;
+    [SerializeField] private int BaseCostInFuel;
     [SerializeField] private int CostInFuelIncrease;
-    [SerializeField] private int CostInLead;
-    [HideInInspector] public int CurrentCostInLead;
+    [HideInInspector] public int CurrentCostInFuel;
+    [SerializeField] private int BaseCostInLead;
     [SerializeField] private int CostInLeadIncrease;
+    [HideInInspector] public int CurrentCostInLead;
+    // ћожно добавить цены в других ресурсах
 
-    private void Awake()
+    public void ResetCurrentCost()
     {
-        CurrentCostInWood = CostInWood;
-        CurrentCostInSteel = CostInSteel;
-        CurrentCostInFuel = CostInFuel;
-        CurrentCostInLead = CostInLead;
+        CurrentCostInWood = BaseCostInWood;
+        CurrentCostInSteel = BaseCostInSteel;
+        CurrentCostInFuel = BaseCostInFuel;
+        CurrentCostInLead = BaseCostInLead;
     }
 
     public void IncreaseCost()
@@ -33,5 +35,13 @@ public class BuildingInformation : ScriptableObject
         CurrentCostInSteel += CostInSteelIncrease;
         CurrentCostInFuel += CostInFuelIncrease;
         CurrentCostInLead += CostInLeadIncrease;
+    }
+
+    public void DecreaseCost()
+    {
+        CurrentCostInWood -= CostInWoodIncrease;
+        CurrentCostInSteel -= CostInSteelIncrease;
+        CurrentCostInFuel -= CostInFuelIncrease;
+        CurrentCostInLead -= CostInLeadIncrease;
     }
 }

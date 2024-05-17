@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Fuel Factory
   buildingDescription: Here oil is turned into fuel for machinery
-  CostInWood: 10
-  CostInWoodIncrease: 10
-  CostInSteel: 10
-  CostInSteelIncrease: 5
-  CostInFuel: 0
+  BaseCostInWood: 40
+  CostInWoodIncrease: 20
+  CurrentCostInWood: 40
+  BaseCostInSteel: 20
+  CostInSteelIncrease: 10
+  CurrentCostInSteel: 20
+  BaseCostInFuel: 0
   CostInFuelIncrease: 0
-  CostInLead: 0
+  CurrentCostInFuel: 0
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

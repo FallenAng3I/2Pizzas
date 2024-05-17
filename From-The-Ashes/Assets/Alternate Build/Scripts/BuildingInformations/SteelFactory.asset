@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Steel Factory
   buildingDescription: Here steel is produced from iron ore
-  CostInWood: 10
-  CostInWoodIncrease: 5
-  CostInSteel: 0
+  BaseCostInWood: 20
+  CostInWoodIncrease: 10
+  CurrentCostInWood: 20
+  BaseCostInSteel: 0
   CostInSteelIncrease: 0
-  CostInFuel: 0
+  CurrentCostInSteel: 0
+  BaseCostInFuel: 0
   CostInFuelIncrease: 0
-  CostInLead: 0
+  CurrentCostInFuel: 0
+  BaseCostInLead: 0
   CostInLeadIncrease: 0
+  CurrentCostInLead: 0

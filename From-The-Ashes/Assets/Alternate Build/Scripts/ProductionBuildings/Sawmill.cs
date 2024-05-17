@@ -1,22 +1,13 @@
 using System;
+using System.Diagnostics;
 
 public class Sawmill : ProductionBuilding
 {
     public static Action ProduceWood;
 
-    protected override void Awake()
-    {
-        ProduceWood += ProduceMediator;
-    }
-
     public override void InvokeAction()
     {
         ProduceWood.Invoke();
-    }
-
-    private void ProduceMediator()
-    {
-        Produce(clickProductionQuantity);
     }
 
     protected override void Produce(int quantity)
@@ -24,8 +15,13 @@ public class Sawmill : ProductionBuilding
         NewResources.WoodProduced.Invoke(quantity);
     }
 
-    private void OnDestroy()
+    protected override void OnEnable()
     {
-        ProduceWood -= ProduceMediator;
+        ProduceWood += ProduceOnClick;
+    }
+
+    protected override void OnDisable()
+    {
+        ProduceWood -= ProduceOnClick;
     }
 }

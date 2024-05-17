@@ -14,11 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Military Factory
   buildingDescription: Here ammunition is produced, while consuming lead and steel
-  CostInWood: 10
-  CostInWoodIncrease: 10
-  CostInSteel: 10
-  CostInSteelIncrease: 10
-  CostInFuel: 0
-  CostInFuelIncrease: 0
-  CostInLead: 0
-  CostInLeadIncrease: 0
+  BaseCostInWood: 1000
+  CostInWoodIncrease: 500
+  CurrentCostInWood: 1000
+  BaseCostInSteel: 1000
+  CostInSteelIncrease: 500
+  CurrentCostInSteel: 1000
+  BaseCostInFuel: 1000
+  CostInFuelIncrease: 500
+  CurrentCostInFuel: 1000
+  BaseCostInLead: 1000
+  CostInLeadIncrease: 500
+  CurrentCostInLead: 1000

@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 public class LeadFactory : ProductionBuilding
@@ -7,11 +6,6 @@ public class LeadFactory : ProductionBuilding
     public static Action ProduceLead;
 
     [SerializeField] private int leadOreForLead;
-
-    protected override void Awake()
-    {
-        ProduceLead += () => Produce(clickProductionQuantity);
-    }
 
     public override void InvokeAction()
     {
@@ -27,5 +21,15 @@ public class LeadFactory : ProductionBuilding
             NewResources.LeadOreConsumed.Invoke(leadOreForLead * quantity);
             NewResources.LeadProduced.Invoke(quantity);
         }
+    }
+
+    protected override void OnEnable()
+    {
+        ProduceLead += ProduceOnClick;
+    }
+
+    protected override void OnDisable()
+    {
+        ProduceLead -= ProduceOnClick;
     }
 }
