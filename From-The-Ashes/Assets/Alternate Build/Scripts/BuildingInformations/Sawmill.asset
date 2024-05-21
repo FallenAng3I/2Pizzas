@@ -14,15 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: Sawmill
   buildingDescription: Here wood Is produced
-  CostInWood: 0
-  CurrentCostInWood: 10
-  CostInWoodIncrease: 5
-  CostInSteel: 0
-  CurrentCostInSteel: 0
-  CostInSteelIncrease: 0
-  CostInFuel: 0
-  CurrentCostInFuel: 0
-  CostInFuelIncrease: 0
-  CostInLead: 0
-  CurrentCostInLead: 0
-  CostInLeadIncrease: 0
+  baseConstructionCostInWood: 0
+  constructionCostInWoodIncrease: 10
+  baseConstructionCostInSteel: 0
+  constructionCostInSteelIncrease: 0
+  baseConstructionCostInFuel: 0
+  constructionCostInFuelIncrease: 0
+  baseConstructionCostInLead: 0
+  constructionCostInLeadIncrease: 0
+  baseClickProductionQuantity: 1
+  clickProductionQuantityIncrease: 1
+  baseClickUpgradeCostInWood: 5
+  clickUpgradeCostInWoodIncrease: 5
+  baseClickUpgradeCostInSteel: 0
+  clickUpgradeCostInSteelIncrease: 0
+  baseClickUpgradeCostInFuel: 0
+  clickUpgradeCostInFuelIncrease: 0
+  baseClickUpgradeCostInLead: 0
+  clickUpgradeCostInLeadIncrease: 0
+  passiveProductionTime: 1
+  basePassiveProductionQuantity: 1
+  passiveProductionQuantityIncrease: 1
+  basePassiveUpgradeCostInWood: 5
+  passiveUpgradeCostInWoodIncrease: 5
+  basePassiveUpgradeCostInSteel: 0
+  passiveUpgradeCostInSteelIncrease: 0
+  basePassiveUpgradeCostInFuel: 0
+  passiveUpgradeCostInFuelIncrease: 0
+  basePassiveUpgradeCostInLead: 0
+  passiveUpgradeCostInLeadIncrease: 0

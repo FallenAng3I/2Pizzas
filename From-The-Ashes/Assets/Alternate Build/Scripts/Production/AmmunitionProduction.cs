@@ -1,17 +1,9 @@
-using System;
 using UnityEngine;
 
 public class AmmunitionProduction : Production
 {
     [SerializeField] private int leadForAmmunition;
     [SerializeField] private int steelForAmmunition;
-
-    public static Action ProduceAmmunition;
-
-    public override void InvokeAction()
-    {
-        ProduceAmmunition();
-    }
 
     protected override void Produce(int quantity)
     {
@@ -23,15 +15,5 @@ public class AmmunitionProduction : Production
             NewResources.SteelConsumed.Invoke(steelForAmmunition * quantity);
             NewResources.AmmunitionProduced.Invoke(quantity);
         }
-    }
-
-    protected override void OnEnable()
-    {
-        ProduceAmmunition += ProduceOnClick;
-    }
-
-    protected override void OnDisable()
-    {
-        ProduceAmmunition -= ProduceOnClick;
     }
 }

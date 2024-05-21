@@ -9,82 +9,152 @@ public class BuildingInformation : ScriptableObject
     public string BuildingDescription { get => buildingDescription; }
 
     [Header("Construction Cost")]
-    [SerializeField] private int BaseCostInWood;
-    [SerializeField] private int CostInWoodIncrease;
-    [SerializeField] private int BaseCostInSteel;
-    [SerializeField] private int CostInSteelIncrease;
-    [SerializeField] private int BaseCostInFuel;
-    [SerializeField] private int CostInFuelIncrease;
-    [SerializeField] private int BaseCostInLead;
-    [SerializeField] private int CostInLeadIncrease;
+    [SerializeField] private int baseConstructionCostInWood;
+    [SerializeField] private int constructionCostInWoodIncrease;
+    private int currentConstructionCostInWood;
+    [SerializeField] private int baseConstructionCostInSteel;
+    [SerializeField] private int constructionCostInSteelIncrease;
+    private int currentConstructionCostInSteel;
+    [SerializeField] private int baseConstructionCostInFuel;
+    [SerializeField] private int constructionCostInFuelIncrease;
+    private int currentConstructionCostInFuel;
+    [SerializeField] private int baseConstructionCostInLead;
+    [SerializeField] private int constructionCostInLeadIncrease;
+    private int currentConstructionCostInLead;
     // ћожно добавить цены в других ресурсах
 
-    [HideInInspector] public int CurrentCostInWood;
-    [HideInInspector] public int CurrentCostInSteel;
-    [HideInInspector] public int CurrentCostInFuel;
-    [HideInInspector] public int CurrentCostInLead;
+    public int CurrentConstructionCostInWood { get => currentConstructionCostInWood; }
+    public int CurrentConstructionCostInSteel { get => currentConstructionCostInSteel; }
+    public int CurrentConstructionCostInFuel { get => currentConstructionCostInFuel; }
+    public int CurrentConstructionCostInLead { get => currentConstructionCostInLead; }
+
+    [Header("Click Production")]
+    [SerializeField] private int baseClickProductionQuantity;
+    [SerializeField] private int clickProductionQuantityIncrease;
+    private int currentClickProductionQuantity;
+
+    public int CurrentClickProductionQuantity { get => currentClickProductionQuantity; }
 
     [Header("Click Upgrade Cost")]
-    [SerializeField] private int clickUpgradeCostInWood;
+    [SerializeField] private int baseClickUpgradeCostInWood;
     [SerializeField] private int clickUpgradeCostInWoodIncrease;
-    [SerializeField] private int clickUpgradeCostInSteel;
+    private int currentClickUpgradeCostInWood;
+    [SerializeField] private int baseClickUpgradeCostInSteel;
     [SerializeField] private int clickUpgradeCostInSteelIncrease;
-    [SerializeField] private int clickUpgradeCostInFuel;
+    private int currentClickUpgradeCostInSteel;
+    [SerializeField] private int baseClickUpgradeCostInFuel;
     [SerializeField] private int clickUpgradeCostInFuelIncrease;
-    [SerializeField] private int clickUpgradeCostInLead;
+    private int currentClickUpgradeCostInFuel;
+    [SerializeField] private int baseClickUpgradeCostInLead;
     [SerializeField] private int clickUpgradeCostInLeadIncrease;
+    private int currentClickUpgradeCostInLead;
     // ћожно добавить цены в других ресурсах
 
-    public int ClickUpgradeCostInWood { get => clickUpgradeCostInWood; }
-    public int ClickUpgradeCostInWoodIncrease { get => clickUpgradeCostInWoodIncrease; }
-    public int ClickUpgradeCostInSteel { get => clickUpgradeCostInSteel; }
-    public int ClickUpgradeCostInSteelIncrease { get => clickUpgradeCostInSteelIncrease; }
-    public int ClickUpgradeCostInFuel { get => clickUpgradeCostInFuel; }
-    public int ClickUpgradeCostInFuelIncrease { get => clickUpgradeCostInFuelIncrease; }
-    public int ClickUpgradeCostInLead { get => clickUpgradeCostInLead; }
-    public int ClickUpgradeCostInLeadIncrease { get => clickUpgradeCostInLeadIncrease; }
+    public int CurrentClickUpgradeCostInWood { get => currentClickUpgradeCostInWood; }
+    public int CurrentClickUpgradeCostInSteel { get => currentClickUpgradeCostInSteel; }
+    public int CurrentClickUpgradeCostInFuel { get => currentClickUpgradeCostInFuel; }
+    public int CurrentClickUpgradeCostInLead { get => currentClickUpgradeCostInLead; }
+    
+    [Header("Passive Production")]
+    [SerializeField] private int passiveProductionTime;
+    [SerializeField] private int basePassiveProductionQuantity;
+    [SerializeField] private int passiveProductionQuantityIncrease;
+    private int currentPassiveProductionQuantity;
+    private bool passiveProductionUpgraded;
+
+    public bool PassiveProductionUpgraded { get => passiveProductionUpgraded; }
+    public int PassiveProductionTime { get => passiveProductionTime; }
+    public int CurrentPassiveProductionQuantity { get => currentPassiveProductionQuantity; }
 
     [Header("Passive Upgrade Cost")]
-    [SerializeField] private int passiveUpgradeCostInWood;
+    [SerializeField] private int basePassiveUpgradeCostInWood;
     [SerializeField] private int passiveUpgradeCostInWoodIncrease;
-    [SerializeField] private int passiveUpgradeCostInSteel;
+    private int currentPassiveUpgradeCostInWood;
+    [SerializeField] private int basePassiveUpgradeCostInSteel;
     [SerializeField] private int passiveUpgradeCostInSteelIncrease;
-    [SerializeField] private int passiveUpgradeCostInFuel;
+    private int currentPassiveUpgradeCostInSteel;
+    [SerializeField] private int basePassiveUpgradeCostInFuel;
     [SerializeField] private int passiveUpgradeCostInFuelIncrease;
-    [SerializeField] private int passiveUpgradeCostInLead;
+    private int currentPassiveUpgradeCostInFuel;
+    [SerializeField] private int basePassiveUpgradeCostInLead;
     [SerializeField] private int passiveUpgradeCostInLeadIncrease;
+    private int currentPassiveUpgradeCostInLead;
     // ћожно добавить цены в других ресурсах
 
-    public int PassiveUpgradeCostInWood { get => passiveUpgradeCostInWood; }
-    public int PassiveUpgradeCostInWoodIncrease { get => passiveUpgradeCostInWoodIncrease; }
-    public int PassiveUpgradeCostInSteel { get => passiveUpgradeCostInSteel; }
-    public int PassiveUpgradeCostInSteelIncrease { get => passiveUpgradeCostInSteelIncrease; }
-    public int PassiveUpgradeCostInFuel { get => passiveUpgradeCostInFuel; }
-    public int PassiveUpgradeCostInFuelIncrease { get => passiveUpgradeCostInFuelIncrease; }
-    public int PassiveUpgradeCostInLead { get => passiveUpgradeCostInLead; }
-    public int PassiveUpgradeCostInLeadIncrease { get => passiveUpgradeCostInLeadIncrease; }
+    public int CurrentPassiveUpgradeCostInWood { get => currentPassiveUpgradeCostInWood; }
+    public int CurrentPassiveUpgradeCostInSteel { get => currentPassiveUpgradeCostInSteel; }
+    public int CurrentPassiveUpgradeCostInFuel { get => currentPassiveUpgradeCostInFuel; }
+    public int CurrentPassiveUpgradeCostInLead { get => currentPassiveUpgradeCostInLead; }
 
-    public void ResetCurrentCost()
+    public void ResetCurrentValues()
     {
-        CurrentCostInWood = BaseCostInWood;
-        CurrentCostInSteel = BaseCostInSteel;
-        CurrentCostInFuel = BaseCostInFuel;
-        CurrentCostInLead = BaseCostInLead;
+        currentConstructionCostInWood = baseConstructionCostInWood;
+        currentConstructionCostInSteel = baseConstructionCostInSteel;
+        currentConstructionCostInFuel = baseConstructionCostInFuel;
+        currentConstructionCostInLead = baseConstructionCostInLead;
+
+        currentClickProductionQuantity = baseClickProductionQuantity;
+
+        currentClickUpgradeCostInWood = baseClickUpgradeCostInWood;
+        currentClickUpgradeCostInSteel = baseClickUpgradeCostInSteel;
+        currentClickUpgradeCostInFuel = baseClickUpgradeCostInFuel;
+        currentClickUpgradeCostInLead = baseClickUpgradeCostInLead;
+
+        passiveProductionUpgraded = false;
+        currentPassiveProductionQuantity = basePassiveProductionQuantity;
+
+        currentPassiveUpgradeCostInWood = basePassiveUpgradeCostInWood;
+        currentPassiveUpgradeCostInSteel = basePassiveUpgradeCostInSteel;
+        currentPassiveUpgradeCostInFuel = basePassiveUpgradeCostInFuel;
+        currentPassiveUpgradeCostInLead = basePassiveUpgradeCostInLead;
     }
 
-    public void IncreaseCurrentCost()
+    public void IncreaseCurrentConstructionCost()
     {
-        CurrentCostInWood += CostInWoodIncrease;
-        CurrentCostInSteel += CostInSteelIncrease;
-        CurrentCostInFuel += CostInFuelIncrease;
-        CurrentCostInLead += CostInLeadIncrease;
+        currentConstructionCostInWood += constructionCostInWoodIncrease;
+        currentConstructionCostInSteel += constructionCostInSteelIncrease;
+        currentConstructionCostInFuel += constructionCostInFuelIncrease;
+        currentConstructionCostInLead += constructionCostInLeadIncrease;
     }
 
-    public void DecreaseCurrentCost()
+    public void DecreaseCurrentConstructionCost()
     {
-        CurrentCostInWood -= CostInWoodIncrease;
-        CurrentCostInSteel -= CostInSteelIncrease;
-        CurrentCostInFuel -= CostInFuelIncrease;
-        CurrentCostInLead -= CostInLeadIncrease;
+        currentConstructionCostInWood -= constructionCostInWoodIncrease;
+        currentConstructionCostInSteel -= constructionCostInSteelIncrease;
+        currentConstructionCostInFuel -= constructionCostInFuelIncrease;
+        currentConstructionCostInLead -= constructionCostInLeadIncrease;
+    }
+
+    public void UpgradeClickProduction()
+    {
+        currentClickProductionQuantity += clickProductionQuantityIncrease;
+    }
+
+    public void IncreaseCurrentClickUpgradeCost()
+    {
+        currentClickUpgradeCostInWood += clickUpgradeCostInWoodIncrease;
+        currentClickUpgradeCostInSteel += clickUpgradeCostInSteelIncrease;
+        currentClickUpgradeCostInFuel += clickUpgradeCostInFuelIncrease;
+        currentClickUpgradeCostInLead += clickUpgradeCostInLeadIncrease;
+    }
+
+    public void UpgradePassiveProduction()
+    {
+        if (!passiveProductionUpgraded)
+        {
+            passiveProductionUpgraded = true;
+        }
+        else
+        {
+            currentPassiveProductionQuantity += passiveProductionQuantityIncrease; // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
+        }
+    }
+
+    public void IncreaseCurrentPassiveUpgradeCost()
+    {
+        currentPassiveUpgradeCostInWood += passiveUpgradeCostInWoodIncrease;
+        currentPassiveUpgradeCostInSteel += passiveUpgradeCostInSteelIncrease;
+        currentPassiveUpgradeCostInFuel += passiveUpgradeCostInFuelIncrease;
+        currentPassiveUpgradeCostInLead += passiveUpgradeCostInLeadIncrease;
     }
 }

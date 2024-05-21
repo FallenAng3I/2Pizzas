@@ -1,16 +1,8 @@
-using System;
 using UnityEngine;
 
 public class LeadProduction : Production
 {
-    public static Action ProduceLead;
-
     [SerializeField] private int leadOreForLead;
-
-    public override void InvokeAction()
-    {
-        ProduceLead.Invoke();
-    }
 
     protected override void Produce(int quantity)
     {
@@ -21,15 +13,5 @@ public class LeadProduction : Production
             NewResources.LeadOreConsumed.Invoke(leadOreForLead * quantity);
             NewResources.LeadProduced.Invoke(quantity);
         }
-    }
-
-    protected override void OnEnable()
-    {
-        ProduceLead += ProduceOnClick;
-    }
-
-    protected override void OnDisable()
-    {
-        ProduceLead -= ProduceOnClick;
     }
 }

@@ -57,15 +57,15 @@ public class UpgradeMenu : MonoBehaviour
 
     private void UpdateCost()
     {
-        int clickCostInWood = building.ClickUpgradeCostInWood;
-        int clickCostInSteel = building.ClickUpgradeCostInSteel;
-        int clickCostInFuel = building.ClickUpgradeCostInFuel;
-        int clickCostInLead = building.ClickUpgradeCostInLead;
+        int clickCostInWood = building.buildingInformation.CurrentClickUpgradeCostInWood;
+        int clickCostInSteel = building.buildingInformation.CurrentClickUpgradeCostInSteel;
+        int clickCostInFuel = building.buildingInformation.CurrentClickUpgradeCostInFuel;
+        int clickCostInLead = building.buildingInformation.CurrentClickUpgradeCostInLead;
 
-        int passiveCostInWood = building.PassiveUpgradeCostInWood;
-        int passiveCostInSteel = building.PassiveUpgradeCostInSteel;
-        int passiveCostInFuel = building.PassiveUpgradeCostInFuel;
-        int passiveCostInLead = building.PassiveUpgradeCostInLead;
+        int passiveCostInWood = building.buildingInformation.CurrentPassiveUpgradeCostInWood;
+        int passiveCostInSteel = building.buildingInformation.CurrentPassiveUpgradeCostInSteel;
+        int passiveCostInFuel = building.buildingInformation.CurrentPassiveUpgradeCostInFuel;
+        int passiveCostInLead = building.buildingInformation.CurrentPassiveUpgradeCostInLead;
 
         UpdateCostText(clickCostInWood, clickCostInSteel, clickCostInFuel, clickCostInLead, clickUpgradeCostText);
         UpdateCostText(passiveCostInWood, passiveCostInSteel, passiveCostInFuel, passiveCostInLead, passiveUpgradeCostText);

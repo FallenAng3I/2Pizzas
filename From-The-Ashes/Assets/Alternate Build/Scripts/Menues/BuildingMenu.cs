@@ -43,7 +43,7 @@ public class BuildingMenu : MonoBehaviour
         buildingDescriptionText.text = building.buildingInformation.BuildingDescription;
         UpdateStopButton();
 
-        produceButton.onClick.AddListener(building.production.InvokeAction);
+        produceButton.onClick.AddListener(building.production.ClickProduction);
         upgradeButton.onClick.AddListener(() => upgradeMenu.OpenMenu(building));
         stopButton.onClick.AddListener(TogglePassiveProduction);
         replaceButton.onClick.AddListener(() => constructionMenu.OpenMenu(building.GetComponentInParent<ConstructionSlot>()));

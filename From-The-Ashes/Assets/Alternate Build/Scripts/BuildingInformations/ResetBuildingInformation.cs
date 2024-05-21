@@ -9,7 +9,7 @@ public class ResetBuildingInformation : MonoBehaviour
     {
         foreach (var building in buildingInformations)
         {
-            building.ResetCurrentCost();
+            building.ResetCurrentValues();
         }
     }
 }

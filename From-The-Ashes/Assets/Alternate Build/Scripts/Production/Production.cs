@@ -3,61 +3,32 @@ using UnityEngine;
 
 public abstract class Production : MonoBehaviour
 {
-    [Header("Click Production")]
-    [SerializeField] protected int clickProductionQuantity;
-    [SerializeField] protected int clickProductionQuantityIncrease;
+    protected Building building;
 
-    protected bool passiveProductionUpgraded;
     [HideInInspector] public bool passiveProductionEnabled = true;
-
-    [Header("Passive Production")]
-    [SerializeField] protected int passiveProductionTime;
-    [SerializeField] protected int passiveProductionQuantity;
-    [SerializeField] protected int passiveProductionQuantityIncrease;
-
-    protected IEnumerator ProductionCycle()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(passiveProductionTime);
-            if (passiveProductionUpgraded && passiveProductionEnabled) Produce(passiveProductionQuantity);
-        }
-    }
 
     protected void Start()
     {
-        StartCoroutine(ProductionCycle());
+        building = GetComponent<Building>();
+
+        StartCoroutine(PassiveProduction());
     }
 
-    protected void ProduceOnClick()
+    public void ClickProduction()
     {
-        Produce(clickProductionQuantity);
+        Produce(building.buildingInformation.CurrentClickProductionQuantity);
     }
 
-    public abstract void InvokeAction();
+    protected IEnumerator PassiveProduction()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(building.buildingInformation.PassiveProductionTime);
+            if (building.buildingInformation.PassiveProductionUpgraded && passiveProductionEnabled) Produce(building.buildingInformation.CurrentPassiveProductionQuantity);
+        }
+    }
 
     protected abstract void Produce(int quantity);
-
-    protected abstract void OnEnable();
-
-    protected abstract void OnDisable();
-
-    public void UpgradeClick()
-    {
-        clickProductionQuantity += clickProductionQuantityIncrease;// ћожно использовать другую форму апгрейда, например, удваивать количество продукта
-    }
-
-    public void UpgradePassive()
-    {
-        if (!passiveProductionUpgraded)
-        {
-            passiveProductionUpgraded = true;
-        }
-        else
-        {
-            passiveProductionQuantity += passiveProductionQuantityIncrease; // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
-        }
-    }
 
     public void TogglePassiveProduction()
     {

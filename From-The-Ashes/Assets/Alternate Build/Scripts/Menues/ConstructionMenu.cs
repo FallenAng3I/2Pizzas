@@ -69,17 +69,17 @@ public class ConstructionMenu : MonoBehaviour
     {
         if (constructionSlot.building == null || constructionSlot.building.buildingInformation != buildingPrefab.buildingInformation)
         {
-            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.buildingInformation.CurrentCostInWood) 
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInSteel)
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInFuel)
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentCostInLead);
+            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInWood) 
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInSteel)
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInFuel)
+                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInLead);
 
             if (enoughResources)
             {
-                NewResources.WoodConsumed(buildingPrefab.buildingInformation.CurrentCostInWood);
-                NewResources.SteelConsumed(buildingPrefab.buildingInformation.CurrentCostInSteel);
-                NewResources.FuelConsumed(buildingPrefab.buildingInformation.CurrentCostInFuel);
-                NewResources.LeadConsumed(buildingPrefab.buildingInformation.CurrentCostInLead);
+                NewResources.WoodConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInWood);
+                NewResources.SteelConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInSteel);
+                NewResources.FuelConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInFuel);
+                NewResources.LeadConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInLead);
 
                 if (constructionSlot.building != null)
                 {
@@ -89,7 +89,7 @@ public class ConstructionMenu : MonoBehaviour
                 Building building = Instantiate(buildingPrefab, constructionSlot.transform);
                 constructionSlot.building = building;
 
-                buildingPrefab.buildingInformation.IncreaseCurrentCost();
+                buildingPrefab.buildingInformation.IncreaseCurrentConstructionCost();
                 UpdatePopUpWindow(constructionButton, buildingPrefab);
 
                 CloseMenu();
@@ -99,10 +99,10 @@ public class ConstructionMenu : MonoBehaviour
 
     private void UpdatePopUpWindow(Button constructionButton, Building building)
     {
-        int costInWood = building.buildingInformation.CurrentCostInWood;
-        int costInSteel = building.buildingInformation.CurrentCostInSteel;
-        int costInFuel = building.buildingInformation.CurrentCostInFuel;
-        int costInLead = building.buildingInformation.CurrentCostInLead;
+        int costInWood = building.buildingInformation.CurrentConstructionCostInWood;
+        int costInSteel = building.buildingInformation.CurrentConstructionCostInSteel;
+        int costInFuel = building.buildingInformation.CurrentConstructionCostInFuel;
+        int costInLead = building.buildingInformation.CurrentConstructionCostInLead;
 
         constructionButton.gameObject.GetComponent<PopUpWindow>().UpdateCostText(costInWood, costInSteel, costInFuel, costInLead);
     }
