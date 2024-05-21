@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class SteelFactory : ProductionBuilding
+public class SteelProduction : Production
 {
     [SerializeField] private int ironForSteel;
 

@@ -1,6 +1,6 @@
 using System;
 
-public class LeadMine : ProductionBuilding
+public class LeadOreProduction : Production
 {
     public static Action ProduceLeadOre;
 

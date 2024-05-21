@@ -43,7 +43,7 @@ public class BuildingMenu : MonoBehaviour
         buildingDescriptionText.text = building.buildingInformation.BuildingDescription;
         UpdateStopButton();
 
-        produceButton.onClick.AddListener(building.productionBuilding.InvokeAction);
+        produceButton.onClick.AddListener(building.production.InvokeAction);
         upgradeButton.onClick.AddListener(() => upgradeMenu.OpenMenu(building));
         stopButton.onClick.AddListener(TogglePassiveProduction);
         replaceButton.onClick.AddListener(() => constructionMenu.OpenMenu(building.GetComponentInParent<ConstructionSlot>()));
@@ -74,14 +74,14 @@ public class BuildingMenu : MonoBehaviour
     // При нажатии на кнопку остановки переключаем пассиноые производство и обновляем кнопку остановки
     private void TogglePassiveProduction()
     {
-        building.productionBuilding.TogglePassiveProduction();
+        building.production.TogglePassiveProduction();
         UpdateStopButton();
     }
 
     // Текст кнопки остановки изменяется в зависимости от того, остановлено здание или нет
     private void UpdateStopButton()
     {
-        if (building.productionBuilding.passiveProductionEnabled)
+        if (building.production.passiveProductionEnabled)
         {
             stopButton.GetComponentInChildren<TextMeshProUGUI>().text = "Stop";
         }

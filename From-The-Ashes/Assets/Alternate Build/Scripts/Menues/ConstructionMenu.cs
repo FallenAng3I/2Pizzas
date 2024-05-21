@@ -89,7 +89,7 @@ public class ConstructionMenu : MonoBehaviour
                 Building building = Instantiate(buildingPrefab, constructionSlot.transform);
                 constructionSlot.building = building;
 
-                buildingPrefab.buildingInformation.IncreaseCost();
+                buildingPrefab.buildingInformation.IncreaseCurrentCost();
                 UpdatePopUpWindow(constructionButton, buildingPrefab);
 
                 CloseMenu();

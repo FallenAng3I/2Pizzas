@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class FuelFactory : ProductionBuilding
+public class FuelProduction : Production
 {
     public static Action ProduceFuel;
 

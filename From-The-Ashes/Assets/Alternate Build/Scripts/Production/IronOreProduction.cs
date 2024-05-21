@@ -1,6 +1,6 @@
 using System;
 
-public class IronMine : ProductionBuilding
+public class IronOreProduction : Production
 {
     public static Action ProduceIronOre;
 

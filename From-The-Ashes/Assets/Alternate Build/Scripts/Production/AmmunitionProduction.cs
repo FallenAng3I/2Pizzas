@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class MilitaryFactory : ProductionBuilding
+public class AmmunitionProduction : Production
 {
     [SerializeField] private int leadForAmmunition;
     [SerializeField] private int steelForAmmunition;

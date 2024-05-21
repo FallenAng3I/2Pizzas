@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class LeadFactory : ProductionBuilding
+public class LeadProduction : Production
 {
     public static Action ProduceLead;
 

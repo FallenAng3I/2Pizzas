@@ -24,13 +24,6 @@ public class BuildingInformation : ScriptableObject
     [HideInInspector] public int CurrentCostInFuel;
     [HideInInspector] public int CurrentCostInLead;
 
-    [Header("Production On Click")]
-    [SerializeField] private int baseClickProductionQuantity;
-    [SerializeField] private int clickProductionQuantityIncrease;
-
-    public int BaseClickProductionQuantity { get => baseClickProductionQuantity; }
-    public int ClickProductionQuantityIncrease { get => clickProductionQuantityIncrease; }
-
     [Header("Click Upgrade Cost")]
     [SerializeField] private int clickUpgradeCostInWood;
     [SerializeField] private int clickUpgradeCostInWoodIncrease;
@@ -50,15 +43,6 @@ public class BuildingInformation : ScriptableObject
     public int ClickUpgradeCostInFuelIncrease { get => clickUpgradeCostInFuelIncrease; }
     public int ClickUpgradeCostInLead { get => clickUpgradeCostInLead; }
     public int ClickUpgradeCostInLeadIncrease { get => clickUpgradeCostInLeadIncrease; }
-
-    [Header("Passive Production")]
-    [SerializeField] private int passiveProductionTime;
-    [SerializeField] private int passiveProductionQuantity;
-    [SerializeField] private int passiveProductionQuantityIncrease;
-
-    public int PassiveProductionTime { get => passiveProductionTime; }
-    public int PassiveProductionQuantity { get => passiveProductionQuantity; }
-    public int PassiveProductionQuantityIncrease { get => passiveProductionQuantityIncrease; }
 
     [Header("Passive Upgrade Cost")]
     [SerializeField] private int passiveUpgradeCostInWood;
@@ -88,7 +72,7 @@ public class BuildingInformation : ScriptableObject
         CurrentCostInLead = BaseCostInLead;
     }
 
-    public void IncreaseCost()
+    public void IncreaseCurrentCost()
     {
         CurrentCostInWood += CostInWoodIncrease;
         CurrentCostInSteel += CostInSteelIncrease;
@@ -96,7 +80,7 @@ public class BuildingInformation : ScriptableObject
         CurrentCostInLead += CostInLeadIncrease;
     }
 
-    public void DecreaseCost()
+    public void DecreaseCurrentCost()
     {
         CurrentCostInWood -= CostInWoodIncrease;
         CurrentCostInSteel -= CostInSteelIncrease;

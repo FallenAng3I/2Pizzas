@@ -32,8 +32,8 @@ public class UpgradeMenu : MonoBehaviour
 
         buildingNameText.text = building.buildingInformation.BuildingName;
 
-        passiveUpgradeButton.onClick.AddListener(() => { Debug.Log("1"); building.productionBuilding.UpgradePassive(); UpdateCost(); });
-        clickUpgradeButton.onClick.AddListener(() => { Debug.Log("2"); building.productionBuilding.UpgradeClick(); UpdateCost(); });
+        passiveUpgradeButton.onClick.AddListener(() => { building.UpgradePassive(); UpdateCost(); });
+        clickUpgradeButton.onClick.AddListener(() => { building.UpgradeClick(); UpdateCost(); });
         
         UpdateCost();
 
@@ -57,15 +57,15 @@ public class UpgradeMenu : MonoBehaviour
 
     private void UpdateCost()
     {
-        int clickCostInWood = building.buildingInformation.ClickUpgradeCostInWood;
-        int clickCostInSteel = building.buildingInformation.ClickUpgradeCostInSteel;
-        int clickCostInFuel = building.buildingInformation.ClickUpgradeCostInFuel;
-        int clickCostInLead = building.buildingInformation.ClickUpgradeCostInLead;
+        int clickCostInWood = building.ClickUpgradeCostInWood;
+        int clickCostInSteel = building.ClickUpgradeCostInSteel;
+        int clickCostInFuel = building.ClickUpgradeCostInFuel;
+        int clickCostInLead = building.ClickUpgradeCostInLead;
 
-        int passiveCostInWood = building.buildingInformation.PassiveUpgradeCostInWood;
-        int passiveCostInSteel = building.buildingInformation.PassiveUpgradeCostInSteel;
-        int passiveCostInFuel = building.buildingInformation.PassiveUpgradeCostInFuel;
-        int passiveCostInLead = building.buildingInformation.PassiveUpgradeCostInLead;
+        int passiveCostInWood = building.PassiveUpgradeCostInWood;
+        int passiveCostInSteel = building.PassiveUpgradeCostInSteel;
+        int passiveCostInFuel = building.PassiveUpgradeCostInFuel;
+        int passiveCostInLead = building.PassiveUpgradeCostInLead;
 
         UpdateCostText(clickCostInWood, clickCostInSteel, clickCostInFuel, clickCostInLead, clickUpgradeCostText);
         UpdateCostText(passiveCostInWood, passiveCostInSteel, passiveCostInFuel, passiveCostInLead, passiveUpgradeCostText);

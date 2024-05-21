@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using UnityEngine;
 
-public class OilWell : ProductionBuilding
+public class OilProduction : Production
 {
     public static Action ProduceOil;
 

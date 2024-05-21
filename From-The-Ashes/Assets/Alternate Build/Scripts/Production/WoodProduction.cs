@@ -1,7 +1,5 @@
 using System;
-using System.Diagnostics;
-
-public class Sawmill : ProductionBuilding
+public class WoodProduction : Production
 {
     public static Action ProduceWood;
 
