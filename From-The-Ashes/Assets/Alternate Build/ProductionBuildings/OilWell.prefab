@@ -109,6 +109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: production
+      value: 
+      objectReference: {fileID: 2614288250697394546}
+    - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: buildingName
       value: Oil Well
       objectReference: {fileID: 0}
@@ -151,12 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
-  clickUpgradeCostInWood: 15
-  clickUpgradeCostInWoodIncrease: 15
-  passiveProductionUpgraded: 0
   passiveProductionEnabled: 1
   passiveProductionTime: 1
   passiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1
-  passiveUpgradeCostInWood: 30
-  passiveUpgradeCostInWoodIncrease: 30

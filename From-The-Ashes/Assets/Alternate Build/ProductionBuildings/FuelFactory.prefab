@@ -109,6 +109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: production
+      value: 
+      objectReference: {fileID: 5373994778167810110}
+    - target: {fileID: 8955982855484111333, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: buildingName
       value: Fuel Factory
       objectReference: {fileID: 0}
@@ -151,13 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
-  clickUpgradeCostInWood: 20
-  clickUpgradeCostInWoodIncrease: 20
-  passiveProductionUpgraded: 0
   passiveProductionEnabled: 1
   passiveProductionTime: 3
   passiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1
-  passiveUpgradeCostInWood: 40
-  passiveUpgradeCostInWoodIncrease: 40
   oilForFuel: 3
