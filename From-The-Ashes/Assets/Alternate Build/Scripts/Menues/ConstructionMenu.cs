@@ -29,7 +29,9 @@ public class ConstructionMenu : MonoBehaviour
 
     private void Start()
     {
-        ConstructionSlot.ConstructionSlotSelected += OpenMenu;
+        ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
+        BuildingMenu.OnReplaceButtonClicked += OpenMenu;
+        BuildingMenu.OnBuildingMenuOpened += CloseMenu;
 
         sawmillButton.onClick.AddListener(() => ConstructBuilding(sawmillPrefab, sawmillButton));
         ironMineButton.onClick.AddListener(() => ConstructBuilding(ironMinePrefab, ironMineButton));
@@ -40,14 +42,7 @@ public class ConstructionMenu : MonoBehaviour
         leadFactoryButton.onClick.AddListener(() => ConstructBuilding(leadFactoryPrefab, leadFactoryButton));
         militaryFactoryButton.onClick.AddListener(() => ConstructBuilding(militaryFactoryPrefab, militaryFactoryButton));
 
-        UpdatePopUpWindow(sawmillButton, sawmillPrefab);
-        UpdatePopUpWindow(ironMineButton, ironMinePrefab);
-        UpdatePopUpWindow(steelFactoryButton, steelFactoryPrefab);
-        UpdatePopUpWindow(oilWellButton, oilWellPrefab);
-        UpdatePopUpWindow(fuelFactoryButton, fuelFactoryPrefab);
-        UpdatePopUpWindow(leadMineButton, leadMinePrefab);
-        UpdatePopUpWindow(leadFactoryButton, leadFactoryPrefab);
-        UpdatePopUpWindow(militaryFactoryButton, militaryFactoryPrefab);
+        SetConstructionButtonBuilingInformation();
 
         CloseMenu();
     }
@@ -67,19 +62,19 @@ public class ConstructionMenu : MonoBehaviour
     // Проверяем, не занят ли слот строительства таким же зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
     private void ConstructBuilding(Building buildingPrefab, Button constructionButton)
     {
-        if (constructionSlot.building == null || constructionSlot.building.buildingInformation != buildingPrefab.buildingInformation)
+        if (constructionSlot.building == null || constructionSlot.building.BuildingInformation != buildingPrefab.BuildingInformation)
         {
-            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInWood) 
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInSteel)
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInFuel)
-                && NewResources.SteelNeeded(buildingPrefab.buildingInformation.CurrentConstructionCostInLead);
+            bool enoughResources = NewResources.WoodNeeded(buildingPrefab.BuildingInformation.CurrentConstructionCostInWood) 
+                && NewResources.SteelNeeded(buildingPrefab.BuildingInformation.CurrentConstructionCostInSteel)
+                && NewResources.SteelNeeded(buildingPrefab.BuildingInformation.CurrentConstructionCostInFuel)
+                && NewResources.SteelNeeded(buildingPrefab.BuildingInformation.CurrentConstructionCostInLead);
 
             if (enoughResources)
             {
-                NewResources.WoodConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInWood);
-                NewResources.SteelConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInSteel);
-                NewResources.FuelConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInFuel);
-                NewResources.LeadConsumed(buildingPrefab.buildingInformation.CurrentConstructionCostInLead);
+                NewResources.WoodConsumed(buildingPrefab.BuildingInformation.CurrentConstructionCostInWood);
+                NewResources.SteelConsumed(buildingPrefab.BuildingInformation.CurrentConstructionCostInSteel);
+                NewResources.FuelConsumed(buildingPrefab.BuildingInformation.CurrentConstructionCostInFuel);
+                NewResources.LeadConsumed(buildingPrefab.BuildingInformation.CurrentConstructionCostInLead);
 
                 if (constructionSlot.building != null)
                 {
@@ -89,21 +84,22 @@ public class ConstructionMenu : MonoBehaviour
                 Building building = Instantiate(buildingPrefab, constructionSlot.transform);
                 constructionSlot.building = building;
 
-                buildingPrefab.buildingInformation.IncreaseCurrentConstructionCost();
-                UpdatePopUpWindow(constructionButton, buildingPrefab);
+                buildingPrefab.BuildingInformation.IncreaseCurrentConstructionCost();
 
                 CloseMenu();
             }
         }
     }
 
-    private void UpdatePopUpWindow(Button constructionButton, Building building)
+    private void SetConstructionButtonBuilingInformation()
     {
-        int costInWood = building.buildingInformation.CurrentConstructionCostInWood;
-        int costInSteel = building.buildingInformation.CurrentConstructionCostInSteel;
-        int costInFuel = building.buildingInformation.CurrentConstructionCostInFuel;
-        int costInLead = building.buildingInformation.CurrentConstructionCostInLead;
-
-        constructionButton.gameObject.GetComponent<PopUpWindow>().UpdateCostText(costInWood, costInSteel, costInFuel, costInLead);
+        sawmillButton.GetComponent<PopUpWindow>().buildingInformation = sawmillPrefab.BuildingInformation;
+        ironMineButton.GetComponent<PopUpWindow>().buildingInformation = ironMinePrefab.BuildingInformation;
+        steelFactoryButton.GetComponent<PopUpWindow>().buildingInformation = steelFactoryPrefab.BuildingInformation;
+        oilWellButton.GetComponent<PopUpWindow>().buildingInformation = oilWellPrefab.BuildingInformation;
+        fuelFactoryButton.GetComponent<PopUpWindow>().buildingInformation = fuelFactoryPrefab.BuildingInformation;
+        leadMineButton.GetComponent<PopUpWindow>().buildingInformation = leadMinePrefab.BuildingInformation;
+        leadFactoryButton.GetComponent<PopUpWindow>().buildingInformation = leadFactoryPrefab.BuildingInformation;
+        militaryFactoryButton.GetComponent<PopUpWindow>().buildingInformation = militaryFactoryPrefab.BuildingInformation;
     }
 }

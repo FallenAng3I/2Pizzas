@@ -28,8 +28,8 @@ MonoBehaviour:
   clickUpgradeCostInWoodIncrease: 50
   baseClickUpgradeCostInSteel: 50
   clickUpgradeCostInSteelIncrease: 50
-  baseClickUpgradeCostInFuel: 50
-  clickUpgradeCostInFuelIncrease: 50
+  baseClickUpgradeCostInFuel: 0
+  clickUpgradeCostInFuelIncrease: 0
   baseClickUpgradeCostInLead: 0
   clickUpgradeCostInLeadIncrease: 0
   passiveProductionTime: 0

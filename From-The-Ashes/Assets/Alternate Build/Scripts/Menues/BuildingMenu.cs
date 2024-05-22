@@ -1,14 +1,11 @@
+using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class BuildingMenu : MonoBehaviour
 {
     private Building building = null;
-
-    [SerializeField] private UpgradeMenu upgradeMenu;
-    [SerializeField] private ConstructionMenu constructionMenu;
 
     [SerializeField] private Button closeButton;
 
@@ -23,9 +20,15 @@ public class BuildingMenu : MonoBehaviour
     [SerializeField] private Button stopButton;
     [SerializeField] private Button replaceButton;
 
+    public static event Action OnBuildingMenuOpened;
+    public static event Action OnBuildingMenuClosed;
+    public static event Action<Building> OnUpgradeButtonClicked;
+    public static event Action<ConstructionSlot> OnReplaceButtonClicked;
+
     private void Start()
     {
-        Building.BuildingButtonClicked += OpenMenu;
+        Building.OnBuildingSelected += OpenMenu;
+        ConstructionSlot.OnConstructionSlotSelected += (slot) => CloseMenu();
 
         closeButton.onClick.AddListener(CloseMenu);
 
@@ -39,16 +42,18 @@ public class BuildingMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingInformation.BuildingName;
-        buildingDescriptionText.text = building.buildingInformation.BuildingDescription;
+        buildingNameText.text = building.BuildingInformation.BuildingName;
+        buildingDescriptionText.text = building.BuildingInformation.BuildingDescription;
         UpdateStopButton();
 
-        produceButton.onClick.AddListener(building.production.ClickProduction);
-        upgradeButton.onClick.AddListener(() => upgradeMenu.OpenMenu(building));
+        produceButton.onClick.AddListener(building.Production.ClickProduction);
+        upgradeButton.onClick.AddListener(() => OnUpgradeButtonClicked?.Invoke(building));
         stopButton.onClick.AddListener(TogglePassiveProduction);
-        replaceButton.onClick.AddListener(() => constructionMenu.OpenMenu(building.GetComponentInParent<ConstructionSlot>()));
+        replaceButton.onClick.AddListener(() => OnReplaceButtonClicked?.Invoke(building.GetComponentInParent<ConstructionSlot>()));
 
         gameObject.SetActive(true);
+
+        OnBuildingMenuOpened?.Invoke();
     }
 
     // Очищаем всю информацию о здании, очищаем действия с кнопок, закрываем другие меню, связанные со зданием
@@ -65,8 +70,7 @@ public class BuildingMenu : MonoBehaviour
         stopButton.onClick.RemoveAllListeners();
         replaceButton.onClick.RemoveAllListeners();
 
-        upgradeMenu.CloseMenu();
-        constructionMenu.CloseMenu();
+        OnBuildingMenuClosed?.Invoke();
  
         gameObject.SetActive(false);
     }
@@ -74,14 +78,14 @@ public class BuildingMenu : MonoBehaviour
     // При нажатии на кнопку остановки переключаем пассиноые производство и обновляем кнопку остановки
     private void TogglePassiveProduction()
     {
-        building.production.TogglePassiveProduction();
+        building.Production.TogglePassiveProduction();
         UpdateStopButton();
     }
 
     // Текст кнопки остановки изменяется в зависимости от того, остановлено здание или нет
     private void UpdateStopButton()
     {
-        if (building.production.passiveProductionEnabled)
+        if (building.Production.passiveProductionEnabled)
         {
             stopButton.GetComponentInChildren<TextMeshProUGUI>().text = "Stop";
         }

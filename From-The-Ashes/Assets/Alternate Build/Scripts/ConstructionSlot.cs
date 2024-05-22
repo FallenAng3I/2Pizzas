@@ -6,38 +6,37 @@ public class ConstructionSlot : MonoBehaviour
 {
     [SerializeField] private Button slotButton;
     [SerializeField] private GameObject SelectionIndicator;
-    public static Action<ConstructionSlot> ConstructionSlotSelected;
+
+    public static event Action<ConstructionSlot> OnConstructionSlotSelected;
+    public static event Action OnConstructionSlotSelectionIndicated;
 
     [HideInInspector] public Building building;
 
     private void Start()
     {
-        DeSelectSlot();
+        IndicateSelection(false);
 
-        slotButton.onClick.AddListener(() => ConstructionSlotSelected(this));
+        slotButton.onClick.AddListener(SelectSlot);
 
-        ConstructionSlotSelected += CheckIfSelected;
-        Building.BuildingButtonClicked += (clickedBuilding) => CheckIfSelected(clickedBuilding.GetComponentInParent<ConstructionSlot>());
-    }
-
-    private void CheckIfSelected(ConstructionSlot slot)
-    {
-        if (slot == this)
-        {
-            SelectSlot();
-            return;
-        }
-
-        DeSelectSlot();
+        OnConstructionSlotSelectionIndicated += () => IndicateSelection(false);
     }
 
     private void SelectSlot()
     {
-        SelectionIndicator.SetActive(true);
+        OnConstructionSlotSelected?.Invoke(this);
+        IndicateSelection(true);
     }
 
-    private void DeSelectSlot()
+    public void IndicateSelection(bool isSelected)
     {
-        SelectionIndicator.SetActive(false);
+        if (isSelected)
+        {
+            OnConstructionSlotSelectionIndicated?.Invoke();
+            SelectionIndicator.SetActive(true);
+        }
+        else
+        {
+            SelectionIndicator.SetActive(false);
+        }
     }
 }

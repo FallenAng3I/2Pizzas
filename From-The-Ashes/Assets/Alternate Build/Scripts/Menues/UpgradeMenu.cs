@@ -5,9 +5,6 @@ using UnityEngine.UI;
 public class UpgradeMenu : MonoBehaviour
 {
     [SerializeField] private Button closeButton;
-
-    private Building building;
-
     [SerializeField] private TextMeshProUGUI buildingNameText;
 
     // Кнопки улучшений и поля стоимости улучшений
@@ -16,8 +13,13 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private Button clickUpgradeButton;
     [SerializeField] private TextMeshProUGUI clickUpgradeCostText;
 
+    private Building building;
+
     private void Start()
     {
+        BuildingMenu.OnUpgradeButtonClicked += OpenMenu;
+        BuildingMenu.OnBuildingMenuClosed += CloseMenu;
+
         closeButton.onClick.AddListener(CloseMenu);
 
         CloseMenu();
@@ -30,7 +32,7 @@ public class UpgradeMenu : MonoBehaviour
 
         building = newBuilding;
 
-        buildingNameText.text = building.buildingInformation.BuildingName;
+        buildingNameText.text = building.BuildingInformation.BuildingName;
 
         passiveUpgradeButton.onClick.AddListener(() => { building.UpgradePassive(); UpdateCost(); });
         clickUpgradeButton.onClick.AddListener(() => { building.UpgradeClick(); UpdateCost(); });
@@ -57,15 +59,15 @@ public class UpgradeMenu : MonoBehaviour
 
     private void UpdateCost()
     {
-        int clickCostInWood = building.buildingInformation.CurrentClickUpgradeCostInWood;
-        int clickCostInSteel = building.buildingInformation.CurrentClickUpgradeCostInSteel;
-        int clickCostInFuel = building.buildingInformation.CurrentClickUpgradeCostInFuel;
-        int clickCostInLead = building.buildingInformation.CurrentClickUpgradeCostInLead;
+        int clickCostInWood = building.BuildingInformation.CurrentClickUpgradeCostInWood;
+        int clickCostInSteel = building.BuildingInformation.CurrentClickUpgradeCostInSteel;
+        int clickCostInFuel = building.BuildingInformation.CurrentClickUpgradeCostInFuel;
+        int clickCostInLead = building.BuildingInformation.CurrentClickUpgradeCostInLead;
 
-        int passiveCostInWood = building.buildingInformation.CurrentPassiveUpgradeCostInWood;
-        int passiveCostInSteel = building.buildingInformation.CurrentPassiveUpgradeCostInSteel;
-        int passiveCostInFuel = building.buildingInformation.CurrentPassiveUpgradeCostInFuel;
-        int passiveCostInLead = building.buildingInformation.CurrentPassiveUpgradeCostInLead;
+        int passiveCostInWood = building.BuildingInformation.CurrentPassiveUpgradeCostInWood;
+        int passiveCostInSteel = building.BuildingInformation.CurrentPassiveUpgradeCostInSteel;
+        int passiveCostInFuel = building.BuildingInformation.CurrentPassiveUpgradeCostInFuel;
+        int passiveCostInLead = building.BuildingInformation.CurrentPassiveUpgradeCostInLead;
 
         UpdateCostText(clickCostInWood, clickCostInSteel, clickCostInFuel, clickCostInLead, clickUpgradeCostText);
         UpdateCostText(passiveCostInWood, passiveCostInSteel, passiveCostInFuel, passiveCostInLead, passiveUpgradeCostText);

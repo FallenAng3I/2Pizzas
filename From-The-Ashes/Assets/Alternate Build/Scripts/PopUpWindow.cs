@@ -7,6 +7,8 @@ public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [SerializeField] private GameObject windowObject;
     [SerializeField] private TextMeshProUGUI buildingCostText;
 
+    [HideInInspector] public BuildingInformation buildingInformation;
+
     private void Start()
     {
         windowObject.SetActive(false);
@@ -15,6 +17,7 @@ public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         windowObject.SetActive(true);
+        UpdateCostText();
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -27,25 +30,25 @@ public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         windowObject.SetActive(false);
     }
 
-    public void UpdateCostText(int costInWood, int costInSteel, int costInFuel, int costInLead)
+    private void UpdateCostText()
     {
         string costText = "";
 
-        if (costInWood != 0)
+        if (buildingInformation.CurrentConstructionCostInWood != 0)
         {
-            costText += $"Wood: {costInWood}\r\n";
+            costText += $"Wood: {buildingInformation.CurrentConstructionCostInWood}\r\n";
         }
-        if (costInSteel != 0)
+        if (buildingInformation.CurrentConstructionCostInSteel != 0)
         {
-            costText += $"Steel: {costInSteel}\r\n";
+            costText += $"Steel: {buildingInformation.CurrentConstructionCostInSteel}\r\n";
         }
-        if (costInFuel != 0)
+        if (buildingInformation.CurrentConstructionCostInFuel != 0)
         {
-            costText += $"Fuel: {costInFuel}\r\n";
+            costText += $"Fuel: {buildingInformation.CurrentConstructionCostInFuel}\r\n";
         }
-        if (costInLead != 0)
+        if (buildingInformation.CurrentConstructionCostInLead != 0)
         {
-            costText += $"Lead: {costInLead}\r\n";
+            costText += $"Lead: {buildingInformation.CurrentConstructionCostInLead}\r\n";
         }
 
         buildingCostText.text = costText;

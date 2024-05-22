@@ -16,15 +16,15 @@ public abstract class Production : MonoBehaviour
 
     public void ClickProduction()
     {
-        Produce(building.buildingInformation.CurrentClickProductionQuantity);
+        Produce(building.BuildingInformation.CurrentClickProductionQuantity);
     }
 
     protected IEnumerator PassiveProduction()
     {
         while (true)
         {
-            yield return new WaitForSeconds(building.buildingInformation.PassiveProductionTime);
-            if (building.buildingInformation.PassiveProductionUpgraded && passiveProductionEnabled) Produce(building.buildingInformation.CurrentPassiveProductionQuantity);
+            yield return new WaitForSeconds(building.BuildingInformation.PassiveProductionTime);
+            if (building.BuildingInformation.PassiveProductionUpgraded && passiveProductionEnabled) Produce(building.BuildingInformation.CurrentPassiveProductionQuantity);
         }
     }
 

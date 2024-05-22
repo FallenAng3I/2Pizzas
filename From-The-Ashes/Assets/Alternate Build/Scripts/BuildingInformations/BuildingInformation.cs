@@ -127,7 +127,7 @@ public class BuildingInformation : ScriptableObject
 
     public void UpgradeClickProduction()
     {
-        currentClickProductionQuantity += clickProductionQuantityIncrease;
+        currentClickProductionQuantity += clickProductionQuantityIncrease; // ћожно использовать другую форму апгрейда, например, удваивать количество продукта
     }
 
     public void IncreaseCurrentClickUpgradeCost()

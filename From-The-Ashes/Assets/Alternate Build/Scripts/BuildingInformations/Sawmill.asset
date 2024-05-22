@@ -26,8 +26,8 @@ MonoBehaviour:
   clickProductionQuantityIncrease: 1
   baseClickUpgradeCostInWood: 5
   clickUpgradeCostInWoodIncrease: 5
-  baseClickUpgradeCostInSteel: 0
-  clickUpgradeCostInSteelIncrease: 0
+  baseClickUpgradeCostInSteel: 5
+  clickUpgradeCostInSteelIncrease: 5
   baseClickUpgradeCostInFuel: 0
   clickUpgradeCostInFuelIncrease: 0
   baseClickUpgradeCostInLead: 0
@@ -35,8 +35,8 @@ MonoBehaviour:
   passiveProductionTime: 1
   basePassiveProductionQuantity: 1
   passiveProductionQuantityIncrease: 1
-  basePassiveUpgradeCostInWood: 5
-  passiveUpgradeCostInWoodIncrease: 5
+  basePassiveUpgradeCostInWood: 10
+  passiveUpgradeCostInWoodIncrease: 10
   basePassiveUpgradeCostInSteel: 0
   passiveUpgradeCostInSteelIncrease: 0
   basePassiveUpgradeCostInFuel: 0
