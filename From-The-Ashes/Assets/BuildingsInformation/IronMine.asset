@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
+  m_Name: IronMine
+  m_EditorClassIdentifier: 
+  buildingInformationsList: {fileID: 0}
+  buildingPrefab: {fileID: 2879505283375531056, guid: 372119a8ff29ecb4780f008dafe397fe, type: 3}
+  buildingDescription: 
+  constructionCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  clickUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  passiveUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  productionInput: []
+  productionOutput:
+  - quantity: 1
+    resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+  baseClickProductionQuantity: 1
+  clickProductionQuantityIncrease: 1
+  currentClickProductionQuantity: 1
+  passiveProductionTime: 1
+  passiveProductionUpgraded: 0

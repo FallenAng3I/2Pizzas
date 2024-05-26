@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
+  m_Name: SteelFactory
+  m_EditorClassIdentifier: 
+  buildingPrefab: {fileID: 6209750437132471638, guid: c7e8d60c96f8f1a4ba8c04ee9d02203b, type: 3}
+  buildingDescription: 
+  constructionCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  clickUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 10
+    quantityIncrease: 10
+  passiveUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    baseQuantity: 10
+    quantityIncrease: 10
+  productionInput:
+  - quantity: 2
+    resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+  productionOutput:
+  - quantity: 1
+    resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+  baseClickProductionQuantity: 1
+  clickProductionQuantityIncrease: 1
+  passiveProductionTime: 1
+  passiveProductionUpgraded: 0

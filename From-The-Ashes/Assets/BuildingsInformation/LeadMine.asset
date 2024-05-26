@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
+  m_Name: LeadMine
+  m_EditorClassIdentifier: 
+  buildingPrefab: {fileID: 4298247986724282179, guid: f7c1cf44f3fe11440a50c4e0af9124e4, type: 3}
+  buildingDescription: 
+  constructionCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 30
+    quantityIncrease: 30
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 10
+    quantityIncrease: 10
+  clickUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 40
+    quantityIncrease: 40
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    baseQuantity: 20
+    quantityIncrease: 20
+  passiveUpgradeCost:
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    baseQuantity: 60
+    quantityIncrease: 60
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    baseQuantity: 40
+    quantityIncrease: 40
+  productionInput: []
+  productionOutput:
+  - quantity: 1
+    resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}
+  baseClickProductionQuantity: 1
+  clickProductionQuantityIncrease: 1
+  passiveProductionTime: 1
+  passiveProductionUpgraded: 0

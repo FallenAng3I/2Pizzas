@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu]
 [Serializable]
-public class AudioSettingsData : MonoBehaviour
+public class AudioSettingsData : ScriptableObject
 {
     public float masterVolume;
     public float musicVolume;
