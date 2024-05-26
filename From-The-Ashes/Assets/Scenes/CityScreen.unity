@@ -1953,7 +1953,6 @@ MonoBehaviour:
   passiveUpgradeCostText: {fileID: 707189756}
   clickUpgradeButton: {fileID: 94092834}
   clickUpgradeCostText: {fileID: 213850588}
-  buildingInformation: {fileID: 0}
 --- !u!114 &254098547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,9 +2027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: e59b70316623a5242a81e8f3644515e6, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,9 +2040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: 0c50eb18f9300b944b0f4a1baa003e21, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,9 +2053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: a98ea7c9a9200ff43b19869bd5ed1bda, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2073,9 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: bdeb4b24c147b4f41b99f2b8f2211993, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2088,9 +2079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: 68ecd68e8b295bc4589f7919d6385154, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2103,9 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: b08dc072dab26c84f8d7ad8c72ee930f, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2118,9 +2105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: db618c70373a577438c17a0bfb706c49, type: 2}
-  passiveProductionEnabled: 0
 --- !u!114 &263954849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2133,9 +2118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e327232bdb6e764c962b55180d16100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   buildingInformation: {fileID: 11400000, guid: 8ec2d76a8f95d8344b44b4f66514d8f1, type: 2}
-  passiveProductionEnabled: 0
 --- !u!4 &263954850
 Transform:
   m_ObjectHideFlags: 0
@@ -3864,8 +3847,9 @@ MonoBehaviour:
   - {fileID: 710106303}
   - {fileID: 1090720731}
   - {fileID: 1956676219}
+  resourceCountFieldPrefab: {fileID: 0}
+  contentTransform: {fileID: 0}
   useDecimalPrefixes: 1
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
 --- !u!114 &730774468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6931,7 +6915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 471ae67c372c79c4f90afd71f4dcde36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
+  buildingInformationsList: {fileID: 0}
 --- !u!1001 &1459210951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8287,12 +8271,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8307,8 +8291,8 @@ Canvas:
   m_GameObject: {fileID: 1874643894}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2070421062}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8421,7 +8405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 188a74bf67c68af4e978b8a3e9ba0a30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  storage: {fileID: 11400000, guid: 5ddac3905caf4d544aea94f741dc8741, type: 2}
   menuWindowObject: {fileID: 1887074224}
   sawmillButton: {fileID: 1658942729}
   ironMineButton: {fileID: 1588985575}
@@ -8918,7 +8901,6 @@ MonoBehaviour:
   buildingNameText: {fileID: 54973773}
   buildingDescriptionText: {fileID: 619810518}
   upgradeButton: {fileID: 904518272}
-  stopButton: {fileID: 1080088679}
   demolishButton: {fileID: 246890696}
 --- !u!114 &2022163834
 MonoBehaviour:
