@@ -30,7 +30,7 @@ public class BuildingMenu : MonoBehaviour
 
         closeButton.onClick.AddListener(CloseMenu);
         upgradeButton.onClick.AddListener(() => OnUpgradeButtonClicked?.Invoke(building.BuildingInformation));
-        demolishButton.onClick.AddListener(building.Demolish);
+        demolishButton.onClick.AddListener(() => { building.Demolish(); CloseMenu(); });
 
         CloseMenu();
     }

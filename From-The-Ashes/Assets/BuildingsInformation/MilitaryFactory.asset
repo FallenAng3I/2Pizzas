@@ -7,11 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
   m_Name: MilitaryFactory
   m_EditorClassIdentifier: 
+  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 2371895704258407832, guid: 1fa2fae2cd0f862429a5de18042dbc95, type: 3}
   buildingDescription: 
   constructionCost:
@@ -63,5 +64,6 @@ MonoBehaviour:
     resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
+  currentClickProductionQuantity: 0
   passiveProductionTime: 1
   passiveProductionUpgraded: 0
