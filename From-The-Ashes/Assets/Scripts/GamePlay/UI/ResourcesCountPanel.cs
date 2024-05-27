@@ -23,10 +23,10 @@ public class ResourcesCountPanel : MonoBehaviour
 
     private void UpdateResourceCount(Resource resource)
     {
-        if (resourceCountFields.Any(ResourceCountField => ResourceCountField.resource == resource))
+        if (resourceCountFields.Any(ResourceCountField => ResourceCountField.Resource == resource))
         {
             int count = Storage.Instance.GetResourceAmount(resource);
-            ResourceCountField resourceCountField = resourceCountFields.Find(ResourceCountField => ResourceCountField.resource == resource);
+            ResourceCountField resourceCountField = resourceCountFields.Find(ResourceCountField => ResourceCountField.Resource == resource);
             UpdateResourceCountText(count, resourceCountField);
         }
         else
@@ -55,14 +55,11 @@ public class ResourcesCountPanel : MonoBehaviour
         resourceCountField.ResourceCountText.text = $"{count}";
     }
 
-    // Этот кусок кода работает криво и я не знаю, почему
-    // По идее он должен создавать новое поле ресурса, но зачем-то он создаёт два: одно с ресурсом и одно пустое
-    // При этом он не может засунуть спрайт в изображение и создаёт поле в неправильном месте
     private void CreateResourceCountField(Resource resource)
     {
         ResourceCountField resourceCountField = Instantiate(resourceCountFieldPrefab, contentTransform);
-        resourceCountField.resource = resource;
-        resourceCountField.ResourceIcon.sprite = resource.ResourceIcon;
-        UpdateResourceCountText(Storage.Instance.GetResourceAmount(resource), resourceCountField);
+        resourceCountField.Resource = resource;
+        resourceCountFields.Add(resourceCountField);
+        UpdateResourceCount(resource);
     }
 }

@@ -259,6 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934c929e039a4e640b5788cf879d0888, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceIcon: {fileID: 6038406576393076961}
-  resourceCountText: {fileID: 6094850414515123159}
   resource: {fileID: 0}
+  resourceImage: {fileID: 6038406576393076961}
+  resourceCountText: {fileID: 6094850414515123159}

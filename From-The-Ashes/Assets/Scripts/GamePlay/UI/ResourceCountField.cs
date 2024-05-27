@@ -4,10 +4,21 @@ using UnityEngine.UI;
 
 public class ResourceCountField : MonoBehaviour
 {
-    [SerializeField] private Image resourceIcon;
+    [SerializeField] private Resource resource;
+    [SerializeField] private Image resourceImage;
     [SerializeField] private TextMeshProUGUI resourceCountText;
-    [SerializeField] public Resource resource;
 
-    public Image ResourceIcon { get => resourceIcon; }
+    public Resource Resource
+    {
+        get => resource;
+        set
+        {
+            if (resource == null)
+            {
+                resource = value;
+                resourceImage.sprite = resource.ResourceIcon;
+            }
+        }
+    }
     public TextMeshProUGUI ResourceCountText { get => resourceCountText; }
 }
