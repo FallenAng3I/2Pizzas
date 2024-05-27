@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
@@ -23,7 +19,7 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         if (!eventData.selectedObject.CompareTag("Build"))
         {
-            menu.OpenMenu();
+            // menu.OpenMenu();
             AreasManager.Instance.currentSelection = EventSystem.current.currentSelectedGameObject;
         }
     }

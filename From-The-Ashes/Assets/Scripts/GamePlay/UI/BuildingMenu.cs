@@ -26,10 +26,9 @@ public class BuildingMenu : MonoBehaviour
     {
         // При выборе здания меню открывается, при выборе строительной площадки - закрывается
         Building.OnBuildingSelected += OpenMenu;
-        ConstructionSlot.OnConstructionSlotSelected += (slot) => CloseMenu();
 
         closeButton.onClick.AddListener(CloseMenu);
-        upgradeButton.onClick.AddListener(() => OnUpgradeButtonClicked?.Invoke(building.BuildingInformation));
+        upgradeButton.onClick.AddListener(() => { Debug.Log("1"); OnUpgradeButtonClicked?.Invoke(building.BuildingInformation); });
         demolishButton.onClick.AddListener(() => { building.Demolish(); CloseMenu(); });
 
         CloseMenu();

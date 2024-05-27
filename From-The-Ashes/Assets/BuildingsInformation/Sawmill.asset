@@ -7,11 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
   m_Name: Sawmill
   m_EditorClassIdentifier: 
+  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 3674652881052671656, guid: 7f11c5920bfb43f478ef616bb8a576cf, type: 3}
   buildingDescription: 
   constructionCost:
@@ -28,18 +29,19 @@ MonoBehaviour:
   passiveUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 10
-    quantityIncrease: 0
+    quantityIncrease: 10
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 0
-    quantityIncrease: 0
+    baseQuantity: 10
+    quantityIncrease: 10
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 0
-    quantityIncrease: 0
+    baseQuantity: 10
+    quantityIncrease: 10
   productionInput: []
   productionOutput:
   - quantity: 1
     resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
+  currentClickProductionQuantity: 1
   passiveProductionTime: 1
-  passiveProductionUpgraded: 0
+  passiveProductionUpgraded: 1

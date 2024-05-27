@@ -8,7 +8,7 @@ public class Building : MonoBehaviour, IPointerClickHandler
     [SerializeField] private BuildingInformation buildingInformation;
     public BuildingInformation BuildingInformation { get => buildingInformation; }
 
-    [SerializeField] private Event_SO selectionEvent;
+    [SerializeField] private VoidEvent buildingSelectedEvent;
 
     [Header("Building UI")]
     [SerializeField] private GameObject SelectionIndicator;
@@ -21,6 +21,8 @@ public class Building : MonoBehaviour, IPointerClickHandler
         buildingButton.onClick.AddListener(buildingInformation.BuildingClicked);
 
         IndicateSelection(false);
+
+        buildingInformation.BuildingConstructed();
     }
 
     // ¬ыбор здани€ и открытие меню здани€
@@ -32,13 +34,14 @@ public class Building : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    private void SelectBuilding()
+    public void SelectBuilding()
     {
         OnBuildingSelected?.Invoke(this);
+        buildingSelectedEvent.RaiseEvent();
         IndicateSelection(true);
     }
 
-    private void DeselectBuilding()
+    public void DeselectBuilding()
     {
         IndicateSelection(false);
     }
@@ -55,6 +58,7 @@ public class Building : MonoBehaviour, IPointerClickHandler
         }
 
         Destroy(gameObject);
+        buildingInformation.BuildingDemolished();
 
         GetComponentInParent<ConstructionSlot>().building = null;
     }
@@ -69,18 +73,5 @@ public class Building : MonoBehaviour, IPointerClickHandler
         {
             SelectionIndicator?.SetActive(false);
         }
-    }
-
-    //  огда выбираетс€ другое здание или строительна€ площадка, индикатор выбора этого здани€ отключаетс€
-    private void OnEnable()
-    {
-        selectionEvent.OnEventRaised += DeselectBuilding;
-        buildingInformation.BuildingConstructed();
-    }
-
-    private void OnDisable()
-    {
-        selectionEvent.OnEventRaised -= DeselectBuilding;
-        buildingInformation.BuildingDemolished();
     }
 }

@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Event")]
-public class Event_SO: ScriptableObject
+[CreateAssetMenu(fileName = "New Void Event")]
+public class VoidEvent: ScriptableObject
 {
     public event Action OnEventRaised;
 

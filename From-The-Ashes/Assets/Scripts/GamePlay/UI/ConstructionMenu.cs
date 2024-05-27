@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,12 +21,12 @@ public class ConstructionMenu : MonoBehaviour
 
     private ConstructionSlot constructionSlot;
 
-    public static event Action OnBuildingConstructed;
+    [SerializeField] private VoidEvent BuildingConstructedEvent;
 
-    private void Awake()
+    private void Start()
     {
-        // При выборе строительной площадки меню открывается, при выборе здания - закрывается
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
+        //ConstructionSlot.OnConstructionSlotDeselected += CloseMenu;
         BuildingMenu.OnBuildingMenuOpened += CloseMenu;
 
         foreach (ConstructionModule constructionModule in constructionModules)
@@ -39,16 +38,16 @@ public class ConstructionMenu : MonoBehaviour
         CloseMenu();
     }
 
-    public void OpenMenu(ConstructionSlot slot)
+    public void OpenMenu(ConstructionSlot newConstructionSlot)
     {
-        constructionSlot = slot;
+        constructionSlot = newConstructionSlot;
         menuWindowObject.SetActive(true);
     }
 
     public void CloseMenu()
     {
-        menuWindowObject.SetActive(false);
         constructionSlot = null;
+        menuWindowObject.SetActive(false);
     }
 
     // Проверяем, не занят ли слот строительства зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
@@ -72,7 +71,7 @@ public class ConstructionMenu : MonoBehaviour
                 buildingInformation.IncreaseCurrentConstructionCost();
 
                 GameObject buildingObject = Instantiate(buildingInformation.BuildingPrefab, constructionSlot.transform);
-                OnBuildingConstructed?.Invoke();
+                BuildingConstructedEvent.RaiseEvent();
 
                 CloseMenu();
             }

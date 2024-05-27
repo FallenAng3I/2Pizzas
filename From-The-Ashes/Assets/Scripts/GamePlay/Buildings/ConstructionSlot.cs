@@ -1,49 +1,52 @@
+using DefaultNamespace;
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class ConstructionSlot : MonoBehaviour, IPointerClickHandler
+public class ConstructionSlot : MonoBehaviour//, ISelectHandler, IDeselectHandler
 {
+    [SerializeField] private Button slotButton;
     [SerializeField] private GameObject SelectionIndicator;
 
-    public static event Action<ConstructionSlot> OnConstructionSlotSelected;
+    public static Action<ConstructionSlot> OnConstructionSlotSelected;
+
+    [SerializeField] private VoidEvent ConstructionSlotSelectedEvent;
+    [SerializeField] private VoidEvent ConstructionSlotDeselectedEvent;
 
     [HideInInspector] public Building building;
 
     private void Start()
     {
-        // Индикатор выбора строительной площадки отключается, если выбрана другая площадка или здание, или если построено здание на выбраной площадке
-        OnConstructionSlotSelected += (constructionSlot) => IndicateSelection(false);
-        Building.OnBuildingSelected += (building) => IndicateSelection(false);
-        ConstructionMenu.OnBuildingConstructed += () => IndicateSelection(false);
+        slotButton.onClick.AddListener(SelectSlot);
 
-        IndicateSelection(false);
+        DeselectSlot();
     }
 
-    // По-сути этот метод урезано дублирует функционал кнопки, поэтому его можно убрать, повесив на объект компнент кнопки
-    public void OnPointerClick(PointerEventData eventData)
+    /*
+    public void OnDeselect(BaseEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Left)
-        {
-            SelectSlot();
-        }
+        DeselectSlot();
     }
 
-    private void SelectSlot()
+    public void OnSelect(BaseEventData eventData)
     {
+        SelectSlot();
+    }
+    */
+
+    public void SelectSlot()
+    {
+
+        ConstructionSlotSelectedEvent.RaiseEvent();
         OnConstructionSlotSelected?.Invoke(this);
-        IndicateSelection(true);
+        SelectionIndicator.SetActive(true);
     }
 
-    private void IndicateSelection(bool isSelected)
+    public void DeselectSlot()
     {
-        if (isSelected)
-        {
-            SelectionIndicator.SetActive(true);
-        }
-        else
-        {
-            SelectionIndicator.SetActive(false);
-        }
+        ConstructionSlotDeselectedEvent.RaiseEvent();
+        SelectionIndicator.SetActive(false);
     }
 }
