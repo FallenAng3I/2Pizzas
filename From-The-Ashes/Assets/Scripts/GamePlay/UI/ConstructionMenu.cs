@@ -32,7 +32,7 @@ public class ConstructionMenu : MonoBehaviour
 
     private void Start()
     {
-        // При выборе строительной площадки меню открывается, при выборе здания - закрывается
+        // РџСЂРё РІС‹Р±РѕСЂРµ СЃС‚СЂРѕРёС‚РµР»СЊРЅРѕР№ РїР»РѕС‰Р°РґРєРё РјРµРЅСЋ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ, РїСЂРё РІС‹Р±РѕСЂРµ Р·РґР°РЅРёСЏ - Р·Р°РєСЂС‹РІР°РµС‚СЃСЏ
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
         BuildingMenu.OnBuildingMenuOpened += CloseMenu;
 
@@ -45,7 +45,7 @@ public class ConstructionMenu : MonoBehaviour
         leadFactoryButton.onClick.AddListener(() => ConstructBuilding(leadFactoryPrefab, leadFactoryButton));
         militaryFactoryButton.onClick.AddListener(() => ConstructBuilding(militaryFactoryPrefab, militaryFactoryButton));
 
-        // Назначаем во всплывающие меню информацию о здании для отображения цен
+        // РќР°Р·РЅР°С‡Р°РµРј РІРѕ РІСЃРїР»С‹РІР°СЋС‰РёРµ РјРµРЅСЋ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ Р·РґР°РЅРёРё РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С†РµРЅ
         sawmillButton.GetComponent<PopUpWindow>().buildingInformation = sawmillPrefab;
         ironMineButton.GetComponent<PopUpWindow>().buildingInformation = ironMinePrefab;
         steelFactoryButton.GetComponent<PopUpWindow>().buildingInformation = steelFactoryPrefab;
@@ -70,7 +70,7 @@ public class ConstructionMenu : MonoBehaviour
         constructionSlot = null;
     }
 
-    // Проверяем, не занят ли слот строительства зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
+    // РџСЂРѕРІРµСЂСЏРµРј, РЅРµ Р·Р°РЅСЏС‚ Р»Рё СЃР»РѕС‚ СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІР° Р·РґР°РЅРёРµРј, РїСЂРѕРІРµСЂСЏРµРј, РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ Р»Рё СЂРµСЃСѓСЂСЃРѕРІ, РѕС‚РЅРёРјР°РµРј СЂРµСЃСѓСЂСЃС‹, СЃС‚СЂРѕРёРј Р·РґР°РЅРёРµ, СѓРІРµР»РёС‡РёРІР°РµРј С†РµРЅСѓ Р·РґР°РЅРёСЏ, Р·Р°РєСЂС‹РІР°РµРј РјРµРЅСЋ 
     private void ConstructBuilding(BuildingInformation building, Button constructionButton)
     {
         if (constructionSlot.building == null)
