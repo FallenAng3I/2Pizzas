@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
-    public ContextMenu menu;
+    public ConstructionMenu menu;
 
     public void OnDeselect(BaseEventData eventData)
     {
@@ -23,7 +23,6 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         if (!eventData.selectedObject.CompareTag("Build"))
         {
-            
             menu.OpenMenu();
             AreasManager.Instance.currentSelection = EventSystem.current.currentSelectedGameObject;
         }

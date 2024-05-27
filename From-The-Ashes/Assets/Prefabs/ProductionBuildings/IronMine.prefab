@@ -24,17 +24,21 @@ PrefabInstance:
       propertyPath: m_text
       value: Iron Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 5098461558415465532, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.b
-      value: 0.21306516
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.g
-      value: 0.3462894
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.r
-      value: 0.7169812
+      value: 0.745283
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Pivot.x
