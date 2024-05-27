@@ -24,21 +24,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sawmill
       objectReference: {fileID: 0}
+    - target: {fileID: 3016289360164327089, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5098461558415465532, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_text
       value: Sawmill
       objectReference: {fileID: 0}
+    - target: {fileID: 5098461558415465532, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.b
-      value: 0.23268954
+      value: 0.26232645
       objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.g
-      value: 0.35377115
+      value: 0.3168852
       objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.r
-      value: 0.5943396
+      value: 0.4245283
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Pivot.x

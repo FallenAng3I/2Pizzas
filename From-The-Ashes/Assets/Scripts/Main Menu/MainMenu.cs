@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("FlexeScene");
+        SceneManager.LoadScene("FlexScene");
     }
     
     public void OpenSettings()

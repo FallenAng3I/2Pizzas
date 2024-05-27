@@ -39,13 +39,13 @@ public class ConstructionMenu : MonoBehaviour
         CloseMenu();
     }
 
-    private void OpenMenu(ConstructionSlot slot)
+    public void OpenMenu(ConstructionSlot slot)
     {
         constructionSlot = slot;
         menuWindowObject.SetActive(true);
     }
 
-    private void CloseMenu()
+    public void CloseMenu()
     {
         menuWindowObject.SetActive(false);
         constructionSlot = null;
