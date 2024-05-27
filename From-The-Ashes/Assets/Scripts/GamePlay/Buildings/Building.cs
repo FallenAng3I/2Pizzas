@@ -8,6 +8,8 @@ public class Building : MonoBehaviour, IPointerClickHandler
     [SerializeField] private BuildingInformation buildingInformation;
     public BuildingInformation BuildingInformation { get => buildingInformation; }
 
+    [SerializeField] private Event_SO selectionEvent;
+
     [Header("Building UI")]
     [SerializeField] private GameObject SelectionIndicator;
     [SerializeField] private Button buildingButton;
@@ -36,7 +38,7 @@ public class Building : MonoBehaviour, IPointerClickHandler
         IndicateSelection(true);
     }
 
-    private void DeselectBuilding<T>(T variable)
+    private void DeselectBuilding()
     {
         IndicateSelection(false);
     }
@@ -72,15 +74,13 @@ public class Building : MonoBehaviour, IPointerClickHandler
     // Когда выбирается другое здание или строительная площадка, индикатор выбора этого здания отключается
     private void OnEnable()
     {
-        OnBuildingSelected += DeselectBuilding;
-        ConstructionSlot.OnConstructionSlotSelected += DeselectBuilding;
+        selectionEvent.OnEventRaised += DeselectBuilding;
         buildingInformation.BuildingConstructed();
     }
 
     private void OnDisable()
     {
-        OnBuildingSelected -= DeselectBuilding;
-        ConstructionSlot.OnConstructionSlotSelected -= DeselectBuilding;
+        selectionEvent.OnEventRaised -= DeselectBuilding;
         buildingInformation.BuildingDemolished();
     }
 }

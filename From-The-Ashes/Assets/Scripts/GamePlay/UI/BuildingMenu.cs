@@ -35,11 +35,8 @@ public class BuildingMenu : MonoBehaviour
         CloseMenu();
     }
 
-    // «акрываем меню (чтобы отписатьс€, заполн€ем пол€ информации о здании, назначаем это здание дл€ кнопок управлени€ и открываем меню
     private void OpenMenu(Building newBuilding)
     {
-        CloseMenu();
-
         building = newBuilding;
 
         buildingNameText.text = building.BuildingInformation.name;
