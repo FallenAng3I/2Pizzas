@@ -131,9 +131,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -240,7 +256,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -530,9 +547,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -639,7 +672,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -685,7 +719,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &63502887
@@ -862,9 +896,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -971,7 +1021,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -1104,9 +1155,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -1213,7 +1280,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -1225,9 +1293,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -1334,7 +1418,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -1512,9 +1597,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -1621,7 +1722,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -1633,9 +1735,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -1742,7 +1860,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -2254,9 +2373,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -2363,7 +2498,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -2484,6 +2620,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Iron Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: IronMine Button
@@ -2501,9 +2649,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -2610,7 +2774,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -2709,6 +2874,18 @@ PrefabInstance:
     - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_text
       value: Lead Factory
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
@@ -2880,9 +3057,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -2989,7 +3182,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -3205,9 +3399,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -3314,7 +3524,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -3470,9 +3681,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -3579,7 +3806,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -3591,9 +3819,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -3700,7 +3944,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -4018,9 +4263,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -4127,7 +4388,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -4453,9 +4715,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -4562,7 +4840,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -5220,6 +5499,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Fuel Factory
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: FuelFactory Button
@@ -5237,9 +5528,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -5346,7 +5653,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -5578,6 +5886,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Military Factory
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: MilitaryFactory Button
@@ -5725,9 +6045,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -5834,7 +6170,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -5965,9 +6302,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -6074,7 +6427,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -6298,9 +6652,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -6407,7 +6777,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -6419,9 +6790,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -6528,7 +6915,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -6566,9 +6954,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -6675,7 +7079,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -6812,9 +7217,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -6921,7 +7342,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -7152,9 +7574,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -7261,7 +7699,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -7323,9 +7762,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -7432,7 +7887,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -7564,9 +8020,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -7673,7 +8145,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -7690,9 +8163,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -7799,7 +8288,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -7811,9 +8301,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -7920,7 +8426,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -8080,6 +8587,18 @@ PrefabInstance:
     - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_text
       value: Oil Well
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
@@ -8354,9 +8873,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -8463,7 +8998,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -8566,9 +9102,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -8675,7 +9227,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -8743,12 +9296,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -8763,8 +9316,8 @@ Canvas:
   m_GameObject: {fileID: 1874643894}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 2070421062}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -8970,9 +9523,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -9079,7 +9648,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -9211,6 +9781,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Lead Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: LeadMine Button
@@ -9270,7 +9852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8207547, g: 0.5475854, b: 0.18195976, a: 1}
+  m_Color: {r: 0.9245283, g: 0.86820364, b: 0.51023495, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9504,6 +10086,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Sawmill
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: Sawmill Button
@@ -9702,9 +10296,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -9832,7 +10442,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
@@ -9932,6 +10543,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Steel Factory
       objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4620986412545448676, guid: b4fb31befb51090409864f7195713f89, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6025219684749105764, guid: b4fb31befb51090409864f7195713f89, type: 3}
       propertyPath: m_Name
       value: SteelFactory Button
@@ -9949,9 +10572,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1217171180}
     m_Modifications:
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5330188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905662282434865574, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5347152
+      objectReference: {fileID: 0}
     - target: {fileID: 3811681316295736498, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Name
       value: Slot (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3859126199773580948, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6872332028034555384, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
       propertyPath: m_Pivot.x
@@ -10058,7 +10697,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8171779343021220695, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a431f44bccfeecd4a82643f70f601bc2, type: 3}
