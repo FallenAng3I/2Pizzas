@@ -8957,8 +8957,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1136304122}
   m_HandleRect: {fileID: 1136304121}
   m_Direction: 0
-  m_Value: -0.0000020345053
-  m_Size: 0.97959185
+  m_Value: -0.000004069027
+  m_Size: 0.9795919
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9016,7 +9016,7 @@ PrefabInstance:
     - target: {fileID: 6038406576393076961, guid: c03187c8f3f6f394f9f60673c34e1933, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 456e5b7461c2511488f707897b0dffe8, type: 3}
+      objectReference: {fileID: 21300000, guid: ef65dd3e9e41fa74792cbe6b731e2c46, type: 3}
     - target: {fileID: 6094850414515123159, guid: c03187c8f3f6f394f9f60673c34e1933, type: 3}
       propertyPath: m_fontStyle
       value: 1
