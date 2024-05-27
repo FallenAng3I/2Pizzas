@@ -26,7 +26,6 @@ public class ConstructionMenu : MonoBehaviour
     private void Start()
     {
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
-        //ConstructionSlot.OnConstructionSlotDeselected += CloseMenu;
         BuildingMenu.OnBuildingMenuOpened += CloseMenu;
 
         foreach (ConstructionModule constructionModule in constructionModules)
