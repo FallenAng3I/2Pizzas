@@ -10,6 +10,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
     
+    public void StartTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+    
     public void OpenSettings()
     {
         Debug.Log("Открытие настроек...");
