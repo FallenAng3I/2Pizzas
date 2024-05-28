@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class BuildingMenu : MonoBehaviour
 {
-    private Building building = null;
-
+    [SerializeField] private GameObject buildingMenuWindowObject;
     [SerializeField] private Button closeButton;
 
     [Header("Building Information")]
@@ -18,17 +17,21 @@ public class BuildingMenu : MonoBehaviour
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Button demolishButton;
 
+    private Building building = null;
+
+    [SerializeField] private VoidEvent somethingSelectedEvent;
+
     public static event Action OnBuildingMenuOpened;
     public static event Action OnBuildingMenuClosed;
     public static event Action<BuildingInformation> OnUpgradeButtonClicked;
 
     private void Start()
     {
-        // При выборе здания меню открывается, при выборе строительной площадки - закрывается
+        somethingSelectedEvent.OnEventRaised += CloseMenu;
         Building.OnBuildingSelected += OpenMenu;
 
         closeButton.onClick.AddListener(CloseMenu);
-        upgradeButton.onClick.AddListener(() => { Debug.Log("1"); OnUpgradeButtonClicked?.Invoke(building.BuildingInformation); });
+        upgradeButton.onClick.AddListener(() => OnUpgradeButtonClicked?.Invoke(building.BuildingInformation));
         demolishButton.onClick.AddListener(() => { building.Demolish(); CloseMenu(); });
 
         CloseMenu();
@@ -41,21 +44,17 @@ public class BuildingMenu : MonoBehaviour
         buildingNameText.text = building.BuildingInformation.name;
         buildingDescriptionText.text = building.BuildingInformation.BuildingDescription;
 
-        gameObject.SetActive(true);
+        buildingMenuWindowObject.SetActive(true);
 
         OnBuildingMenuOpened?.Invoke();
     }
 
-    public void CloseMenu()
+    private void CloseMenu()
     {
         building = null;
 
-        buildingImage.sprite = default;
-        buildingNameText.text = "";
-        buildingDescriptionText.text = "";
-
         OnBuildingMenuClosed?.Invoke();
- 
-        gameObject.SetActive(false);
+
+        buildingMenuWindowObject.SetActive(false);
     }
 }

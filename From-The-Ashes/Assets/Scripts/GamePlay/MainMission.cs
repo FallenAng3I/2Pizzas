@@ -23,12 +23,14 @@ public class NeededItem
     public Image Image { get => image; }
 }
 
-public class FinalMission : MonoBehaviour
+public class MainMission : MonoBehaviour
 {
     [SerializeField] private List<NeededItem> neededItems;
 
+    public static Action OnMissionCompleted;
+
     // Синглтон, в будущем возможно использование более гибкого ScriptableObject
-    public static FinalMission Instance;
+    public static MainMission Instance;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -65,6 +67,11 @@ public class FinalMission : MonoBehaviour
         foreach (var item in neededItems)
         {
             allRecieved &= item.ItemRecieved;
+        }
+
+        if (allRecieved)
+        {
+            OnMissionCompleted?.Invoke();
         }
     }
 }

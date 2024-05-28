@@ -5,6 +5,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+public class RaidModule
+{
+    [SerializeField] private RaidData raidData;
+    [SerializeField] private GameObject raidField;
+
+    public RaidModule(RaidData raidData, GameObject raidField)
+    {
+        this.raidData = raidData;
+        this.raidField = raidField;
+    }
+
+    public RaidData RaidData { get => raidData; }
+    public GameObject RaidField { get => raidField; }
+}
+
 public class RaidsPanel : MonoBehaviour
 {
     [SerializeField] private List<RaidData> raidDatas;
@@ -12,7 +27,7 @@ public class RaidsPanel : MonoBehaviour
 
     [Header("Raids Window")]
     [SerializeField] private Button closeButton;
-    [SerializeField] private GameObject raidMenuObject;
+    [SerializeField] private GameObject menuWindowObject;
 
     [Header("Raid Information Window")]
     [SerializeField] private GameObject raidInformationWindowObject;
@@ -22,8 +37,9 @@ public class RaidsPanel : MonoBehaviour
     [SerializeField] private Button startRaidButton;
 
     [Header("Raid Module")]
-    [SerializeField] private GameObject raidModulePrefab;
+    [SerializeField] private GameObject raidFieldPrefab;
     [SerializeField] private Transform raidsScrollViewContentTransform;
+    private List<RaidModule> raidModules = new List<RaidModule>();
 
     public static event Action<SpecialItem> OnSpecialItemObtained;
 
@@ -33,11 +49,15 @@ public class RaidsPanel : MonoBehaviour
 
         foreach (RaidData raidData in raidDatas)
         {
-            GameObject raidModule = Instantiate(raidModulePrefab, raidsScrollViewContentTransform);
-            raidModule.GetComponentInChildren<TextMeshProUGUI>().text = raidData.name;
-            raidModule.GetComponentInChildren<Button>().onClick.AddListener(() => SelectRaid(raidData));
+            GameObject raidField = Instantiate(raidFieldPrefab, raidsScrollViewContentTransform);
+            raidField.GetComponentInChildren<TextMeshProUGUI>().text = raidData.name;
+            raidField.GetComponentInChildren<Button>().onClick.AddListener(() => LoadRaidInformation(raidData));
+            RaidModule raidModule = new RaidModule(raidData, raidField);
+            raidModules.Add(raidModule);
         }
 
+        MainMission.OnMissionCompleted += CloseMenu;
+        MilitaryBaseMenu.OnRaidsButtonClicked += OpenMenu;
         startRaidButton.onClick.AddListener(Raid);
         closeButton.onClick.AddListener(CloseMenu);
         CloseMenu();
@@ -56,22 +76,31 @@ public class RaidsPanel : MonoBehaviour
 
     public void OpenMenu()
     {
-        raidMenuObject.SetActive(true);
+        menuWindowObject.SetActive(true);
     }
 
     public void CloseMenu()
     {
-        raidMenuObject.SetActive(false);
+        menuWindowObject.SetActive(false);
         raidInformationWindowObject.SetActive(false);
     }
 
-    private void SelectRaid(RaidData raidData)
+    private void LoadRaidInformation(RaidData raidData)
     {
         selectedRaidData = raidData;
         raidImage.sprite = selectedRaidData.RaidSprite;
         raidDescriptionText.text = selectedRaidData.RaidDescription;
         ShowCost(selectedRaidData);
         raidInformationWindowObject.SetActive(true);
+    }
+
+    private void ClearRaidInformation()
+    {
+        raidInformationWindowObject.SetActive(false);
+        selectedRaidData = null;
+        raidImage.sprite = default;
+        raidDescriptionText.text = "";
+        raidCostText.text = "";
     }
 
     private void ShowCost(RaidData raidData)
@@ -107,7 +136,12 @@ public class RaidsPanel : MonoBehaviour
                 Storage.Instance.AddResource(reward.Resource, reward.Quantity);
             }
             OnSpecialItemObtained?.Invoke(selectedRaidData.SpecialReward);
-        }
 
+            RaidModule raidModule = raidModules.Find(RaidModule => RaidModule.RaidData == selectedRaidData);
+            Destroy(raidModule.RaidField);
+            raidModules.Remove(raidModule);
+
+            ClearRaidInformation();
+        }
     }
 }

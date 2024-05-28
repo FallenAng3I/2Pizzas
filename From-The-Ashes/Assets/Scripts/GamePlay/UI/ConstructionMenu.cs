@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,16 +17,18 @@ public class ConstructionModule
 public class ConstructionMenu : MonoBehaviour
 {
     [SerializeField] private GameObject menuWindowObject;
+    [SerializeField] private float menuClosingDelay = 0.1f;
 
     [SerializeField] private List<ConstructionModule> constructionModules;
 
     private ConstructionSlot constructionSlot;
 
-    [SerializeField] private VoidEvent BuildingConstructedEvent;
+    public static event Action OnBuildingConstructed;
 
-    private void Start()
+    private void Awake()
     {
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
+        ConstructionSlot.OnConstructionSlotDeselected += () => StartCoroutine(CloseMenuWithDelay());
         BuildingMenu.OnBuildingMenuOpened += CloseMenu;
 
         foreach (ConstructionModule constructionModule in constructionModules)
@@ -39,6 +42,7 @@ public class ConstructionMenu : MonoBehaviour
 
     public void OpenMenu(ConstructionSlot newConstructionSlot)
     {
+        StopAllCoroutines();
         constructionSlot = newConstructionSlot;
         menuWindowObject.SetActive(true);
     }
@@ -47,6 +51,12 @@ public class ConstructionMenu : MonoBehaviour
     {
         constructionSlot = null;
         menuWindowObject.SetActive(false);
+    }
+
+    private IEnumerator CloseMenuWithDelay()
+    {
+        yield return new WaitForSeconds(menuClosingDelay);
+        CloseMenu();
     }
 
     // Проверяем, не занят ли слот строительства зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
@@ -70,7 +80,7 @@ public class ConstructionMenu : MonoBehaviour
                 buildingInformation.IncreaseCurrentConstructionCost();
 
                 GameObject buildingObject = Instantiate(buildingInformation.BuildingPrefab, constructionSlot.transform);
-                BuildingConstructedEvent.RaiseEvent();
+                OnBuildingConstructed?.Invoke();
 
                 CloseMenu();
             }

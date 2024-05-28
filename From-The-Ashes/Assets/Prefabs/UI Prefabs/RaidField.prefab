@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 782404417072175485}
   - component: {fileID: 5147037682884426193}
   m_Layer: 5
-  m_Name: RaidModule
+  m_Name: RaidField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

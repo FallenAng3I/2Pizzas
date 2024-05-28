@@ -4,10 +4,11 @@ using UnityEngine.UI;
 
 public class UpgradeMenu : MonoBehaviour
 {
+    [SerializeField] private GameObject menuWindowObject;
     [SerializeField] private Button closeButton;
     [SerializeField] private TextMeshProUGUI buildingNameText;
 
-    // Кнопки улучшений и поля стоимости улучшений
+    [Header("Upgrades")]
     [SerializeField] private Button passiveUpgradeButton;
     [SerializeField] private TextMeshProUGUI passiveUpgradeCostText;
     [SerializeField] private Button clickUpgradeButton;
@@ -15,7 +16,7 @@ public class UpgradeMenu : MonoBehaviour
 
     private BuildingInformation buildingInformation;
 
-    private void Start()
+    private void Awake()
     {
         BuildingMenu.OnUpgradeButtonClicked += OpenMenu;
         BuildingMenu.OnBuildingMenuClosed += CloseMenu;
@@ -31,6 +32,7 @@ public class UpgradeMenu : MonoBehaviour
     // Закрываем меню, заполняем поля информации о здании, назначаем здание для кнопок апргредов и устанавливаем цену апгрейдов
     public void OpenMenu(BuildingInformation newBuildingInformation)
     {
+        Debug.Log("1");
         CloseMenu();
         
         buildingInformation = newBuildingInformation;
@@ -40,7 +42,7 @@ public class UpgradeMenu : MonoBehaviour
         clickUpgradeButton.onClick.AddListener(UpgradeClick);
         passiveUpgradeButton.onClick.AddListener(UpgradePassive);
 
-        gameObject.SetActive(true);
+        menuWindowObject.SetActive(true);
     }
 
     // Очищаем информацию о здании и закрываем меню
@@ -55,7 +57,7 @@ public class UpgradeMenu : MonoBehaviour
         clickUpgradeButton.onClick.RemoveAllListeners();
         clickUpgradeCostText.text = "";
 
-        gameObject.SetActive(false);
+        menuWindowObject.SetActive(false);
     }
 
     // Проверяем, достаточно ли ресурсов, потребляем эти ресурсы и производим апгрейд
@@ -65,8 +67,6 @@ public class UpgradeMenu : MonoBehaviour
 
         foreach (Cost cost in buildingInformation.ClickUpgradeCost)
         {
-            Debug.Log(Storage.Instance.GetResourceAmount(cost.Resource));
-            Debug.Log(cost.Quantity);
             enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
         }
 

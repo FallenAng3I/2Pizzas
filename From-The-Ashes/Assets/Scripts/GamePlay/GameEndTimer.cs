@@ -8,6 +8,7 @@ public class GameEndTimer : MonoBehaviour
     public int GameEndTime { get => gameEndTime; }
 
     public static event Action<int> OnTimeChanged;
+    public static event Action OnGameEnded;
 
     // Синглтон, в будущем возможно использование более гибкого ScriptableObject
     public static GameEndTimer Instance;
@@ -27,7 +28,7 @@ public class GameEndTimer : MonoBehaviour
     private void Start()
     {
         OnTimeChanged?.Invoke(gameEndTime);
-        StartCoroutine(Timer());
+        StartWindow.OnGameStarted += () => StartCoroutine(Timer());
     }
 
     IEnumerator Timer()
@@ -38,5 +39,6 @@ public class GameEndTimer : MonoBehaviour
             gameEndTime -= 1;
             OnTimeChanged?.Invoke(gameEndTime);
         }
+        OnGameEnded?.Invoke();
     }
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
+  m_Name: Raid4
+  m_EditorClassIdentifier: 
+  raidDescription: 
+  raidSprite: {fileID: 21300000, guid: 612c4ba6d25137a42a2992b6a7d1594e, type: 3}
+  cost:
+  - quantity: 10
+    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  reward:
+  - quantity: 10
+    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  specialReward: {fileID: 11400000, guid: dfe957bea5157c142a67cdcd06dbf276, type: 2}

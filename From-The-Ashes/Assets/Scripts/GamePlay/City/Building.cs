@@ -8,19 +8,17 @@ public class Building : MonoBehaviour, IPointerClickHandler
     [SerializeField] private BuildingInformation buildingInformation;
     public BuildingInformation BuildingInformation { get => buildingInformation; }
 
-    [SerializeField] private VoidEvent buildingSelectedEvent;
-
     [Header("Building UI")]
-    [SerializeField] private GameObject SelectionIndicator;
+    [SerializeField] private Image SelectionIndicator;
     [SerializeField] private Button buildingButton;
-
+    [Space]
+    [SerializeField] private VoidEvent somethingSelectedEvent;
     public static event Action<Building> OnBuildingSelected;
 
-    private void Start()
+    private void Awake()
     {
         buildingButton.onClick.AddListener(buildingInformation.BuildingClicked);
-
-        IndicateSelection(false);
+        DeselectBuilding();
 
         buildingInformation.BuildingConstructed();
     }
@@ -30,20 +28,21 @@ public class Building : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
+            somethingSelectedEvent.RaiseEvent();
             SelectBuilding();
         }
     }
 
     public void SelectBuilding()
     {
+        somethingSelectedEvent.RaiseEvent();
         OnBuildingSelected?.Invoke(this);
-        buildingSelectedEvent.RaiseEvent();
-        IndicateSelection(true);
+        SelectionIndicator.enabled = true;
     }
 
     public void DeselectBuilding()
     {
-        IndicateSelection(false);
+        SelectionIndicator.enabled = false;
     }
 
     // Здесь мы уменьшаем цену на здание до той, за которую было куплено последнее здание этого типа
@@ -63,15 +62,13 @@ public class Building : MonoBehaviour, IPointerClickHandler
         GetComponentInParent<ConstructionSlot>().building = null;
     }
 
-    private void IndicateSelection(bool isSelected)
+    private void OnEnable()
     {
-        if (isSelected)
-        {
-            SelectionIndicator?.SetActive(true);
-        }
-        else
-        {
-            SelectionIndicator?.SetActive(false);
-        }
+        somethingSelectedEvent.OnEventRaised += DeselectBuilding;
+    }
+
+    private void OnDisable()
+    {
+        somethingSelectedEvent.OnEventRaised -= DeselectBuilding;
     }
 }

@@ -16,13 +16,27 @@ PrefabInstance:
       propertyPath: buildingInformation
       value: 
       objectReference: {fileID: 11400000, guid: d20b0465c9fe9584599813808a520ed0, type: 2}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.41509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.24083303
+      objectReference: {fileID: 0}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.2477065
+      objectReference: {fileID: 0}
     - target: {fileID: 2816280126042192742, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Name
       value: LeadMine
       objectReference: {fileID: 0}
     - target: {fileID: 5098461558415465532, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_text
-      value: Lead Mine
+      value: 'Lead
+
+        Mine'
       objectReference: {fileID: 0}
     - target: {fileID: 7371345340386756214, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Color.b
@@ -46,27 +60,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_LocalPosition.x

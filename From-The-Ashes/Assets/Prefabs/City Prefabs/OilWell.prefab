@@ -16,6 +16,18 @@ PrefabInstance:
       propertyPath: buildingInformation
       value: 
       objectReference: {fileID: 11400000, guid: c14855958a8a3b24d87041ac69bf9a7c, type: 2}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 741837495665596799, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2816280126042192742, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_Name
       value: OilWell
@@ -46,27 +58,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8699760579521361481, guid: 22b29a8c453d4534395c716d6c50c71b, type: 3}
       propertyPath: m_LocalPosition.x

@@ -42,7 +42,7 @@ public class Pause_ESC : MonoBehaviour
         isPaused = false;
     }
     
-    void Pause()
+    public void Pause()
     {
         ConstructionMenu.SetActive(false);
         BuildingMenu.SetActive(false);
