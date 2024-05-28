@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: CityRaid
   m_EditorClassIdentifier: 
   raidDescription: Raid to the city
-  raidSprite: {fileID: 21300000, guid: 456e5b7461c2511488f707897b0dffe8, type: 3}
+  raidSprite: {fileID: 21300000, guid: 21707071331137e41b9b769832664243, type: 3}
   cost:
   - quantity: 10
     resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
   reward:
   - quantity: 10
     resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-  specialReward: {fileID: 0}
+  specialReward: {fileID: 11400000, guid: 431ca485939eee543bb2494e8a7d467d, type: 2}
