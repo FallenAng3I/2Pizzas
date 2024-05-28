@@ -13,18 +13,21 @@ using System;
 [Serializable]
 public class RaidData
 {
-    [SerializeField] private string description;
-    [SerializeField] private List<Cost> resourcesNeeded;
+    [SerializeField] Button raidButton;
+    [SerializeField] private string raidName;
+    [SerializeField] private string raidDescription;
+    [SerializeField] private List<ResourceContainer> cost;
 
-    public string Description { get => description; }
-    public List<Cost> ResourcesNeeded { get => resourcesNeeded; }
+    public string Description { get => raidDescription; }
+    public List<ResourceContainer> Cost { get => cost; }
 }
 
-public class MilitaryBase : MonoBehaviour, ISelectHandler, IDeselectHandler
+public class MilitaryBase : MonoBehaviour
 {
-    [SerializeField] private List<Cost> raidsCosts;
+    [SerializeField] private List<RaidData> raidDatas;
 
     [Header("Menu UI")]
+    [SerializeField] private Button militaryBaseButton;
     [SerializeField] private GameObject raidMenuObject;
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private Button raidButton;
@@ -32,19 +35,10 @@ public class MilitaryBase : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     private void Awake()
     {
+        militaryBaseButton.onClick.AddListener(OpenMenu);
         raidButton.onClick.AddListener(Raid);
         UpdateCostText();
         CloseMenu();
-    }
-
-    public void OnSelect(BaseEventData eventData)
-    {
-        OpenMenu();
-    }
-
-    public void OnDeselect(BaseEventData eventData)
-    {
-        StartCoroutine(CloseWithMenuWithDelay());
     }
 
     private void OpenMenu()
@@ -67,10 +61,9 @@ public class MilitaryBase : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         string costString = "";
 
-        foreach (Cost cost in raidsCosts)
+        foreach (RaidData raidData in raidDatas)
         {
-            cost.ResetCost();
-            costString += $"{cost.Resource.name}: {cost.Quantity}\r\n";
+            
         }
 
         costText.text = costString;
@@ -80,14 +73,14 @@ public class MilitaryBase : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         bool enoughResources = true;
 
-        foreach (Cost cost in raidsCosts)
+        foreach (Cost cost in raidDatas)
         {
             enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
         }
 
         if (enoughResources)
         {
-            foreach (Cost cost in raidsCosts)
+            foreach (Cost cost in raidDatas)
             {
                 Storage.Instance.SubtractResource(cost.Resource, cost.Quantity);
                 cost.IncreaseCost();
