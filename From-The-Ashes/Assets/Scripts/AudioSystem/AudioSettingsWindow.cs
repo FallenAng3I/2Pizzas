@@ -30,10 +30,10 @@ public class AudioSettingsWindow : MonoBehaviour
         masterSlider.onValueChanged.AddListener((float volume) => SetVolume("MasterVolume", Mathf.Clamp(volume, 0.001f, float.MaxValue), masterSlider, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume));
         musicSlider.onValueChanged.AddListener((float volume) => SetVolume("MusicVolume", Mathf.Clamp(volume, 0.001f, float.MaxValue), musicSlider, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume));
 
-        openSettingsButton.onClick.AddListener(OpenSettingsWindow);
-        closeSettingsButton.onClick.AddListener(CloseSettingsWindow);
+        //openSettingsButton.onClick.AddListener(OpenSettingsWindow);
+        //closeSettingsButton.onClick.AddListener(CloseSettingsWindow);
 
-        CloseSettingsWindow();
+        //CloseSettingsWindow();
     }
 
     private void OpenSettingsWindow()
