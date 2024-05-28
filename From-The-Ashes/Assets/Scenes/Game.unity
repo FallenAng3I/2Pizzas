@@ -2747,7 +2747,7 @@ MonoBehaviour:
   ConstructionMenu: {fileID: 375605163}
   BuildingMenu: {fileID: 2022163831}
   UpgradeMenu: {fileID: 254098544}
-  MilitaryBaseConstructionMenu: {fileID: 0}
+  MilitaryBaseConstructionMenu: {fileID: 40412258}
 --- !u!1 &375605163
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,10 +3420,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 352542394}
-    - target: {fileID: 1080221083996886142, guid: 2057d953dac5993438222179e5046241, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
-      objectReference: {fileID: 0}
     - target: {fileID: 5265204382040987681, guid: 2057d953dac5993438222179e5046241, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7603,7 +7599,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1634813944}
   m_HandleRect: {fileID: 1634813943}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -8806,7 +8802,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1136304122}
   m_HandleRect: {fileID: 1136304121}
   m_Direction: 0
-  m_Value: 0
+  m_Value: -0.0000020345053
   m_Size: 0.97959185
   m_NumberOfSteps: 0
   m_OnValueChanged:
