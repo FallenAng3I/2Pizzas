@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 using System;
 
 // Ќа случай, если будет ограниченное количество рейдов с разными ресурсами. Ќапример:
@@ -13,13 +12,16 @@ using System;
 [Serializable]
 public class RaidData
 {
-    [SerializeField] Button raidButton;
+    [SerializeField] private Button raidButton;
     [SerializeField] private string raidName;
     [SerializeField] private string raidDescription;
+    [SerializeField] private Sprite raidSprite;
+
     [SerializeField] private List<ResourceContainer> cost;
 
     public string Description { get => raidDescription; }
     public List<ResourceContainer> Cost { get => cost; }
+    public Button RaidButton { get => raidButton; }
 }
 
 public class MilitaryBase : MonoBehaviour
@@ -28,16 +30,24 @@ public class MilitaryBase : MonoBehaviour
 
     [Header("Menu UI")]
     [SerializeField] private Button militaryBaseButton;
+    [Space]
     [SerializeField] private GameObject raidMenuObject;
-    [SerializeField] private TextMeshProUGUI costText;
-    [SerializeField] private Button raidButton;
+    [SerializeField] private TextMeshProUGUI raidNameText;
+    [SerializeField] private TextMeshProUGUI raidCostText;
+    [SerializeField] private Button startRaidButton;
     [SerializeField] private float menuClosingDelay = 0.1f;
 
     private void Awake()
     {
         militaryBaseButton.onClick.AddListener(OpenMenu);
-        raidButton.onClick.AddListener(Raid);
-        UpdateCostText();
+
+        foreach (RaidData raidData in raidDatas)
+        {
+            startRaidButton.onClick.AddListener();
+        }
+
+        startRaidButton.onClick.AddListener(Raid);
+
         CloseMenu();
     }
 
@@ -57,6 +67,11 @@ public class MilitaryBase : MonoBehaviour
         raidMenuObject.SetActive(false);
     }
 
+    private void UpdateMenu()
+    {
+
+    }
+
     private void UpdateCostText()
     {
         string costString = "";
@@ -66,7 +81,7 @@ public class MilitaryBase : MonoBehaviour
             
         }
 
-        costText.text = costString;
+        raidCostText.text = costString;
     }
 
     private void Raid()
