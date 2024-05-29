@@ -8,7 +8,7 @@ public class MilitaryBase : MonoBehaviour
     [SerializeField] private Button militaryBaseButton;
     [SerializeField] private Image selectionIndicator;
     [Space]
-    [SerializeField] private VoidEvent somethingSelectedEvent;
+    [SerializeField] private GameEvent somethingSelectedEvent;
 
     public static event Action OnMilitaryBaseBuilt;
     public static event Action OnMilitaryBaseSelected;
@@ -25,28 +25,16 @@ public class MilitaryBase : MonoBehaviour
         OnMilitaryBaseBuilt?.Invoke();
     }
 
-    private void SelectMilitaryBase()
+    public void SelectMilitaryBase()
     {
-        somethingSelectedEvent.RaiseEvent();
+        somethingSelectedEvent.Raise();
         selectionIndicator.enabled = true;
         OnMilitaryBaseSelected?.Invoke();
     }
 
-    private void DeselectMilitaryBase()
+    public void DeselectMilitaryBase()
     {
         selectionIndicator.enabled = false;
         OnMilitaryBaseDeselected?.Invoke();
-    }
-
-    private void OnEnable()
-    {
-        somethingSelectedEvent.OnEventRaised += DeselectMilitaryBase;
-        Pause_ESC.OnGamePaused += DeselectMilitaryBase;
-    }
-
-    private void OnDisable()
-    {
-        somethingSelectedEvent.OnEventRaised -= DeselectMilitaryBase;
-        Pause_ESC.OnGamePaused -= DeselectMilitaryBase;
     }
 }

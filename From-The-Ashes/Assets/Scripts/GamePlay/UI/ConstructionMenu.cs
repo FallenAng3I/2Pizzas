@@ -93,7 +93,6 @@ public class ConstructionMenu : MonoBehaviour
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
         ConstructionSlot.OnConstructionSlotDeselected += CloseMenuWithDelay;
         BuildingMenu.OnBuildingMenuOpened += CloseMenu;
-        Pause_ESC.OnGamePaused += CloseMenu;
     }
 
     private void OnDisable()
@@ -101,6 +100,5 @@ public class ConstructionMenu : MonoBehaviour
         ConstructionSlot.OnConstructionSlotSelected -= OpenMenu;
         ConstructionSlot.OnConstructionSlotDeselected -= CloseMenuWithDelay;
         BuildingMenu.OnBuildingMenuOpened -= CloseMenu;
-        Pause_ESC.OnGamePaused -= CloseMenu;
     }
 }

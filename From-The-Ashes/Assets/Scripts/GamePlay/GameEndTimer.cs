@@ -22,12 +22,13 @@ public class GameEndTimer : MonoBehaviour
         {
             Instance = this;
         }
+
+        OnTimeChanged?.Invoke(gameEndTime);
     }
 
-    private void Start()
+    private void StartTimer()
     {
-        OnTimeChanged?.Invoke(gameEndTime);
-        StartWindow.OnGameStarted += () => StartCoroutine(Timer());
+        StartCoroutine(Timer());
     }
 
     IEnumerator Timer()
@@ -39,5 +40,15 @@ public class GameEndTimer : MonoBehaviour
             OnTimeChanged?.Invoke(gameEndTime);
         }
         OnTimeEnded?.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        StartWindow.OnGameStarted += StartTimer;
+    }
+
+    private void OnDisable()
+    {
+        StartWindow.OnGameStarted -= StartTimer;
     }
 }

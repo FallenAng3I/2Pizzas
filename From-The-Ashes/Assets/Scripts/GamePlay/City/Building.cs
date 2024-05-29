@@ -12,7 +12,7 @@ public class Building : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Image SelectionIndicator;
     [SerializeField] private Button buildingButton;
     [Space]
-    [SerializeField] private VoidEvent somethingSelectedEvent;
+    [SerializeField] private GameEvent somethingSelectedEvent;
     public static event Action<Building> OnBuildingSelected;
 
     private void Awake()
@@ -28,14 +28,14 @@ public class Building : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            somethingSelectedEvent.RaiseEvent();
+            somethingSelectedEvent.Raise();
             SelectBuilding();
         }
     }
 
     public void SelectBuilding()
     {
-        somethingSelectedEvent.RaiseEvent();
+        somethingSelectedEvent.Raise();
         OnBuildingSelected?.Invoke(this);
         SelectionIndicator.enabled = true;
     }
@@ -64,15 +64,11 @@ public class Building : MonoBehaviour, IPointerClickHandler
 
     private void OnEnable()
     {
-        somethingSelectedEvent.OnEventRaised += DeselectBuilding;
         BuildingMenu.OnBuildingMenuClosed += DeselectBuilding;
-        Pause_ESC.OnGamePaused += DeselectBuilding;
     }
 
     private void OnDisable()
     {
-        somethingSelectedEvent.OnEventRaised -= DeselectBuilding;
         BuildingMenu.OnBuildingMenuClosed -= DeselectBuilding;
-        Pause_ESC.OnGamePaused -= DeselectBuilding;
     }
 }

@@ -109,6 +109,8 @@ public class UpgradeMenu : MonoBehaviour
         foreach (Cost cost in buildingInformation.ClickUpgradeCost)
         {
             costText += $"{cost.Resource.name}: {cost.Quantity}\r\n";
+            Debug.Log(cost.Resource.name);
+            Debug.Log(cost.Quantity);
         }
         clickUpgradeCostText.text = costText;
 

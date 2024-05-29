@@ -6,7 +6,7 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
     [SerializeField] private GameObject SelectionIndicator;
     [Space]
-    [SerializeField] private VoidEvent SomethingSelectedEvent;
+    [SerializeField] private GameEvent SomethingSelectedEvent;
     public static Action<ConstructionSlot> OnConstructionSlotSelected;
     public static Action OnConstructionSlotDeselected;
 
@@ -27,14 +27,14 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
         SelectSlot();
     }
 
-    private void SelectSlot()
+    public void SelectSlot()
     {
-        SomethingSelectedEvent.RaiseEvent();
+        SomethingSelectedEvent.Raise();
         OnConstructionSlotSelected?.Invoke(this);
         SelectionIndicator.SetActive(true);
     }
 
-    private void DeselectSlot()
+    public void DeselectSlot()
     {
         OnConstructionSlotDeselected?.Invoke();
         SelectionIndicator.SetActive(false);
@@ -42,15 +42,11 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     private void OnEnable()
     {
-        SomethingSelectedEvent.OnEventRaised += DeselectSlot;
         ConstructionMenu.OnBuildingConstructed += DeselectSlot;
-        Pause_ESC.OnGamePaused += DeselectSlot;
     }
 
     private void OnDisable()
     {
-        SomethingSelectedEvent.OnEventRaised -= DeselectSlot;
         ConstructionMenu.OnBuildingConstructed -= DeselectSlot;
-        Pause_ESC.OnGamePaused -= DeselectSlot;
     }
 }

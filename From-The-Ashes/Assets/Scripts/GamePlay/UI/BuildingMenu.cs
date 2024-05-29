@@ -19,7 +19,7 @@ public class BuildingMenu : MonoBehaviour
 
     private Building building = null;
 
-    [SerializeField] private VoidEvent somethingSelectedEvent;
+    [SerializeField] private GameEvent somethingSelectedEvent;
 
     public static event Action OnBuildingMenuOpened;
     public static event Action OnBuildingMenuClosed;
@@ -34,7 +34,7 @@ public class BuildingMenu : MonoBehaviour
         CloseMenu();
     }
 
-    private void OpenMenu(Building newBuilding)
+    public void OpenMenu(Building newBuilding)
     {
         building = newBuilding;
 
@@ -46,7 +46,7 @@ public class BuildingMenu : MonoBehaviour
         buildingMenuWindowObject.SetActive(true);
     }
 
-    private void CloseMenu()
+    public void CloseMenu()
     {
         building = null;
 
@@ -57,15 +57,11 @@ public class BuildingMenu : MonoBehaviour
 
     private void OnEnable()
     {
-        somethingSelectedEvent.OnEventRaised += CloseMenu;
         Building.OnBuildingSelected += OpenMenu;
-        Pause_ESC.OnGamePaused += CloseMenu;
     }
 
     private void OnDisable()
     {
-        somethingSelectedEvent.OnEventRaised -= CloseMenu;
         Building.OnBuildingSelected -= OpenMenu;
-        Pause_ESC.OnGamePaused -= CloseMenu;
     }
 }

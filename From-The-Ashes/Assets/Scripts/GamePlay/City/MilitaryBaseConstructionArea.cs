@@ -19,7 +19,7 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
     [SerializeField] private Button constructionButton;
     [SerializeField] private float menuClosingDelay = 0.1f;
     [Space]
-    [SerializeField] private VoidEvent SomethingSelectedEvent;
+    [SerializeField] private GameEvent SomethingSelectedEvent;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
     public void OnSelect(BaseEventData eventData)
     {
         selectionIndicator.enabled = true;
-        SomethingSelectedEvent.RaiseEvent();
+        SomethingSelectedEvent.Raise();
         OpenMenu();
     }
 

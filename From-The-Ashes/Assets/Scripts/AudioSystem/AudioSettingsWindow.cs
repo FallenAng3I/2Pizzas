@@ -8,9 +8,6 @@ public class AudioSettingsWindow : MonoBehaviour
     [SerializeField] private AudioMixer audioMixer;
 
     [Header("UI Elements")]
-    [SerializeField] private GameObject settingsWindowObject;
-    [SerializeField] private Button openSettingsButton;
-    [SerializeField] private Button closeSettingsButton;
     [SerializeField] private Toggle masterToggle;
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Toggle musicToggle;
@@ -20,14 +17,6 @@ public class AudioSettingsWindow : MonoBehaviour
 
     private void Awake()
     {
-        ToggleSound(audioSettingsData.masterEnabled, "MasterVolume", masterToggle, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume);
-        ToggleSound(audioSettingsData.musicEnabled, "MasterVolume", musicToggle, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume);
-        ToggleSound(audioSettingsData.effectsEnabled, "EffectsVolume", effectsToggle, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume);
-
-        SetVolume("MasterVolume", audioSettingsData.masterVolume, masterSlider, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume);
-        SetVolume("MusicVolume", audioSettingsData.musicVolume, musicSlider, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume);
-        SetVolume("EffectsVolume", audioSettingsData.effectsVolume, effectsSlider, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume);
-
         masterToggle.onValueChanged.AddListener((bool enabled) => ToggleSound(enabled, "MasterVolume", masterToggle, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume));
         musicToggle.onValueChanged.AddListener((bool enabled) => ToggleSound(enabled, "MusicVolume", musicToggle, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume));
         effectsToggle.onValueChanged.AddListener((bool enabled) => ToggleSound(enabled, "EffectsVolume", effectsToggle, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume));
@@ -35,21 +24,18 @@ public class AudioSettingsWindow : MonoBehaviour
         masterSlider.onValueChanged.AddListener((float volume) => SetVolume("MasterVolume", Mathf.Clamp(volume, 0.001f, float.MaxValue), masterSlider, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume));
         musicSlider.onValueChanged.AddListener((float volume) => SetVolume("MusicVolume", Mathf.Clamp(volume, 0.001f, float.MaxValue), musicSlider, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume));
         effectsSlider.onValueChanged.AddListener((float volume) => SetVolume("EffectsVolume", Mathf.Clamp(volume, 0.001f, float.MaxValue), effectsSlider, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume));
-
-        //openSettingsButton.onClick.AddListener(OpenSettingsWindow);
-        //closeSettingsButton.onClick.AddListener(CloseSettingsWindow);
-
-        //CloseSettingsWindow();
     }
 
-    private void OpenSettingsWindow()
+    private void Start()
     {
-        settingsWindowObject.SetActive(true);
-    }
+        SetVolume("MasterVolume", audioSettingsData.masterVolume, masterSlider, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume);
+        SetVolume("MusicVolume", audioSettingsData.musicVolume, musicSlider, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume);
+        SetVolume("EffectsVolume", audioSettingsData.effectsVolume, effectsSlider, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume);
 
-    private void CloseSettingsWindow()
-    {
-        settingsWindowObject.SetActive(false);
+        ToggleSound(audioSettingsData.masterEnabled, "MasterVolume", masterToggle, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume);
+        ToggleSound(audioSettingsData.musicEnabled, "MasterVolume", musicToggle, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume);
+        ToggleSound(audioSettingsData.effectsEnabled, "EffectsVolume", effectsToggle, ref audioSettingsData.effectsEnabled, ref audioSettingsData.effectsVolume);
+
     }
 
     private void SetVolume(string audioGroupVolume, float volume, Slider volumeSlider, ref bool enabledData, ref float volumeData)
@@ -81,15 +67,5 @@ public class AudioSettingsWindow : MonoBehaviour
 
         enabledData = enabled;
         toggle.isOn = enabled;
-    }
-
-    private void OnEnable()
-    {
-        Pause_ESC.OnSettingsButtonClicked += OpenSettingsWindow;
-    }
-
-    private void OnDisable()
-    {
-        Pause_ESC.OnSettingsButtonClicked -= OpenSettingsWindow;
     }
 }

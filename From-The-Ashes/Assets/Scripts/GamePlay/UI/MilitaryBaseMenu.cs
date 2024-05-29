@@ -51,7 +51,6 @@ public class MilitaryBaseMenu : MonoBehaviour
         MilitaryBase.OnMilitaryBaseDeselected += CloseMenu;
         RaidsMenu.OnRaidsMenuOpened += MoveMenu;
         RaidsMenu.OnRaidsMenuClosed += MoveMenuBack;
-        Pause_ESC.OnGamePaused += CloseMenu;
     }
 
     private void OnDisable()
@@ -60,6 +59,5 @@ public class MilitaryBaseMenu : MonoBehaviour
         MilitaryBase.OnMilitaryBaseDeselected -= CloseMenu;
         RaidsMenu.OnRaidsMenuOpened -= MoveMenu;
         RaidsMenu.OnRaidsMenuClosed -= MoveMenuBack;
-        Pause_ESC.OnGamePaused -= CloseMenu;
     }
 }
