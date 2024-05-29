@@ -3505,7 +3505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad472220f2c07d6428c8a9488e86a991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEndTime: 60
+  gameEndTime: 600
 --- !u!114 &296814846
 MonoBehaviour:
   m_ObjectHideFlags: 0

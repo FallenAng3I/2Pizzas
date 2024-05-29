@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 389989550465863879, guid: efa5da8bbb7271b4dae0d2bc50d9b3b5, type: 3}
-  buildingDescription: 
+  buildingDescription: Produces oil. "Whoever controls oil, controls much more than
+    oil"
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 40
