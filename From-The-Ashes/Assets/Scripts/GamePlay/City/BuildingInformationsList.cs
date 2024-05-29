@@ -4,10 +4,10 @@ using UnityEngine;
 [CreateAssetMenu]
 public class BuildingInformationsList : ScriptableObject
 {
-    [SerializeField] private List<BuildingInformation> buildingInformations;
-    public List<BuildingInformation> BuildingInformations { get => buildingInformations; }
+    [SerializeField] private List<BuildingData> buildingInformations;
+    public List<BuildingData> BuildingInformations { get => buildingInformations; }
 
-    public void AddNewBuildingInformation(BuildingInformation buildingInformation)
+    public void AddNewBuildingInformation(BuildingData buildingInformation)
     {
         buildingInformations.Add(buildingInformation);
     }

@@ -7,7 +7,7 @@ public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     [SerializeField] private GameObject windowObject;
     [SerializeField] private TextMeshProUGUI buildingCostText;
 
-    [HideInInspector] public BuildingInformation buildingInformation;
+    [HideInInspector] public BuildingData buildingInformation;
 
     private void Start()
     {

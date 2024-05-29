@@ -14,7 +14,7 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private Button clickUpgradeButton;
     [SerializeField] private TextMeshProUGUI clickUpgradeCostText;
 
-    private BuildingInformation buildingInformation;
+    private BuildingData buildingInformation;
 
     private void Awake()
     {
@@ -30,7 +30,7 @@ public class UpgradeMenu : MonoBehaviour
     }
 
     // Закрываем меню, заполняем поля информации о здании, назначаем здание для кнопок апргредов и устанавливаем цену апгрейдов
-    public void OpenMenu(BuildingInformation newBuildingInformation)
+    public void OpenMenu(BuildingData newBuildingInformation)
     {
         Debug.Log("1");
         CloseMenu();

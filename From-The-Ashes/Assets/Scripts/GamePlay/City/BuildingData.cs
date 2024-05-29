@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewBuildingInformation")]
-public class BuildingInformation : ScriptableObject
+[CreateAssetMenu(menuName = "Economy/BuildingData", fileName = "New BuildingData")]
+public class BuildingData : ScriptableObject
 {
     [SerializeField] private BuildingInformationsList buildingInformationsList;
 

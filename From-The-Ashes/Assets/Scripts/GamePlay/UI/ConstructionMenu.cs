@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class ConstructionModule
 {
     [SerializeField] private Button constructionButton;
-    [SerializeField] private BuildingInformation buildingInformation;
+    [SerializeField] private BuildingData buildingInformation;
 
     public Button ConstructionButton { get => constructionButton; }
-    public BuildingInformation BuildingInformation { get => buildingInformation; }
+    public BuildingData BuildingInformation { get => buildingInformation; }
 }
 
 public class ConstructionMenu : MonoBehaviour
@@ -60,7 +60,7 @@ public class ConstructionMenu : MonoBehaviour
     }
 
     // Проверяем, не занят ли слот строительства зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
-    private void ConstructBuilding(BuildingInformation buildingInformation)
+    private void ConstructBuilding(BuildingData buildingInformation)
     {
         if (constructionSlot.building == null)
         {

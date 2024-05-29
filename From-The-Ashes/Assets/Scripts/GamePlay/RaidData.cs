@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New RaidData")]
+[CreateAssetMenu(menuName = "Raids/RaidData", fileName = "New RaidData")]
 public class RaidData : ScriptableObject
 {
     [SerializeField] private string raidDescription;

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Production : MonoBehaviour
 {
-    [SerializeField] private BuildingInformation buildingInformation;
+    [SerializeField] private BuildingData buildingInformation;
 
     private int amountOfBuildings;
 

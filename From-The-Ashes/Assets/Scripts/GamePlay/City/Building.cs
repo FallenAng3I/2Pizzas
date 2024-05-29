@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class Building : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private BuildingInformation buildingInformation;
-    public BuildingInformation BuildingInformation { get => buildingInformation; }
+    [SerializeField] private BuildingData buildingInformation;
+    public BuildingData BuildingInformation { get => buildingInformation; }
 
     [Header("Building UI")]
     [SerializeField] private Image SelectionIndicator;

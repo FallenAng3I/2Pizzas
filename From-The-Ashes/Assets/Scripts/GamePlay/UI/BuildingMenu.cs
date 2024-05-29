@@ -23,7 +23,7 @@ public class BuildingMenu : MonoBehaviour
 
     public static event Action OnBuildingMenuOpened;
     public static event Action OnBuildingMenuClosed;
-    public static event Action<BuildingInformation> OnUpgradeButtonClicked;
+    public static event Action<BuildingData> OnUpgradeButtonClicked;
 
     private void Start()
     {

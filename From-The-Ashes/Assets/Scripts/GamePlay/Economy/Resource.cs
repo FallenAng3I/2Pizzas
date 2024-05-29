@@ -1,6 +1,7 @@
+using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Economy/Resource", fileName = "New Resource")]
 public class Resource : ScriptableObject
 {
     [SerializeField] private string resourceDescription;
