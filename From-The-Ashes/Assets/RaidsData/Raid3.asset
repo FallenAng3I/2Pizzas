@@ -19,5 +19,5 @@ MonoBehaviour:
     resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
   reward:
   - quantity: 10
-    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    resource: {fileID: 11400000, guid: 547033a33e0d8f24d99e66234a24de05, type: 2}
   specialReward: {fileID: 11400000, guid: e5e16a2dfe173ff408289187abd107d4, type: 2}

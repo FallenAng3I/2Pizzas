@@ -28,6 +28,7 @@ public class MainMission : MonoBehaviour
     [SerializeField] private List<NeededItem> neededItems;
 
     public static Action OnMissionCompleted;
+    public static Action OnMissionFailed;
 
     // Синглтон, в будущем возможно использование более гибкого ScriptableObject
     public static MainMission Instance;
@@ -41,14 +42,12 @@ public class MainMission : MonoBehaviour
         {
             Instance = this;
         }
-    }
 
-    private void Start()
-    {
         RaidsPanel.OnSpecialItemObtained += RecieveItem;
+        GameEndTimer.OnTimeEnded += FailMission;
     }
 
-    public void RecieveItem(SpecialItem item)
+    private void RecieveItem(SpecialItem item)
     {
         if (neededItems.Any(NeededItem => NeededItem.Item == item && NeededItem.ItemRecieved == false))
         {
@@ -57,6 +56,10 @@ public class MainMission : MonoBehaviour
             neededItem.Image.sprite = item.Icon;
             neededItem.Image.enabled = true;
             CheckIfAllRecieved();
+        }
+        else
+        {
+            Debug.Log("Don't need such item");
         }
     }
 
@@ -71,7 +74,17 @@ public class MainMission : MonoBehaviour
 
         if (allRecieved)
         {
-            OnMissionCompleted?.Invoke();
+            CompleteMission();
         }
+    }
+
+    private void CompleteMission()
+    {
+        OnMissionCompleted?.Invoke();
+    }
+
+    private void FailMission()
+    {
+        OnMissionFailed?.Invoke();
     }
 }
