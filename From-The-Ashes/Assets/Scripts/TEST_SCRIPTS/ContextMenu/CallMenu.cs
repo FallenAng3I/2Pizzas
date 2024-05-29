@@ -10,7 +10,7 @@ public class CallMenu : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         if (!EventSystem.current.IsPointerOverGameObject())
         {
-            menu.CloseMenu();
+            // menu.CloseMenu();
             AreasManager.Instance.currentSelection = null;
         }
     }

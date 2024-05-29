@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [Header("Audio sources")]
     [SerializeField] private AudioSource musicSource;
-
     [SerializeField] private List<AudioClip> musicClips;
     private int nextMusicClip = 0;
 

@@ -65,10 +65,14 @@ public class Building : MonoBehaviour, IPointerClickHandler
     private void OnEnable()
     {
         somethingSelectedEvent.OnEventRaised += DeselectBuilding;
+        BuildingMenu.OnBuildingMenuClosed += DeselectBuilding;
+        Pause_ESC.OnGamePaused += DeselectBuilding;
     }
 
     private void OnDisable()
     {
         somethingSelectedEvent.OnEventRaised -= DeselectBuilding;
+        BuildingMenu.OnBuildingMenuClosed -= DeselectBuilding;
+        Pause_ESC.OnGamePaused -= DeselectBuilding;
     }
 }

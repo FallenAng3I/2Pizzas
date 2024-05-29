@@ -43,7 +43,7 @@ public class MainMission : MonoBehaviour
             Instance = this;
         }
 
-        RaidsPanel.OnSpecialItemObtained += RecieveItem;
+        RaidsMenu.OnSpecialItemObtained += RecieveItem;
         GameEndTimer.OnTimeEnded += FailMission;
     }
 

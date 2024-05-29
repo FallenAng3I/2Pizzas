@@ -1,22 +1,26 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Pause_ESC : MonoBehaviour
 {
-    public GameObject PauseMenu;
+    public GameObject PauseMenuObject;
 
-    [Header("Панели для выключения в паузе:")]
-    [SerializeField] private GameObject ConstructionMenu;  
-    [SerializeField] private GameObject BuildingMenu;      
-    [SerializeField] private GameObject UpgradeMenu;       
-    [SerializeField] private GameObject MilitaryBaseConstructionMenu;
+    [SerializeField] private Button resumeButton;
+    [SerializeField] private Button quitButton;
+    [SerializeField] private Button settingsButton;
+
+    public static event Action OnGamePaused;
+    public static event Action OnSettingsButtonClicked;
 
     private bool isPaused = false;
 
     void Start()
     {
-        PauseMenu.SetActive(false);
+        PauseMenuObject.SetActive(false);
+
+        settingsButton.onClick.AddListener(() => OnSettingsButtonClicked?.Invoke());
     }
 
     void Update()
@@ -36,7 +40,7 @@ public class Pause_ESC : MonoBehaviour
     
     public void Resume()
     {
-        PauseMenu.SetActive(false);
+        PauseMenuObject.SetActive(false);
         
         Time.timeScale = 1f;
         isPaused = false;
@@ -44,12 +48,9 @@ public class Pause_ESC : MonoBehaviour
     
     public void Pause()
     {
-        ConstructionMenu.SetActive(false);
-        BuildingMenu.SetActive(false);
-        UpgradeMenu.SetActive(false);
-        MilitaryBaseConstructionMenu.SetActive(false);
+        OnGamePaused?.Invoke();
         
-        PauseMenu.SetActive(true);
+        PauseMenuObject.SetActive(true);
         
         Time.timeScale = 0f;
         isPaused = true;

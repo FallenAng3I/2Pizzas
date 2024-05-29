@@ -25,12 +25,8 @@ public class ConstructionMenu : MonoBehaviour
 
     public static event Action OnBuildingConstructed;
 
-    private void Start()
+    private void Awake()
     {
-        ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
-        ConstructionSlot.OnConstructionSlotDeselected += () => StartCoroutine(CloseMenuWithDelay());
-        BuildingMenu.OnBuildingMenuOpened += CloseMenu;
-
         foreach (ConstructionModule constructionModule in constructionModules)
         {
             constructionModule.ConstructionButton.onClick.AddListener(() => ConstructBuilding(constructionModule.BuildingInformation));
@@ -40,20 +36,25 @@ public class ConstructionMenu : MonoBehaviour
         CloseMenu();
     }
 
-    public void OpenMenu(ConstructionSlot newConstructionSlot)
+    private void OpenMenu(ConstructionSlot newConstructionSlot)
     {
         StopAllCoroutines();
         constructionSlot = newConstructionSlot;
         menuWindowObject.SetActive(true);
     }
 
-    public void CloseMenu()
+    private void CloseMenu()
     {
         constructionSlot = null;
         menuWindowObject.SetActive(false);
     }
 
-    private IEnumerator CloseMenuWithDelay()
+    private void CloseMenuWithDelay()
+    {
+        StartCoroutine(ClosingDelay());
+    }
+
+    private IEnumerator ClosingDelay()
     {
         yield return new WaitForSeconds(menuClosingDelay);
         CloseMenu();
@@ -85,5 +86,21 @@ public class ConstructionMenu : MonoBehaviour
                 CloseMenu();
             }
         }
+    }
+
+    private void OnEnable()
+    {
+        ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
+        ConstructionSlot.OnConstructionSlotDeselected += CloseMenuWithDelay;
+        BuildingMenu.OnBuildingMenuOpened += CloseMenu;
+        Pause_ESC.OnGamePaused += CloseMenu;
+    }
+
+    private void OnDisable()
+    {
+        ConstructionSlot.OnConstructionSlotSelected -= OpenMenu;
+        ConstructionSlot.OnConstructionSlotDeselected -= CloseMenuWithDelay;
+        BuildingMenu.OnBuildingMenuOpened -= CloseMenu;
+        Pause_ESC.OnGamePaused -= CloseMenu;
     }
 }

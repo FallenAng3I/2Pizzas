@@ -20,7 +20,7 @@ public class RaidModule
     public GameObject RaidField { get => raidField; }
 }
 
-public class RaidsPanel : MonoBehaviour
+public class RaidsMenu : MonoBehaviour
 {
     [SerializeField] private List<RaidData> raidDatas;
     private RaidData selectedRaidData;
@@ -41,6 +41,8 @@ public class RaidsPanel : MonoBehaviour
     [SerializeField] private Transform raidsScrollViewContentTransform;
     private List<RaidModule> raidModules = new List<RaidModule>();
 
+    public static event Action OnRaidsMenuOpened;
+    public static event Action OnRaidsMenuClosed;
     public static event Action<SpecialItem> OnSpecialItemObtained;
 
     private void Awake()
@@ -56,8 +58,6 @@ public class RaidsPanel : MonoBehaviour
             raidModules.Add(raidModule);
         }
 
-        MainMission.OnMissionCompleted += CloseMenu;
-        MilitaryBaseMenu.OnRaidsButtonClicked += OpenMenu;
         startRaidButton.onClick.AddListener(Raid);
         closeButton.onClick.AddListener(CloseMenu);
         CloseMenu();
@@ -74,15 +74,17 @@ public class RaidsPanel : MonoBehaviour
         }
     }
 
-    public void OpenMenu()
+    private void OpenMenu()
     {
         menuWindowObject.SetActive(true);
+        OnRaidsMenuOpened?.Invoke();
     }
 
-    public void CloseMenu()
+    private void CloseMenu()
     {
         menuWindowObject.SetActive(false);
         raidInformationWindowObject.SetActive(false);
+        OnRaidsMenuClosed?.Invoke();
     }
 
     private void LoadRaidInformation(RaidData raidData)
@@ -143,5 +145,19 @@ public class RaidsPanel : MonoBehaviour
 
             ClearRaidInformation();
         }
+    }
+
+    private void OnEnable()
+    {
+        MainMission.OnMissionCompleted += CloseMenu;
+        MilitaryBaseMenu.OnRaidsButtonClicked += OpenMenu;
+        MilitaryBaseMenu.OnMenuClosed += CloseMenu;
+    }
+
+    private void OnDisable()
+    {
+        MainMission.OnMissionCompleted -= CloseMenu;
+        MilitaryBaseMenu.OnRaidsButtonClicked -= OpenMenu;
+        MilitaryBaseMenu.OnMenuClosed -= CloseMenu;
     }
 }

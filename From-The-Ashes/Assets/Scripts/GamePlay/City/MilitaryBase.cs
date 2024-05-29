@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,10 +17,10 @@ public class MilitaryBase : MonoBehaviour
     private void Awake()
     {
         militaryBaseButton.onClick.AddListener(SelectMilitaryBase);
-        somethingSelectedEvent.OnEventRaised += DeselectMilitaryBase;
+        DeselectMilitaryBase();
     }
 
-    private void OnEnable()
+    private void Start()
     {
         OnMilitaryBaseBuilt?.Invoke();
     }
@@ -35,5 +36,17 @@ public class MilitaryBase : MonoBehaviour
     {
         selectionIndicator.enabled = false;
         OnMilitaryBaseDeselected?.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        somethingSelectedEvent.OnEventRaised += DeselectMilitaryBase;
+        Pause_ESC.OnGamePaused += DeselectMilitaryBase;
+    }
+
+    private void OnDisable()
+    {
+        somethingSelectedEvent.OnEventRaised -= DeselectMilitaryBase;
+        Pause_ESC.OnGamePaused -= DeselectMilitaryBase;
     }
 }

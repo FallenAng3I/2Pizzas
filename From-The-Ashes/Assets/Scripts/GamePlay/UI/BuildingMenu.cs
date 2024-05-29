@@ -25,11 +25,8 @@ public class BuildingMenu : MonoBehaviour
     public static event Action OnBuildingMenuClosed;
     public static event Action<BuildingData> OnUpgradeButtonClicked;
 
-    private void Start()
+    private void Awake()
     {
-        somethingSelectedEvent.OnEventRaised += CloseMenu;
-        Building.OnBuildingSelected += OpenMenu;
-
         closeButton.onClick.AddListener(CloseMenu);
         upgradeButton.onClick.AddListener(() => OnUpgradeButtonClicked?.Invoke(building.BuildingInformation));
         demolishButton.onClick.AddListener(() => { building.Demolish(); CloseMenu(); });
@@ -44,9 +41,9 @@ public class BuildingMenu : MonoBehaviour
         buildingNameText.text = building.BuildingInformation.name;
         buildingDescriptionText.text = building.BuildingInformation.BuildingDescription;
 
-        buildingMenuWindowObject.SetActive(true);
-
         OnBuildingMenuOpened?.Invoke();
+
+        buildingMenuWindowObject.SetActive(true);
     }
 
     private void CloseMenu()
@@ -56,5 +53,19 @@ public class BuildingMenu : MonoBehaviour
         OnBuildingMenuClosed?.Invoke();
 
         buildingMenuWindowObject.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        somethingSelectedEvent.OnEventRaised += CloseMenu;
+        Building.OnBuildingSelected += OpenMenu;
+        Pause_ESC.OnGamePaused += CloseMenu;
+    }
+
+    private void OnDisable()
+    {
+        somethingSelectedEvent.OnEventRaised -= CloseMenu;
+        Building.OnBuildingSelected -= OpenMenu;
+        Pause_ESC.OnGamePaused -= CloseMenu;
     }
 }

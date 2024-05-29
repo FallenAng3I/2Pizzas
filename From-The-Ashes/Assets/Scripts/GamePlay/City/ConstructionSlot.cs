@@ -14,21 +14,43 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     private void Start()
     {
-        SomethingSelectedEvent.OnEventRaised += () => SelectionIndicator.SetActive(false);
-        ConstructionMenu.OnBuildingConstructed += () => SelectionIndicator.SetActive(false);
-        SelectionIndicator.SetActive(false);
+        DeselectSlot();
     }
 
     public void OnDeselect(BaseEventData eventData)
+    {
+        DeselectSlot();
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        SelectSlot();
+    }
+
+    private void SelectSlot()
+    {
+        SomethingSelectedEvent.RaiseEvent();
+        OnConstructionSlotSelected?.Invoke(this);
+        SelectionIndicator.SetActive(true);
+    }
+
+    private void DeselectSlot()
     {
         OnConstructionSlotDeselected?.Invoke();
         SelectionIndicator.SetActive(false);
     }
 
-    public void OnSelect(BaseEventData eventData)
+    private void OnEnable()
     {
-        SomethingSelectedEvent.RaiseEvent();
-        OnConstructionSlotSelected?.Invoke(this);
-        SelectionIndicator.SetActive(true);
+        SomethingSelectedEvent.OnEventRaised += DeselectSlot;
+        ConstructionMenu.OnBuildingConstructed += DeselectSlot;
+        Pause_ESC.OnGamePaused += DeselectSlot;
+    }
+
+    private void OnDisable()
+    {
+        SomethingSelectedEvent.OnEventRaised -= DeselectSlot;
+        ConstructionMenu.OnBuildingConstructed -= DeselectSlot;
+        Pause_ESC.OnGamePaused -= DeselectSlot;
     }
 }
