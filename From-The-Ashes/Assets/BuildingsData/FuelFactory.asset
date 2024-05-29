@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 3943086440891903978, guid: ae86e0ff671cc5e4e9c0707d7e9c6be8, type: 3}
-  buildingDescription: 
+  buildingDescription: A fuel refinery, makes gasoline from crude oil. "Our culture
+    runs on coffee and gasoline, the first often tasting like the second"
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 50

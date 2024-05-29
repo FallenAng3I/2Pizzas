@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 4639428919900021973, guid: e3413526df6be644ca8004c403d89978, type: 3}
-  buildingDescription: 
+  buildingDescription: Consumes raw lead to make refined lead. Refined lead is used
+    in pproduction of ammo
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 70

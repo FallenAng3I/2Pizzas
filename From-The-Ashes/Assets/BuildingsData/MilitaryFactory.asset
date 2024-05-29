@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 2371895704258407832, guid: 1fa2fae2cd0f862429a5de18042dbc95, type: 3}
-  buildingDescription: 
+  buildingDescription: "Consues refined led to produce ammunition. \"Never criticize
+    a rifleman until you have walked a mile in his shoes. That way, he\u2019ll be
+    barefoot and you\u2019ll be out of range.\""
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 1000

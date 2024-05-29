@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 2879505283375531056, guid: 372119a8ff29ecb4780f008dafe397fe, type: 3}
-  buildingDescription: 
+  buildingDescription: ' Produces iron. "The great questions of the day will not
+    be settled by means of speeches and majority decisions but by iron and blood"'
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 20
