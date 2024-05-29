@@ -25,7 +25,7 @@ public class ConstructionMenu : MonoBehaviour
 
     public static event Action OnBuildingConstructed;
 
-    private void Awake()
+    private void Start()
     {
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
         ConstructionSlot.OnConstructionSlotDeselected += () => StartCoroutine(CloseMenuWithDelay());

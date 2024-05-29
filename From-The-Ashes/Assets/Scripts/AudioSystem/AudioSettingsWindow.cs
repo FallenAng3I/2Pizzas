@@ -16,7 +16,7 @@ public class AudioSettingsWindow : MonoBehaviour
     [SerializeField] private Slider masterSlider;
     [SerializeField] private Slider musicSlider;
 
-    private void Start()
+    private void Awake()
     {
         ToggleSound(audioSettingsData.masterEnabled, "MasterVolume", masterToggle, ref audioSettingsData.masterEnabled, ref audioSettingsData.masterVolume);
         ToggleSound(audioSettingsData.musicEnabled, "MasterVolume", musicToggle, ref audioSettingsData.musicEnabled, ref audioSettingsData.musicVolume);

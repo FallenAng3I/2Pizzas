@@ -12,7 +12,7 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     [HideInInspector] public Building building;
 
-    private void Awake()
+    private void Start()
     {
         SomethingSelectedEvent.OnEventRaised += () => SelectionIndicator.SetActive(false);
         ConstructionMenu.OnBuildingConstructed += () => SelectionIndicator.SetActive(false);

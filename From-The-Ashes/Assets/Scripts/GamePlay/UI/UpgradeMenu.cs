@@ -6,7 +6,6 @@ public class UpgradeMenu : MonoBehaviour
 {
     [SerializeField] private GameObject menuWindowObject;
     [SerializeField] private Button closeButton;
-    [SerializeField] private TextMeshProUGUI buildingNameText;
 
     [Header("Upgrades")]
     [SerializeField] private Button passiveUpgradeButton;
@@ -16,11 +15,8 @@ public class UpgradeMenu : MonoBehaviour
 
     private BuildingData buildingInformation;
 
-    private void Awake()
+    private void Start()
     {
-        BuildingMenu.OnUpgradeButtonClicked += OpenMenu;
-        BuildingMenu.OnBuildingMenuClosed += CloseMenu;
-
         passiveUpgradeButton.onClick.AddListener(UpgradePassive);
         clickUpgradeButton.onClick.AddListener(UpgradeClick);
 
@@ -30,13 +26,11 @@ public class UpgradeMenu : MonoBehaviour
     }
 
     // Закрываем меню, заполняем поля информации о здании, назначаем здание для кнопок апргредов и устанавливаем цену апгрейдов
-    public void OpenMenu(BuildingData newBuildingInformation)
+    private void OpenMenu(BuildingData newBuildingInformation)
     {
-        Debug.Log("1");
         CloseMenu();
         
         buildingInformation = newBuildingInformation;
-        buildingNameText.text = buildingInformation.name;
         UpdateCostText();
 
         clickUpgradeButton.onClick.AddListener(UpgradeClick);
@@ -46,11 +40,9 @@ public class UpgradeMenu : MonoBehaviour
     }
 
     // Очищаем информацию о здании и закрываем меню
-    public void CloseMenu()
+    private void CloseMenu()
     {
         buildingInformation = null;
-
-        buildingNameText.text = "";
 
         passiveUpgradeButton.onClick.RemoveAllListeners();
         passiveUpgradeCostText.text = "";
@@ -61,7 +53,7 @@ public class UpgradeMenu : MonoBehaviour
     }
 
     // Проверяем, достаточно ли ресурсов, потребляем эти ресурсы и производим апгрейд
-    public void UpgradeClick()
+    private void UpgradeClick()
     {
         bool enoughResources = true;
 
@@ -84,7 +76,7 @@ public class UpgradeMenu : MonoBehaviour
     }
 
     // Проверяем не установлен ли апгрейд уже, если не установлен, то проверяем, достаточно ли ресурсов, потребляем эти ресурсы и производим апгрейд
-    public void UpgradePassive()
+    private void UpgradePassive()
     {
         if (!buildingInformation.PassiveProductionUpgraded)
         {
@@ -109,7 +101,7 @@ public class UpgradeMenu : MonoBehaviour
         }
     }
 
-    public void UpdateCostText()
+    private void UpdateCostText()
     {
         string costText;
 
@@ -133,5 +125,17 @@ public class UpgradeMenu : MonoBehaviour
         {
             passiveUpgradeCostText.text = "Upgraded";
         }
+    }
+
+    private void OnEnable()
+    {
+        BuildingMenu.OnUpgradeButtonClicked += OpenMenu;
+        BuildingMenu.OnBuildingMenuClosed += CloseMenu;
+    }
+
+    private void OnDisable()
+    {
+        BuildingMenu.OnUpgradeButtonClicked -= OpenMenu;
+        BuildingMenu.OnBuildingMenuClosed -= CloseMenu;
     }
 }
