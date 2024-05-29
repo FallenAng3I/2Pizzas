@@ -7,11 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
+  m_Script: {fileID: 11500000, guid: db5156da6fbe43943a1386eb9cfb0d87, type: 3}
   m_Name: SteelFactory
   m_EditorClassIdentifier: 
+  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 6209750437132471638, guid: c7e8d60c96f8f1a4ba8c04ee9d02203b, type: 3}
   buildingDescription: 
   constructionCost:
@@ -49,5 +50,6 @@ MonoBehaviour:
     resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
+  currentClickProductionQuantity: 1
   passiveProductionTime: 1
   passiveProductionUpgraded: 0

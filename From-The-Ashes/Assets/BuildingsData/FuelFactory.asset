@@ -7,11 +7,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64982d68aad99da438ac273e6b0deeb9, type: 3}
+  m_Script: {fileID: 11500000, guid: db5156da6fbe43943a1386eb9cfb0d87, type: 3}
   m_Name: FuelFactory
   m_EditorClassIdentifier: 
+  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 3943086440891903978, guid: ae86e0ff671cc5e4e9c0707d7e9c6be8, type: 3}
   buildingDescription: 
   constructionCost:
@@ -55,5 +56,6 @@ MonoBehaviour:
     resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
+  currentClickProductionQuantity: 1
   passiveProductionTime: 1
   passiveProductionUpgraded: 0
