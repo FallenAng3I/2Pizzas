@@ -1,23 +1,23 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Win : MonoBehaviour
+public class Loss : MonoBehaviour
 {
-    [SerializeField] private GameObject winPanelObject;
+    [SerializeField] private GameObject lossPanelObject;
     [SerializeField] private Button quitButton;
 
     private void Awake()
     {
-        winPanelObject.SetActive(false);
-        MainMission.OnMissionCompleted += ShowWin;
+        lossPanelObject.SetActive(false);
+        GameEndTimer.OnGameEnded += ShowLoss;
     }
 
-    private void ShowWin()
+    private void ShowLoss()
     {
         Time.timeScale = 0;
         quitButton.onClick.AddListener(Quit);
-        winPanelObject.SetActive(true);
+        lossPanelObject.SetActive(true);
     }
 
     private void Quit()

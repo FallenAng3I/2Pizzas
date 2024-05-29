@@ -12,7 +12,6 @@ public class GameEndTimer : MonoBehaviour
 
     // Синглтон, в будущем возможно использование более гибкого ScriptableObject
     public static GameEndTimer Instance;
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
