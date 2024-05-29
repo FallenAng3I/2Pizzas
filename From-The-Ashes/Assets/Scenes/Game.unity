@@ -3287,7 +3287,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 600}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281941346
 MonoBehaviour:
@@ -3505,7 +3505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad472220f2c07d6428c8a9488e86a991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEndTime: 600
+  gameEndTime: 300
 --- !u!114 &296814846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3605,12 +3605,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'We haven''t built
-
-    rocket yet, and there''s no time left:
-
-    Our
-    enemies are already here...'
+  m_text: The missile is still not complete... The enemy has already broken or borders
+    and is racing towards the headquarters. You have disgraced the motherland and
+    the ideas of Marxism - Leninism. Hereby You are sentenced to be executed by firing
+    squad!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5029,7 +5027,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 600}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476522683
 MonoBehaviour:
@@ -10125,7 +10123,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "We succesfully \nbuilt a rocket.\nTime to use it!"
+  m_text: The missile is finished and NATO is already pushign for negotiations. We
+    have secured our future, mainly thanks to you comrade! You are hereby rewarded
+    with the medal of the Hero Of The Soviet Union! And trust me, heroes are very
+    welcomed in more... lucrative positions, if you know what i mean.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11995,7 +11996,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 600}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413508034
 MonoBehaviour:
@@ -13404,9 +13405,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enemies are coming for your base. You have 20 minutes to create a nuclear
-    bomb, to stop them. Its components are scattered across the wasteland. You need
-    to equio searchin groups, thar will find them.
+  m_text: Welcome to the surface comrade! No feeling like being back home, but we
+    have little time! Our enemies have also made it to the surface, and are now massing
+    for an attack. We need to create a deterrent. You must build a nuclear missile
+    to scare them off. Find the components in old parts of the former USSR. Hurry
+    comrade, there is little time!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
