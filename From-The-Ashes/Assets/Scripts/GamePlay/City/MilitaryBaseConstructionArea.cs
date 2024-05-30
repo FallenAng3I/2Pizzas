@@ -23,7 +23,6 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
 
     private void Awake()
     {
-        militaryBaseObject.SetActive(false);
         selectionIndicator.enabled = false;
         constructionButton.onClick.AddListener(ConstructMilitaryBase);
         UpdateCostText();
