@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
   m_Name: Raid4
   m_EditorClassIdentifier: 
-  raidDescription: The "Phobos" Labs
+  raidDescription: Plutonium is going to be the hardest resource to get. We know
+    that a stash is present in the "Phobos" labs. However to transport it we will
+    need lead armor suits.
   raidSprite: {fileID: 21300000, guid: 612c4ba6d25137a42a2992b6a7d1594e, type: 3}
   cost:
   - quantity: 10
