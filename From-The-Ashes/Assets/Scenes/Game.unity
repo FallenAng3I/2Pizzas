@@ -1421,7 +1421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad472220f2c07d6428c8a9488e86a991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEndTime: 600
+  gameEndTime: 1800
 --- !u!114 &296814846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9573,6 +9573,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 368529665143915670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 368529665143915670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 368529665143915670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 368529665143915670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 368529665143915670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190335
+      objectReference: {fileID: 0}
     - target: {fileID: 396083500180346771, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -10465,6 +10485,30 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.39215687
       objectReference: {fileID: 0}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e5afac2e157bc234a984e6cca031c32c, type: 3}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826046104238493976, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5832978308549184282, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -10649,6 +10693,42 @@ PrefabInstance:
       propertyPath: slotImage
       value: 
       objectReference: {fileID: 2067504642}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[0].quantity
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[1].quantity
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[2].quantity
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[2].resource
+      value: 
+      objectReference: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[3].quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[3].resource
+      value: 
+      objectReference: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[4].quantity
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339300852746430973, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: constructionCost.Array.data[4].resource
+      value: 
+      objectReference: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
     - target: {fileID: 7517455735490640653, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687

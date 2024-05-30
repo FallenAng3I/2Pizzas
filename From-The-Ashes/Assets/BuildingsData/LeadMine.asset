@@ -26,24 +26,32 @@ MonoBehaviour:
       resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
       quantity: 100
     costIncrease: 40
-  - baseCost:
-      resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-      quantity: 15
-    costIncrease: 10
   baseClickUpgradeCost:
   - baseCost:
       resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-      quantity: 0
-    costIncrease: 0
+      quantity: 50
+    costIncrease: 10
   - baseCost:
       resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}
-      quantity: 0
-    costIncrease: 0
+      quantity: 30
+    costIncrease: 10
+  - baseCost:
+      resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+      quantity: 60
+    costIncrease: 20
   basePassiveUpgradeCost:
   - baseCost:
-      resource: {fileID: 0}
-      quantity: 0
-    costIncrease: 0
+      resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+      quantity: 20
+    costIncrease: 20
+  - baseCost:
+      resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+      quantity: 35
+    costIncrease: 35
+  - baseCost:
+      resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+      quantity: 25
+    costIncrease: 25
   productionInput: []
   productionOutput:
   - resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}

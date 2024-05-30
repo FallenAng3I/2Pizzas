@@ -17,9 +17,11 @@ MonoBehaviour:
     fuze. We will need a steel container to transport it.
   raidSprite: {fileID: 21300000, guid: a10ed6e2f0db1a546bd4faca0d2e872d, type: 3}
   cost:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  - resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    quantity: 400
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    quantity: 95
   reward:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    quantity: 100
   specialReward: {fileID: 11400000, guid: 83911d00044916947b418a84280fddfd, type: 2}

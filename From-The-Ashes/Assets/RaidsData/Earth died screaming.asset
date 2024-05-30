@@ -16,9 +16,15 @@ MonoBehaviour:
     We will be able to transport it, but it will take a lot of fuel to do so.
   raidSprite: {fileID: 21300000, guid: d2e26e4c9589dfb41afc038b68a93164, type: 3}
   cost:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  - resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    quantity: 250
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    quantity: 80
   reward:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: 547033a33e0d8f24d99e66234a24de05, type: 2}
+  - resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
+    quantity: 40
+  - resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}
+    quantity: 60
+  - resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+    quantity: 120
   specialReward: {fileID: 11400000, guid: e5e16a2dfe173ff408289187abd107d4, type: 2}

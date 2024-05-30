@@ -17,9 +17,13 @@ MonoBehaviour:
     need lead armor suits.
   raidSprite: {fileID: 21300000, guid: 507aa311ba019aa40b74d5b538e7509e, type: 3}
   cost:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    quantity: 70
+  - resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    quantity: 150
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    quantity: 15
   reward:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: 547033a33e0d8f24d99e66234a24de05, type: 2}
+  - resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
+    quantity: 60
   specialReward: {fileID: 11400000, guid: dfe957bea5157c142a67cdcd06dbf276, type: 2}

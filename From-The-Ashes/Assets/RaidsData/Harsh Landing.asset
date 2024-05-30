@@ -17,9 +17,11 @@ MonoBehaviour:
     There's plenty of wildlife in the area, so stock up on ammo.
   raidSprite: {fileID: 21300000, guid: e59ab73b819db044c9ab8d8c143b26a6, type: 3}
   cost:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+  - resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    quantity: 350
   reward:
-  - quantity: 10
-    resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    quantity: 40
+  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+    quantity: 60
   specialReward: {fileID: 11400000, guid: 431ca485939eee543bb2494e8a7d467d, type: 2}
