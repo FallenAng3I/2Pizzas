@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
-  m_Name: Raid2
+  m_Name: Phobos Labs
   m_EditorClassIdentifier: 
-  raidDescription: North of here there is an abandoned city. One of the many that
-    were hit by the nukes. In the institute there, we will be able to find a nuclear
-    fuze. We will need a steel container to transport it.
-  raidSprite: {fileID: 21300000, guid: c20fd8612b2c0ba42996ef3e54d79a4e, type: 3}
+  raidDescription: Plutonium is going to be the hardest resource to get. We know
+    that a stash is present in the "Phobos" labs. However to transport it we will
+    need lead armor suits.
+  raidSprite: {fileID: 21300000, guid: 507aa311ba019aa40b74d5b538e7509e, type: 3}
   cost:
   - quantity: 10
     resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
   reward:
   - quantity: 10
-    resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-  specialReward: {fileID: 11400000, guid: 83911d00044916947b418a84280fddfd, type: 2}
+    resource: {fileID: 11400000, guid: 547033a33e0d8f24d99e66234a24de05, type: 2}
+  specialReward: {fileID: 11400000, guid: dfe957bea5157c142a67cdcd06dbf276, type: 2}

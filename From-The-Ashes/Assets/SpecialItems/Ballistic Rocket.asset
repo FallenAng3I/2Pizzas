@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106eae22d57fdc4488392bde55dd3d49, type: 3}
   m_Name: Ballistic Rocket
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: ee6fb15991ef3354e8816db758c3f8eb, type: 3}
   decription: 
