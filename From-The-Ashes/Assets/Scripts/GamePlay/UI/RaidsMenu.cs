@@ -35,6 +35,7 @@ public class RaidsMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI raidDescriptionText;
     [SerializeField] private ResourcesCountTab raidCost;
     [SerializeField] private ResourcesCountTab raidReward;
+    [SerializeField] private Image specialRewardImage;
     [SerializeField] private Button startRaidButton;
 
     [Header("Raid Module")]
@@ -93,6 +94,7 @@ public class RaidsMenu : MonoBehaviour
         selectedRaidData = raidData;
         raidImage.sprite = selectedRaidData.RaidSprite;
         raidDescriptionText.text = selectedRaidData.RaidDescription;
+        specialRewardImage.sprite = selectedRaidData.SpecialReward.Icon;
         raidCost.FillInData(raidData.Cost);
         raidReward.FillInData(raidData.Reward);
         raidInformationWindowObject.SetActive(true);
@@ -103,6 +105,9 @@ public class RaidsMenu : MonoBehaviour
         raidInformationWindowObject.SetActive(false);
         selectedRaidData = null;
         raidImage.sprite = default;
+        raidCost.ClearData();
+        raidReward.ClearData();
+        specialRewardImage.sprite = default;
         raidDescriptionText.text = "";
     }
 

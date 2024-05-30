@@ -42,9 +42,6 @@ public class MainMission : MonoBehaviour
         {
             Instance = this;
         }
-
-        RaidsMenu.OnSpecialItemObtained += RecieveItem;
-        GameEndTimer.OnTimeEnded += FailMission;
     }
 
     private void RecieveItem(SpecialItem item)
@@ -86,5 +83,17 @@ public class MainMission : MonoBehaviour
     private void FailMission()
     {
         OnMissionFailed?.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        RaidsMenu.OnSpecialItemObtained += RecieveItem;
+        GameEndTimer.OnTimeEnded += FailMission;
+    }
+
+    private void OnDisable()
+    {
+        RaidsMenu.OnSpecialItemObtained -= RecieveItem;
+        GameEndTimer.OnTimeEnded -= FailMission;
     }
 }

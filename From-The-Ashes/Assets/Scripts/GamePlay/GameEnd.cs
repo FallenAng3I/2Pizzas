@@ -26,9 +26,6 @@ public class GameEnd : MonoBehaviour
         winPanelObject.SetActive(false);
         lossPanelObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
-
-        MainMission.OnMissionCompleted += ShowComplition;
-        MainMission.OnMissionFailed += ShowFailure;
     }
 
     private void ShowComplition()
@@ -66,5 +63,17 @@ public class GameEnd : MonoBehaviour
     private void Quit()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+    private void OnEnable()
+    {
+        MainMission.OnMissionCompleted += ShowComplition;
+        MainMission.OnMissionFailed += ShowFailure;
+    }
+
+    private void OnDisable()
+    {
+        MainMission.OnMissionCompleted -= ShowComplition;
+        MainMission.OnMissionFailed -= ShowFailure;
     }
 }
