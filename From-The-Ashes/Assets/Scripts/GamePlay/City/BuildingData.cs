@@ -56,9 +56,11 @@ public class BuildingData : ScriptableObject
 
     // Это событие сообщает Production о строительстве нового здания, чтобы увеличить выход пассивного производства
     public event Action OnBuildingConstructed;
+    public event Action<AudioClip> OnBuildingConstructedSound;
     public void BuildingConstructed()
     {
         OnBuildingConstructed?.Invoke();
+        OnBuildingConstructedSound?.Invoke(constructionClip);
         IncreaseCurrentCost(ref currentConstructionCost, baseConstructionCost);
     }
 

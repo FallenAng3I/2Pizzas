@@ -14,16 +14,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<AudioClip> musicClips;
     private int nextMusicClip = 0;
 
-    private void Awake()
-    {
-        MilitaryBase.OnMilitaryBaseBuilt += () => PlayEffectClip(baseConstructedClip);
-        foreach (var buildingData in buildingsData)
-        {
-            buildingData.OnBuildingConstructed += () => PlayEffectClip(buildingData.ConstructionClip);
-            buildingData.OnBuildingDemolished += () => PlayEffectClip(buildingDemolishedClip);
-        }
-    }
-
     private void Update()
     {
         if (!musicSource.isPlaying)
@@ -45,5 +35,35 @@ public class AudioManager : MonoBehaviour
     private void PlayEffectClip(AudioClip constructionClip)
     {
         effectsSource.PlayOneShot(constructionClip);
+    }
+
+    private void PlayMilitaryBaseClip()
+    {
+        PlayEffectClip(baseConstructedClip);
+    }
+
+    private void PlayDemolishedClip()
+    {
+        PlayEffectClip(buildingDemolishedClip);
+    }
+
+    private void OnEnable()
+    {
+        MilitaryBase.OnMilitaryBaseBuilt += PlayMilitaryBaseClip;
+        foreach (var buildingData in buildingsData)
+        {
+            buildingData.OnBuildingConstructedSound += PlayEffectClip;
+            buildingData.OnBuildingDemolished += PlayDemolishedClip;
+        }
+    }
+
+    private void OnDisable()
+    {
+        MilitaryBase.OnMilitaryBaseBuilt -= PlayMilitaryBaseClip;
+        foreach (var buildingData in buildingsData)
+        {
+            buildingData.OnBuildingConstructedSound -= PlayEffectClip;
+            buildingData.OnBuildingDemolished -= PlayDemolishedClip;
+        }
     }
 }
