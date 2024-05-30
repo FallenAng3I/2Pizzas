@@ -6,8 +6,10 @@ using UnityEngine.UI;
 
 public class Building : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private BuildingData buildingInformation;
-    public BuildingData BuildingData { get => buildingInformation; }
+    [SerializeField] private BuildingData buildingData;
+    public BuildingData BuildingData { get => buildingData; }
+
+    [SerializeField] private ParticleSystem productionParticles;
 
     [Header("Building UI")]
     [SerializeField] private Image SelectionIndicator;
@@ -20,10 +22,10 @@ public class Building : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
-        buildingButton.onClick.AddListener(buildingInformation.BuildingClicked);
+        buildingButton.onClick.AddListener(buildingData.BuildingClicked);
         DeselectBuilding();
 
-        buildingInformation.BuildingConstructed();
+        buildingData.BuildingConstructed();
     }
 
     // Выбор здания и открытие меню здания
@@ -47,18 +49,33 @@ public class Building : MonoBehaviour, IPointerClickHandler
         SelectionIndicator.enabled = false;
     }
 
+    private void PlayParticleSystem()
+    {
+        productionParticles.Play();
+    }
+
     // Здесь мы уменьшаем цену на здание до той, за которую было куплено последнее здание этого типа
     // Затем возвращаем ресурсы и уничтожаем здание, а также очищаем поле здания на строительной площадке
     public void Demolish()
     {
         Destroy(gameObject);
-        buildingInformation.BuildingDemolished();
+        buildingData.BuildingDemolished();
 
-        foreach (ResourceContainer cost in buildingInformation.ConstructionCost)
+        foreach (ResourceContainer cost in buildingData.ConstructionCost)
         {
             Storage.Instance.AddResource(cost.Resource, cost.Quantity);
         }
 
         GetComponentInParent<ConstructionSlot>().ClearSlot();
+    }
+
+    private void OnEnable()
+    {
+        buildingData.OnBuildingProduced += PlayParticleSystem;
+    }
+
+    private void OnDisable()
+    {
+        buildingData.OnBuildingProduced -= PlayParticleSystem;
     }
 }

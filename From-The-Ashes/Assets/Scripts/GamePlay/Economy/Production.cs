@@ -54,6 +54,8 @@ public class Production : MonoBehaviour
                 {
                     Storage.Instance.AddResource(container.Resource, container.Quantity);
                 }
+
+                buildingInformation.BuildingProduced();
             }
         }
     }
