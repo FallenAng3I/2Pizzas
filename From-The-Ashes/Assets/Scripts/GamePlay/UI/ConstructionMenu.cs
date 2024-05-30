@@ -63,7 +63,7 @@ public class ConstructionMenu : MonoBehaviour
     // Проверяем, не занят ли слот строительства зданием, проверяем, достаточно ли ресурсов, отнимаем ресурсы, строим здание, увеличиваем цену здания, закрываем меню 
     private void ConstructBuilding(BuildingData buildingInformation)
     {
-        if (constructionSlot.building == null)
+        if (constructionSlot.Building == null)
         {
             bool enoughResources = true;
 
@@ -81,6 +81,7 @@ public class ConstructionMenu : MonoBehaviour
 
                 GameObject buildingObject = Instantiate(buildingInformation.BuildingPrefab, constructionSlot.transform);
                 OnBuildingConstructed?.Invoke();
+                constructionSlot.OccupySlot(buildingObject.GetComponent<Building>());
 
                 CloseMenu();
             }

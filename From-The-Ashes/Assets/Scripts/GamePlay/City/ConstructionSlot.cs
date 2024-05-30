@@ -1,17 +1,20 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
-    [SerializeField] private GameObject SelectionIndicator;
+    [SerializeField] private Image SelectionIndicator;
+    [SerializeField] private Image slotImage;
     [Space]
     [SerializeField] private GameEvent SomethingSelectedEvent;
 
     public static Action<ConstructionSlot> OnConstructionSlotSelected;
     public static Action OnConstructionSlotDeselected;
 
-    [HideInInspector] public Building building;
+    private Building building;
+    public Building Building { get => building; }
 
     private void Start()
     {
@@ -32,13 +35,25 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
     {
         SomethingSelectedEvent.Raise();
         OnConstructionSlotSelected?.Invoke(this);
-        SelectionIndicator.SetActive(true);
+        SelectionIndicator.enabled = true;
     }
 
     public void DeselectSlot()
     {
         OnConstructionSlotDeselected?.Invoke();
-        SelectionIndicator.SetActive(false);
+        SelectionIndicator.enabled = false;
+    }
+
+    public void OccupySlot(Building building)
+    {
+        this.building = building;
+        slotImage.enabled = false;
+    }
+
+    public void ClearSlot()
+    {
+        building = null;
+        slotImage.enabled = true;
     }
 
     private void OnEnable()

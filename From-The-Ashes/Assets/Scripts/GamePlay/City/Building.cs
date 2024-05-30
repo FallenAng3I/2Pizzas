@@ -59,6 +59,6 @@ public class Building : MonoBehaviour, IPointerClickHandler
             Storage.Instance.AddResource(cost.Resource, cost.Quantity);
         }
 
-        GetComponentInParent<ConstructionSlot>().building = null;
+        GetComponentInParent<ConstructionSlot>().ClearSlot();
     }
 }
