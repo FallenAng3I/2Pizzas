@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
   m_Name: Raid2
   m_EditorClassIdentifier: 
-  raidDescription: 
+  raidDescription: The ashes of the old world
   raidSprite: {fileID: 21300000, guid: c20fd8612b2c0ba42996ef3e54d79a4e, type: 3}
   cost:
   - quantity: 10

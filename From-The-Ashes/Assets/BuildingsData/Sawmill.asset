@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 3674652881052671656, guid: 7f11c5920bfb43f478ef616bb8a576cf, type: 3}
-  buildingDescription: Produces wood
+  buildingDescription: Produces wood. "I have a new hobby and it's pretty much logging"
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 0

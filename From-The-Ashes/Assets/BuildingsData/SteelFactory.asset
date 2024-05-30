@@ -15,7 +15,7 @@ MonoBehaviour:
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 6209750437132471638, guid: c7e8d60c96f8f1a4ba8c04ee9d02203b, type: 3}
   buildingDescription: "Takes in iron to produce steel. \"The best steel doesn\u2019t
-    always shine the brightest.\""
+    always shine the brightest\""
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 30

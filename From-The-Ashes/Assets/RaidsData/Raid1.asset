@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
   m_Name: Raid1
   m_EditorClassIdentifier: 
-  raidDescription: Raid to the city
+  raidDescription: A hard landing
   raidSprite: {fileID: 21300000, guid: 21707071331137e41b9b769832664243, type: 3}
   cost:
   - quantity: 10

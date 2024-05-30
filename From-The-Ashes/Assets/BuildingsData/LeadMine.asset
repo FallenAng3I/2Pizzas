@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 4298247986724282179, guid: f7c1cf44f3fe11440a50c4e0af9124e4, type: 3}
-  buildingDescription: Produces raw lead
+  buildingDescription: Produces raw lead. "Mining is like a search-and-destroy mission"
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
     baseQuantity: 60
