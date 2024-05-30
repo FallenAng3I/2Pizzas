@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDeselectHandler
 {
     [SerializeField] private Image selectionIndicator;
+    [SerializeField] private Image slotImage;
     [SerializeField] private GameObject militaryBaseObject;
     [SerializeField] private List<ResourceContainer> constructionCost = new List<ResourceContainer>();
     private bool militaryBaseConstructed;
@@ -84,6 +85,7 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
                 militaryBaseConstructed = true;
 
                 selectionIndicator.enabled = false;
+                slotImage.enabled = false;
                 CloseMenu();
             }
         }

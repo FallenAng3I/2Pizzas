@@ -22,10 +22,16 @@ public class Building : MonoBehaviour, IPointerClickHandler
 
     private void Awake()
     {
-        buildingButton.onClick.AddListener(buildingData.BuildingClicked);
+        buildingButton.onClick.AddListener(ClickBuilding);
         DeselectBuilding();
 
         buildingData.BuildingConstructed();
+    }
+
+    private void ClickBuilding()
+    {
+        buildingData.BuildingClicked();
+        PlayParticleSystem();
     }
 
     // Выбор здания и открытие меню здания
@@ -51,7 +57,11 @@ public class Building : MonoBehaviour, IPointerClickHandler
 
     private void PlayParticleSystem()
     {
-        productionParticles.Play();
+        if (productionParticles.isPlaying)
+        {
+            productionParticles.Stop();
+        }
+        productionParticles.Emit(1);
     }
 
     // Здесь мы уменьшаем цену на здание до той, за которую было куплено последнее здание этого типа

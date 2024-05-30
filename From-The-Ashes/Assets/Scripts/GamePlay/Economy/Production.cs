@@ -26,6 +26,7 @@ public class Production : MonoBehaviour
             {
                 int quantity = buildingInformation.CurrentClickProductionQuantity * amountOfBuildings;
                 Produce(quantity);
+                buildingInformation.BuildingProduced();
             }
         }
     }
@@ -54,8 +55,6 @@ public class Production : MonoBehaviour
                 {
                     Storage.Instance.AddResource(container.Resource, container.Quantity);
                 }
-
-                buildingInformation.BuildingProduced();
             }
         }
     }
