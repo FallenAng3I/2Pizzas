@@ -16,32 +16,10 @@ MonoBehaviour:
   buildingName: Lead Mine
   buildingDescription: Produces raw lead
   buildingIcon: {fileID: 21300000, guid: a3914c4f9c0a06f448c0c00f65b82d2b, type: 3}
-  constructionCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  clickUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    quantity: 0
-  passiveUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    quantity: 0
-  someCost: []
+  constructionClip: {fileID: 8300000, guid: 4cb8f5210e0a0ea4685824b5e198384c, type: 3}
+  baseConstructionCost: []
+  baseClickUpgradeCost: []
+  basePassiveUpgradeCost: []
   productionInput: []
   productionOutput:
   - resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}
