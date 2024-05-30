@@ -20,5 +20,5 @@ public class ResourceCountField : MonoBehaviour
             }
         }
     }
-    public TextMeshProUGUI ResourceCountText { get => resourceCountText; }
+    public TextMeshProUGUI ResourceCountText { get => resourceCountText;  }
 }

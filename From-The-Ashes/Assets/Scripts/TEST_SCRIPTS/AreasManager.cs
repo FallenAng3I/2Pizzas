@@ -7,7 +7,7 @@ namespace DefaultNamespace
 {
     public class AreasManager : MonoBehaviour
     {
-        public Resources UI;
+        public ResourcesCount UI;
         public GameObject Menu;
         
         [SerializeField] private GameObject canvas;

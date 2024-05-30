@@ -52,6 +52,8 @@ public class Storage : MonoBehaviour
 
     public void AddResource(Resource resource, int quantity)
     {
+        if (quantity < 0) return;
+
         if (storageSlots.Any(StorageSlot => StorageSlot.Resource == resource))
         {
             storageSlots.Find(StorageSlot => StorageSlot.Resource == resource).Quantity += quantity;

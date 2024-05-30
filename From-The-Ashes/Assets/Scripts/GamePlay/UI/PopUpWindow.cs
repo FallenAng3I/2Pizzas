@@ -5,9 +5,9 @@ using UnityEngine.EventSystems;
 public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] private GameObject windowObject;
-    [SerializeField] private TextMeshProUGUI buildingCostText;
+    [SerializeField] private ResourcesCountTab resourcesCountTab;
 
-    [HideInInspector] public BuildingData buildingInformation;
+    [HideInInspector] public BuildingData buildingData;
 
     private void Start()
     {
@@ -32,14 +32,6 @@ public class PopUpWindow : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     private void UpdateCostText()
     {
-        string costText = "";
-
-
-        foreach (Cost cost in buildingInformation.ConstructionCost)
-        {
-            costText += $"{cost.Resource.name}: {cost.Quantity}\r\n";
-        }
-
-        buildingCostText.text = costText;
+        resourcesCountTab.FillInData(buildingData.ConstructionCost);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.PlayerLoop;
 
 public class Buildings : MonoBehaviour
 {
-    public Resources resources;
+    public ResourcesCount resources;
     
     public void ClickSawmill()
     {

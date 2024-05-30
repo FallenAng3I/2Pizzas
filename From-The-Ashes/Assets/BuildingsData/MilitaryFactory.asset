@@ -12,58 +12,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5156da6fbe43943a1386eb9cfb0d87, type: 3}
   m_Name: MilitaryFactory
   m_EditorClassIdentifier: 
-  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 2371895704258407832, guid: 1fa2fae2cd0f862429a5de18042dbc95, type: 3}
+  buildingName: Military Factory
   buildingDescription: "Consues refined led to produce ammunition. \"Never criticize
     a rifleman until you have walked a mile in his shoes. That way, he\u2019ll be
     barefoot and you\u2019ll be out of range.\""
+  buildingIcon: {fileID: 21300000, guid: db159a6e01f628742bf6b3ddeba1a712, type: 3}
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 1000
-    quantityIncrease: 1000
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 500
-    quantityIncrease: 500
+    quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 250
-    quantityIncrease: 250
+    quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    baseQuantity: 100
-    quantityIncrease: 100
+    quantity: 0
   clickUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 250
-    quantityIncrease: 250
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 250
-    quantityIncrease: 250
+    quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 250
-    quantityIncrease: 250
+    quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    baseQuantity: 250
-    quantityIncrease: 250
+    quantity: 0
   passiveUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 500
-    quantityIncrease: 500
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 500
-    quantityIncrease: 500
+    quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 500
-    quantityIncrease: 500
+    quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    baseQuantity: 500
-    quantityIncrease: 500
+    quantity: 0
+  someCost: []
   productionInput:
-  - quantity: 2
-    resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-  - quantity: 2
-    resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
+    quantity: 2
+  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+    quantity: 2
   productionOutput:
-  - quantity: 1
-    resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+  - resource: {fileID: 11400000, guid: 00aa15091959f564c960919151d120dc, type: 2}
+    quantity: 1
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
   currentClickProductionQuantity: 1

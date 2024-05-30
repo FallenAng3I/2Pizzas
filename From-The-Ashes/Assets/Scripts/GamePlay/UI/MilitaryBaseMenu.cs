@@ -5,9 +5,12 @@ using UnityEngine.UI;
 public class MilitaryBaseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject menuWindowObject;
+    [Space]
+
     [SerializeField] private Button closeButton;
     [SerializeField] private Button raidsButton;
     [Space]
+
     [SerializeField] private Transform defaultTarget;
     [SerializeField] private Transform moveTarget;
 

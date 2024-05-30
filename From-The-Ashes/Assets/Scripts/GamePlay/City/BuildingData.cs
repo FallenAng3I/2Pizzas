@@ -5,22 +5,29 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Economy/BuildingData", fileName = "New BuildingData")]
 public class BuildingData : ScriptableObject
 {
-    [SerializeField] private BuildingInformationsList buildingInformationsList;
-
     [SerializeField] private GameObject buildingPrefab;
     public GameObject BuildingPrefab { get => buildingPrefab; }
 
+    [Space]
+    [SerializeField] private string buildingName;
     [SerializeField] private string buildingDescription;
+    [SerializeField] private Sprite buildingIcon;
+
+    public string BuildingName { get => buildingName; }
     public string BuildingDescription { get => buildingDescription; }
+    public Sprite BuildingIcon { get => buildingIcon; }
 
     [Header("Construction and Upgrades Cost")]
-    [SerializeField] private List<Cost> constructionCost;
-    [SerializeField] private List<Cost> clickUpgradeCost;
-    [SerializeField] private List<Cost> passiveUpgradeCost;
+    [SerializeField] private List<Cost> baseConstructionCost;
+    [SerializeField] private List<Cost> baseClickUpgradeCost;
+    [SerializeField] private List<Cost> basePassiveUpgradeCost;
 
-    public List<Cost> ConstructionCost { get => constructionCost; }
-    public List<Cost> ClickUpgradeCost { get => clickUpgradeCost; }
-    public List<Cost> PassiveUpgradeCost { get => passiveUpgradeCost; }
+    private List<ResourceContainer> currentConstructionCost;
+    private List<ResourceContainer> currentClickUpgradeCost;
+    private List<ResourceContainer> currentPassiveUpgradeCost;
+    public List<ResourceContainer> ConstructionCost { get => currentConstructionCost; }
+    public List<ResourceContainer> ClickUpgradeCost { get => currentClickUpgradeCost; }
+    public List<ResourceContainer> PassiveUpgradeCost { get => currentPassiveUpgradeCost; }
 
     [Header("Production")]
     [SerializeField] private List<ResourceContainer> productionInput;
@@ -31,16 +38,12 @@ public class BuildingData : ScriptableObject
     [SerializeField] private int passiveProductionTime;
     [SerializeField] private bool passiveProductionUpgraded = false;
 
+    public int ClickProductionQuantityIncrease { get => clickProductionQuantityIncrease; }
     public int CurrentClickProductionQuantity { get => currentClickProductionQuantity; }
     public List<ResourceContainer> ProductionInput { get => productionInput; }
     public List<ResourceContainer> ProductionOutput { get => productionOutput; }
     public int PassiveProductionTime { get => passiveProductionTime; }
     public bool PassiveProductionUpgraded { get => passiveProductionUpgraded; }
-
-    private void Awake()
-    {
-        buildingInformationsList.AddNewBuildingInformation(this);
-    }
 
     // Это событие сообщает соответствующему скрипту Production, что по зданию кликнули
     public event Action OnBuildingClicked;
@@ -54,6 +57,7 @@ public class BuildingData : ScriptableObject
     public void BuildingConstructed()
     {
         OnBuildingConstructed?.Invoke();
+        IncreaseCurrentCost(ref currentConstructionCost, baseConstructionCost);
     }
 
     // А это событие сообщает Production, что здание было снесено
@@ -61,15 +65,13 @@ public class BuildingData : ScriptableObject
     public void BuildingDemolished()
     {
         OnBuildingDemolished?.Invoke();
+        DecreaseCurrentCost(ref currentConstructionCost, baseConstructionCost);
     }
 
     public void UpgradeClickProduction()
     {
         currentClickProductionQuantity += clickProductionQuantityIncrease;
-        foreach (Cost cost in ClickUpgradeCost)
-        {
-            cost.IncreaseCost();
-        }
+        IncreaseCurrentCost(ref currentClickUpgradeCost, baseClickUpgradeCost);
     }
 
     public void UpgradePassiveProduction()
@@ -77,20 +79,37 @@ public class BuildingData : ScriptableObject
         passiveProductionUpgraded = true;
     }
 
-    public void IncreaseCurrentConstructionCost()
+    public void IncreaseCurrentCost(ref List<ResourceContainer> currentCost, List<Cost> baseCost)
     {
-        foreach (Cost cost in constructionCost)
+        List<ResourceContainer> newCost = new List<ResourceContainer>();
+        for (int i = 0; i < currentCost.Count; i++)
         {
-            cost.IncreaseCost();
+            ResourceContainer resourceContainer = new ResourceContainer(currentCost[i].Resource, currentCost[i].Quantity + baseCost[i].CostIncrease);
+            newCost.Add(resourceContainer);
         }
+        currentCost = newCost;
     }
 
-    public void DecreaseCurrentConstructionCost()
+    public void DecreaseCurrentCost(ref List<ResourceContainer> currentCost, List<Cost> baseCost)
     {
-        foreach (Cost cost in constructionCost)
+        List<ResourceContainer> newCost = new List<ResourceContainer>();
+        for (int i = 0; i < currentCost.Count; i++)
         {
-            cost.DecreaseCost();
+            ResourceContainer resourceContainer = new ResourceContainer(currentCost[i].Resource, currentCost[i].Quantity - baseCost[i].CostIncrease);
+            newCost.Add(resourceContainer);
         }
+        currentCost = newCost;
+    }
+
+    public void ResetCurrentCost(ref List<ResourceContainer> currentCost, List<Cost> baseCost)
+    {
+        List<ResourceContainer> newCost = new List<ResourceContainer>();
+        foreach (Cost cost in baseCost)
+        {
+            ResourceContainer resourceContainer = new ResourceContainer(cost.BaseCost.Resource, cost.BaseCost.Quantity);
+            newCost.Add(resourceContainer);
+        }
+        currentCost = newCost;
     }
 
     // ScriptabeObject сохраняет изменения даже при выходе из PlayMode, поэтому его приходится перезагружать
@@ -100,17 +119,8 @@ public class BuildingData : ScriptableObject
         currentClickProductionQuantity = baseClickProductionQuantity;
         passiveProductionUpgraded = false;
 
-        foreach (Cost cost in constructionCost)
-        {
-            cost.ResetCost();
-        }
-        foreach (Cost cost in clickUpgradeCost)
-        {
-            cost.ResetCost();
-        }
-        foreach (Cost cost in passiveUpgradeCost)
-        {
-            cost.ResetCost();
-        }
+        ResetCurrentCost(ref currentConstructionCost, baseConstructionCost);
+        ResetCurrentCost(ref currentClickUpgradeCost, baseClickUpgradeCost);
+        ResetCurrentCost(ref currentPassiveUpgradeCost, basePassiveUpgradeCost);
     }
 }

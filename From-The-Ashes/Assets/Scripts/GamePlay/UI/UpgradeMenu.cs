@@ -1,5 +1,7 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UpgradeMenu : MonoBehaviour
@@ -8,136 +10,125 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private Button closeButton;
 
     [Header("Upgrades")]
-    [SerializeField] private Button passiveUpgradeButton;
-    [SerializeField] private TextMeshProUGUI passiveUpgradeCostText;
+    [SerializeField] private TextMeshProUGUI clickUpgradeDescriptionText;
+    [SerializeField] private ResourcesCountTab clickUpgradeCostTab;
     [SerializeField] private Button clickUpgradeButton;
-    [SerializeField] private TextMeshProUGUI clickUpgradeCostText;
+    [SerializeField] private TextMeshProUGUI passiveUpgradeDescriptionText;
+    [SerializeField] private ResourcesCountTab passiveUpgradeCostTab;
+    [SerializeField] private Button passiveUpgradeButton;
+    [Space]
 
-    private BuildingData buildingInformation;
+    [SerializeField] private UnityEvent upgradeMenuOpenedEvent;
+    [SerializeField] private UnityEvent upgradeMenuClosedEvent;
+    [SerializeField] private UnityEvent buildingUpgradedEvent;
 
-    private void Start()
+    private BuildingData buildingData;
+
+    private void Awake()
     {
         passiveUpgradeButton.onClick.AddListener(UpgradePassive);
         clickUpgradeButton.onClick.AddListener(UpgradeClick);
-
         closeButton.onClick.AddListener(CloseMenu);
 
         CloseMenu();
     }
 
     // Закрываем меню, заполняем поля информации о здании, назначаем здание для кнопок апргредов и устанавливаем цену апгрейдов
-    private void OpenMenu(BuildingData newBuildingInformation)
+    public void OpenMenu(BuildingData newBuildingInformation)
     {
         CloseMenu();
         
-        buildingInformation = newBuildingInformation;
-        UpdateCostText();
+        buildingData = newBuildingInformation;
 
-        clickUpgradeButton.onClick.AddListener(UpgradeClick);
-        passiveUpgradeButton.onClick.AddListener(UpgradePassive);
+        clickUpgradeDescriptionText.text = $"+{buildingData.ClickProductionQuantityIncrease} resource / click for:";
+        passiveUpgradeDescriptionText.text = $"auto click / {buildingData.PassiveProductionTime} sec for:";
+
+        clickUpgradeCostTab.FillInData(buildingData.ClickUpgradeCost.ToList());
+        passiveUpgradeCostTab.FillInData(buildingData.PassiveUpgradeCost.ToList());
 
         menuWindowObject.SetActive(true);
+
+        upgradeMenuOpenedEvent.Invoke();
     }
 
     // Очищаем информацию о здании и закрываем меню
-    private void CloseMenu()
+    public void CloseMenu()
     {
-        buildingInformation = null;
+        buildingData = null;
 
-        passiveUpgradeButton.onClick.RemoveAllListeners();
-        passiveUpgradeCostText.text = "";
-        clickUpgradeButton.onClick.RemoveAllListeners();
-        clickUpgradeCostText.text = "";
+        clickUpgradeDescriptionText.text = "";
+        passiveUpgradeDescriptionText.text = "";
+
+        clickUpgradeCostTab.ClearData();
+        passiveUpgradeCostTab.ClearData();
 
         menuWindowObject.SetActive(false);
+
+        upgradeMenuClosedEvent.Invoke();
     }
 
     // Проверяем, достаточно ли ресурсов, потребляем эти ресурсы и производим апгрейд
     private void UpgradeClick()
     {
+        if (buildingData == null) return;
+
         bool enoughResources = true;
 
-        foreach (Cost cost in buildingInformation.ClickUpgradeCost)
+        foreach (ResourceContainer cost in buildingData.ClickUpgradeCost)
         {
             enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
         }
 
         if (enoughResources)
         {
-            foreach (Cost cost in buildingInformation.ClickUpgradeCost)
+            foreach (ResourceContainer cost in buildingData.ClickUpgradeCost)
             {
                 Storage.Instance.SubtractResource(cost.Resource, cost.Quantity);
             }
 
-            buildingInformation.UpgradeClickProduction();
+            buildingData.UpgradeClickProduction();
+            buildingUpgradedEvent.Invoke();
 
-            UpdateCostText();
+            clickUpgradeCostTab.FillInData(buildingData.ClickUpgradeCost.ToList());
         }
     }
 
     // Проверяем не установлен ли апгрейд уже, если не установлен, то проверяем, достаточно ли ресурсов, потребляем эти ресурсы и производим апгрейд
     private void UpgradePassive()
     {
-        if (!buildingInformation.PassiveProductionUpgraded)
+        if (buildingData == null) return;
+
+        if (!buildingData.PassiveProductionUpgraded)
         {
             bool enoughResources = true;
 
-            foreach (Cost cost in buildingInformation.PassiveUpgradeCost)
+            foreach (ResourceContainer cost in buildingData.PassiveUpgradeCost)
             {
                 enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
             }
 
             if (enoughResources)
             {
-                foreach (Cost cost in buildingInformation.PassiveUpgradeCost)
+                foreach (ResourceContainer cost in buildingData.PassiveUpgradeCost)
                 {
                     Storage.Instance.SubtractResource(cost.Resource, cost.Quantity);
                 }
 
-                buildingInformation.UpgradePassiveProduction();
+                buildingData.UpgradePassiveProduction();
+                buildingUpgradedEvent.Invoke();
 
-                UpdateCostText();
+                passiveUpgradeCostTab.FillInData(buildingData.PassiveUpgradeCost.ToList());
             }
-        }
-    }
-
-    private void UpdateCostText()
-    {
-        string costText;
-
-        costText = "";
-        foreach (Cost cost in buildingInformation.ClickUpgradeCost)
-        {
-            costText += $"{cost.Resource.name}: {cost.Quantity}\r\n";
-            Debug.Log(cost.Resource.name);
-            Debug.Log(cost.Quantity);
-        }
-        clickUpgradeCostText.text = costText;
-
-        if (!buildingInformation.PassiveProductionUpgraded)
-        {
-            costText = "";
-            foreach (Cost cost in buildingInformation.PassiveUpgradeCost)
-            {
-                costText += $"{cost.Resource.name}: {cost.Quantity}\r\n";
-            }
-            passiveUpgradeCostText.text = costText;
-        }
-        else
-        {
-            passiveUpgradeCostText.text = "Upgraded";
         }
     }
 
     private void OnEnable()
     {
         BuildingMenu.OnUpgradeButtonClicked += OpenMenu;
-        BuildingMenu.OnBuildingMenuClosed += CloseMenu;
     }
 
     private void OnDisable()
     {
         BuildingMenu.OnUpgradeButtonClicked -= OpenMenu;
-        BuildingMenu.OnBuildingMenuClosed -= CloseMenu;
     }
 }

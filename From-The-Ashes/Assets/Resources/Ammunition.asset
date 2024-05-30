@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760fc77c64440944ab249cffbcb63a39, type: 3}
   m_Name: Ammunition
   m_EditorClassIdentifier: 
-  resourceDescription: 
+  resourceName: Ammunition
+  resourceDescription: To protect of our Revolution
   resourceIcon: {fileID: 21300000, guid: 612c4ba6d25137a42a2992b6a7d1594e, type: 3}

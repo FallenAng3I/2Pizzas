@@ -7,6 +7,7 @@ public class ConstructionSlot : MonoBehaviour, ISelectHandler, IDeselectHandler
     [SerializeField] private GameObject SelectionIndicator;
     [Space]
     [SerializeField] private GameEvent SomethingSelectedEvent;
+
     public static Action<ConstructionSlot> OnConstructionSlotSelected;
     public static Action OnConstructionSlotDeselected;
 

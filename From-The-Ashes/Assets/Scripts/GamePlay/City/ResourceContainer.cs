@@ -3,9 +3,15 @@ using UnityEngine;
 [System.Serializable]
 public class ResourceContainer
 {
-    [SerializeField] private int quantity;
-    [SerializeField] private Resource resource;
+    [SerializeField] protected Resource resource;
+    [SerializeField] protected int quantity;
 
-    public int Quantity { get => quantity; }
+    public ResourceContainer(Resource resource, int quantity)
+    {
+        this.resource = resource;
+        this.quantity = quantity;
+    }
+
     public Resource Resource { get => resource; }
+    public int Quantity { get => quantity; }
 }

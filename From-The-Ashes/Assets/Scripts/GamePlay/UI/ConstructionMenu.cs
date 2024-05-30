@@ -30,7 +30,7 @@ public class ConstructionMenu : MonoBehaviour
         foreach (ConstructionModule constructionModule in constructionModules)
         {
             constructionModule.ConstructionButton.onClick.AddListener(() => ConstructBuilding(constructionModule.BuildingInformation));
-            constructionModule.ConstructionButton.GetComponent<PopUpWindow>().buildingInformation = constructionModule.BuildingInformation;
+            constructionModule.ConstructionButton.GetComponent<PopUpWindow>().buildingData = constructionModule.BuildingInformation;
         }
 
         CloseMenu();
@@ -67,18 +67,17 @@ public class ConstructionMenu : MonoBehaviour
         {
             bool enoughResources = true;
 
-            foreach (Cost cost in buildingInformation.ConstructionCost)
+            foreach (ResourceContainer cost in buildingInformation.ConstructionCost)
             {
                 enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
             }
 
             if (enoughResources)
             {
-                foreach (Cost cost in buildingInformation.ConstructionCost)
+                foreach (ResourceContainer  cost in buildingInformation.ConstructionCost)
                 {
                     Storage.Instance.SubtractResource(cost.Resource, cost.Quantity);
                 }
-                buildingInformation.IncreaseCurrentConstructionCost();
 
                 GameObject buildingObject = Instantiate(buildingInformation.BuildingPrefab, constructionSlot.transform);
                 OnBuildingConstructed?.Invoke();
@@ -92,13 +91,11 @@ public class ConstructionMenu : MonoBehaviour
     {
         ConstructionSlot.OnConstructionSlotSelected += OpenMenu;
         ConstructionSlot.OnConstructionSlotDeselected += CloseMenuWithDelay;
-        BuildingMenu.OnBuildingMenuOpened += CloseMenu;
     }
 
     private void OnDisable()
     {
         ConstructionSlot.OnConstructionSlotSelected -= OpenMenu;
         ConstructionSlot.OnConstructionSlotDeselected -= CloseMenuWithDelay;
-        BuildingMenu.OnBuildingMenuOpened -= CloseMenu;
     }
 }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760fc77c64440944ab249cffbcb63a39, type: 3}
   m_Name: Candy
   m_EditorClassIdentifier: 
+  resourceName: Candy
   resourceDescription: "\u0415\u0441\u043B\u0438 \u0441\u044A\u0435\u0441\u0442\u044C
     \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u043C\u043D\u043E\u0433\u043E - \u043F\u043E\u043F\u0430
     \u0441\u043B\u0438\u043F\u043D\u0435\u0442\u0441\u044F."

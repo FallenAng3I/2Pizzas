@@ -12,49 +12,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5156da6fbe43943a1386eb9cfb0d87, type: 3}
   m_Name: FuelFactory
   m_EditorClassIdentifier: 
-  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 3943086440891903978, guid: ae86e0ff671cc5e4e9c0707d7e9c6be8, type: 3}
+  buildingName: Fuel Factory
   buildingDescription: A fuel refinery, makes gasoline from crude oil. "Our culture
     runs on coffee and gasoline, the first often tasting like the second"
+  buildingIcon: {fileID: 21300000, guid: ec3d27a1265dad3408287689af803561, type: 3}
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
   clickUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 30
-    quantityIncrease: 30
+    quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    baseQuantity: 10
-    quantityIncrease: 10
+    quantity: 0
   passiveUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 50
-    quantityIncrease: 50
+    quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    baseQuantity: 30
-    quantityIncrease: 30
+    quantity: 0
+  someCost: []
   productionInput:
-  - quantity: 2
-    resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
+  - resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
+    quantity: 2
   productionOutput:
-  - quantity: 1
-    resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
+    quantity: 1
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
   currentClickProductionQuantity: 1

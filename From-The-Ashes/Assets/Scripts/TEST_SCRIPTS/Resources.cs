@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Resources : MonoBehaviour
+public class ResourcesCount : MonoBehaviour
 {
     public Text txtWOOD;
     public Text txtIRON;

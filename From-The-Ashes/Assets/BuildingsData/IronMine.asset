@@ -12,35 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db5156da6fbe43943a1386eb9cfb0d87, type: 3}
   m_Name: IronMine
   m_EditorClassIdentifier: 
-  buildingInformationsList: {fileID: 0}
   buildingPrefab: {fileID: 2879505283375531056, guid: 372119a8ff29ecb4780f008dafe397fe, type: 3}
+  buildingName: Iron Mine
   buildingDescription: ' Produces iron. "The great questions of the day will not
     be settled by means of speeches and majority decisions but by iron and blood"'
+  buildingIcon: {fileID: 21300000, guid: d3cf9f537652728488ff7f7c2a8750fa, type: 3}
   constructionCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
   clickUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
   passiveUpgradeCost:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    baseQuantity: 20
-    quantityIncrease: 20
+    quantity: 0
+  someCost: []
   productionInput: []
   productionOutput:
-  - quantity: 1
-    resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+  - resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+    quantity: 1
   baseClickProductionQuantity: 1
   clickProductionQuantityIncrease: 1
   currentClickProductionQuantity: 1

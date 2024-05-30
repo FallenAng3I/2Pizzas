@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,12 +8,12 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
 {
     [SerializeField] private Image selectionIndicator;
     [SerializeField] private GameObject militaryBaseObject;
-    [SerializeField] private List<Cost> constructionCost;
+    [SerializeField] private List<ResourceContainer> constructionCost = new List<ResourceContainer>();
     private bool militaryBaseConstructed;
 
     [Header("Menu UI")]
     [SerializeField] private GameObject constructionMenuObject;
-    [SerializeField] private TextMeshProUGUI costText;
+    [SerializeField] private ResourcesCountTab resourcesCountTab;
     [SerializeField] private Button constructionButton;
     [SerializeField] private float menuClosingDelay = 0.1f;
     [Space]
@@ -61,15 +59,7 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
 
     private void UpdateCostText()
     {
-        string costString = "";
-
-        foreach (Cost cost in constructionCost)
-        {
-            cost.ResetCost();
-            costString += $"{cost.Resource.name}: {cost.Quantity}\r\n";
-        }
-
-        costText.text = costString;
+        resourcesCountTab.FillInData(constructionCost);
     }
 
     private void ConstructMilitaryBase()
@@ -78,14 +68,14 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
         {
             bool enoughResources = true;
 
-            foreach (Cost cost in constructionCost)
+            foreach (ResourceContainer cost in constructionCost)
             {
                 enoughResources = enoughResources && Storage.Instance.GetResourceAmount(cost.Resource) >= cost.Quantity;
             }
 
             if (enoughResources)
             {
-                foreach (Cost cost in constructionCost)
+                foreach (ResourceContainer cost in constructionCost)
                 {
                     Storage.Instance.SubtractResource(cost.Resource, cost.Quantity);
                 }

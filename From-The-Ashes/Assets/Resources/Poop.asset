@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760fc77c64440944ab249cffbcb63a39, type: 3}
   m_Name: Poop
   m_EditorClassIdentifier: 
+  resourceName: Poop
   resourceDescription: 
   resourceIcon: {fileID: 0}
