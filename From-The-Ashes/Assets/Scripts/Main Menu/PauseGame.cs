@@ -10,7 +10,7 @@ public class PauseGame : MonoBehaviour
 
     private bool isPaused = false;
 
-    void Start()
+    private void Start()
     {
         pausePanelObject.SetActive(false);
 
