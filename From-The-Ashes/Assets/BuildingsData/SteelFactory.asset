@@ -17,24 +17,17 @@ MonoBehaviour:
   buildingDescription: "Takes in iron to produce steel. \"The best steel doesn\u2019t
     always shine the brightest.\""
   buildingIcon: {fileID: 21300000, guid: 3ba15ee005f88ae44ae4eac44f6c4e87, type: 3}
-  constructionCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  clickUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  passiveUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  someCost: []
+  baseConstructionCost:
+  - baseCost:
+      resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
+      quantity: 40
+    costIncrease: 20
+  - baseCost:
+      resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
+      quantity: 25
+    costIncrease: 25
+  baseClickUpgradeCost: []
+  basePassiveUpgradeCost: []
   productionInput:
   - resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
     quantity: 2

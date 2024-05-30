@@ -27,7 +27,7 @@ MonoBehaviour:
       quantity: 10
     costIncrease: 10
   - baseCost:
-      resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+      resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
       quantity: 10
     costIncrease: 10
   basePassiveUpgradeCost:

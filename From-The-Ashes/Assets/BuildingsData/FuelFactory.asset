@@ -17,30 +17,17 @@ MonoBehaviour:
   buildingDescription: A fuel refinery, makes gasoline from crude oil. "Our culture
     runs on coffee and gasoline, the first often tasting like the second"
   buildingIcon: {fileID: 21300000, guid: ec3d27a1265dad3408287689af803561, type: 3}
-  constructionCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  clickUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    quantity: 0
-  passiveUpgradeCost:
-  - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 0
-  - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
-    quantity: 0
-  someCost: []
+  baseConstructionCost:
+  - baseCost:
+      resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
+      quantity: 70
+    costIncrease: 15
+  - baseCost:
+      resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
+      quantity: 100
+    costIncrease: 30
+  baseClickUpgradeCost: []
+  basePassiveUpgradeCost: []
   productionInput:
   - resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
     quantity: 2
