@@ -3,6 +3,10 @@
   <component name="Encoding" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
     <file url="file://$PROJECT_DIR$/Assets/Scripts/AutoWood.cs" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/Buildings/BuildingInformationsReseter.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/City/Building.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/City/BuildingData.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/City/BuildingInformationsReseter.cs" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/Economy/Storage.cs" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/UI/BuildingMenu.cs" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/Assets/Scripts/GamePlay/UI/ResourcesCountPanel.cs" charset="windows-1251" />
   </component>

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
   m_Name: Raid3
   m_EditorClassIdentifier: 
-  raidDescription: 
+  raidDescription: The rocket itself is located in the silo to the east of our position.
+    We will be able to transport it, but it will take a lot of fuel to do so.
   raidSprite: {fileID: 21300000, guid: 22cbf48bca93e304baa7287d49804606, type: 3}
   cost:
   - quantity: 10
