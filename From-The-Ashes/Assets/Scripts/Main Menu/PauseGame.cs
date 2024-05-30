@@ -13,6 +13,8 @@ public class PauseGame : MonoBehaviour
     void Start()
     {
         pausePanelObject.SetActive(false);
+
+        Resume();
     }
 
     private void Update()
@@ -38,7 +40,7 @@ public class PauseGame : MonoBehaviour
         isPaused = false;
     }
     
-    public void Pause()
+    private void Pause()
     {
         Time.timeScale = 0f;
         isPaused = true;

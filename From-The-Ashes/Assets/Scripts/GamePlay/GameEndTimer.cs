@@ -26,29 +26,29 @@ public class GameEndTimer : MonoBehaviour
         OnTimeChanged?.Invoke(gameEndTime);
     }
 
-    private void StartTimer()
+    public void StartTimer()
     {
+        Debug.Log(gameEndTime);
+        Debug.Log(Time.timeScale);
+        Debug.Log("start");
         StartCoroutine(Timer());
     }
 
-    IEnumerator Timer()
+    private IEnumerator Timer()
     {
+        Debug.Log("yep");
         while (gameEndTime > 0)
         {
             yield return new WaitForSeconds(1);
             gameEndTime -= 1;
             OnTimeChanged?.Invoke(gameEndTime);
+            Debug.Log(gameEndTime.ToString());
         }
         OnTimeEnded?.Invoke();
     }
 
-    private void OnEnable()
-    {
-        StartWindow.OnGameStarted += StartTimer;
-    }
-
     private void OnDisable()
     {
-        StartWindow.OnGameStarted -= StartTimer;
+        StopAllCoroutines();
     }
 }

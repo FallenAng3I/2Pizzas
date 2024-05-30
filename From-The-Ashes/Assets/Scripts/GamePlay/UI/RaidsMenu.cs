@@ -33,7 +33,8 @@ public class RaidsMenu : MonoBehaviour
     [SerializeField] private GameObject raidInformationWindowObject;
     [SerializeField] private Image raidImage;
     [SerializeField] private TextMeshProUGUI raidDescriptionText;
-    [SerializeField] private TextMeshProUGUI raidCostText;
+    [SerializeField] private ResourcesCountTab raidCost;
+    [SerializeField] private ResourcesCountTab raidReward;
     [SerializeField] private Button startRaidButton;
 
     [Header("Raid Module")]
@@ -92,7 +93,8 @@ public class RaidsMenu : MonoBehaviour
         selectedRaidData = raidData;
         raidImage.sprite = selectedRaidData.RaidSprite;
         raidDescriptionText.text = selectedRaidData.RaidDescription;
-        ShowCost(selectedRaidData);
+        raidCost.FillInData(raidData.Cost);
+        raidReward.FillInData(raidData.Reward);
         raidInformationWindowObject.SetActive(true);
     }
 
@@ -102,19 +104,6 @@ public class RaidsMenu : MonoBehaviour
         selectedRaidData = null;
         raidImage.sprite = default;
         raidDescriptionText.text = "";
-        raidCostText.text = "";
-    }
-
-    private void ShowCost(RaidData raidData)
-    {
-        string costString = "";
-
-        foreach (ResourceContainer resourceContainer in raidData.Cost)
-        {
-            costString += $"{resourceContainer.Resource.name}: {resourceContainer.Quantity}\r\n";
-        }
-
-        raidCostText.text = costString;
     }
 
     private void Raid()

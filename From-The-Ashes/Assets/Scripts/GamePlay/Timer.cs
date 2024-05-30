@@ -9,11 +9,6 @@ public class Timer : MonoBehaviour
     [SerializeField] private int rushTime = 120;
     private int lastTime = int.MaxValue;
 
-    private void Start()
-    {
-        GameEndTimer.OnTimeChanged += ShowTimeIntervals;
-    }
-
     private void ShowTimeIntervals(int time)
     {
         if (time > rushTime)
@@ -45,5 +40,15 @@ public class Timer : MonoBehaviour
         }
         
         timerText.text = timeString;
+    }
+
+    private void OnEnable()
+    {
+        GameEndTimer.OnTimeChanged += ShowTimeIntervals;
+    }
+
+    private void OnDisable()
+    {
+        GameEndTimer.OnTimeChanged -= ShowTimeIntervals;
     }
 }
