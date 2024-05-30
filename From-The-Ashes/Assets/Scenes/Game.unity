@@ -9725,6 +9725,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 865967493722855732, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: The missile is still not finished, and our enemies are nearing our position,
+        this is over. The sun sets on our home...
+      objectReference: {fileID: 0}
     - target: {fileID: 940139768682391061, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9957,6 +9962,13 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2249410121448039629, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: After the defeat of enemy armies, you were left as the sole organized
+        government structure in the region. With n enemies to fight, you grew - first
+        into a town, then a city, then a nation. In this new post-atomic age, you
+        willl be the one to pave the way for a new empire...
+      objectReference: {fileID: 0}
     - target: {fileID: 2478633965116145232, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_Color.a
       value: 0.39215687
@@ -10005,6 +10017,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2738915102185165846, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: After the enemies overran your home, you had no choice , but to be integrated
+        into their state. After years of stagnation your homestead collapsed and
+        withered away. You will be forgotten and stumped by the unrelenting march
+        of the times...
+      objectReference: {fileID: 0}
     - target: {fileID: 2828017579752672020, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10048,6 +10067,10 @@ PrefabInstance:
     - target: {fileID: 2905632783893036303, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2938042502439688781, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: LAUNCH
       objectReference: {fileID: 0}
     - target: {fileID: 2954639215857060244, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_Color.a
@@ -10261,6 +10284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4373712378422987670, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: Iron Mine
+      objectReference: {fileID: 0}
     - target: {fileID: 4459751650399270850, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 10
@@ -10272,6 +10299,10 @@ PrefabInstance:
     - target: {fileID: 4487918770870679224, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501483954153371353, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
+      propertyPath: m_text
+      value: Dear God
       objectReference: {fileID: 0}
     - target: {fileID: 4553701375570371810, guid: 13633a85813dca04dbbe650e0ac6e954, type: 3}
       propertyPath: m_text
