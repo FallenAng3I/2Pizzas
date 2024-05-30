@@ -12,10 +12,12 @@ public class BuildingData : ScriptableObject
     [SerializeField] private string buildingName;
     [SerializeField] private string buildingDescription;
     [SerializeField] private Sprite buildingIcon;
+    [SerializeField] private AudioClip constructionClip;
 
     public string BuildingName { get => buildingName; }
     public string BuildingDescription { get => buildingDescription; }
     public Sprite BuildingIcon { get => buildingIcon; }
+    public AudioClip ConstructionClip { get => constructionClip; }
 
     [Header("Construction and Upgrades Cost")]
     [SerializeField] private List<Cost> baseConstructionCost;

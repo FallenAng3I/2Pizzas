@@ -16,6 +16,7 @@ MonoBehaviour:
   buildingName: Sawmill
   buildingDescription: Produces wood
   buildingIcon: {fileID: 21300000, guid: f86092ab8bd332544a6b6affb4789aae, type: 3}
+  constructionClip: {fileID: 8300000, guid: 139549a0fd13b3447b7c50bfbab0ed48, type: 3}
   baseConstructionCost:
   - baseCost:
       resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
