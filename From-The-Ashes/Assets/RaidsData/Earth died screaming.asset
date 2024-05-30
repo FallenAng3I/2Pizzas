@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e735b090042c6764bbdd76722c516989, type: 3}
-  m_Name: Raid4
+  m_Name: Earth died screaming
   m_EditorClassIdentifier: 
-  raidDescription: Plutonium is going to be the hardest resource to get. We know
-    that a stash is present in the "Phobos" labs. However to transport it we will
-    need lead armor suits.
-  raidSprite: {fileID: 21300000, guid: 612c4ba6d25137a42a2992b6a7d1594e, type: 3}
+  raidDescription: The rocket itself is located in the silo to the east of our position.
+    We will be able to transport it, but it will take a lot of fuel to do so.
+  raidSprite: {fileID: 21300000, guid: d2e26e4c9589dfb41afc038b68a93164, type: 3}
   cost:
   - quantity: 10
     resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
   reward:
   - quantity: 10
     resource: {fileID: 11400000, guid: 547033a33e0d8f24d99e66234a24de05, type: 2}
-  specialReward: {fileID: 11400000, guid: dfe957bea5157c142a67cdcd06dbf276, type: 2}
+  specialReward: {fileID: 11400000, guid: e5e16a2dfe173ff408289187abd107d4, type: 2}

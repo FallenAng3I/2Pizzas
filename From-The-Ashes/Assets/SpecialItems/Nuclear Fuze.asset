@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106eae22d57fdc4488392bde55dd3d49, type: 3}
   m_Name: Nuclear Fuze
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 70343610d08c73e4f8ce0d63dd557499, type: 3}
   decription: 

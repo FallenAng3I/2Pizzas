@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106eae22d57fdc4488392bde55dd3d49, type: 3}
   m_Name: Plutonium Core
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 430e4c44d9bb02b45821b445f7c8e2b3, type: 3}
   decription: 
