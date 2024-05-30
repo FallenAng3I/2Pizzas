@@ -17,7 +17,7 @@ public class Resources : MonoBehaviour
     
     private int _wood;
     private int _iron;
-    private int _oil;
+    public int _oil;
     private int _fuel;
     private int _steel;
     private int _leadOre;
