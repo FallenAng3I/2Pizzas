@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MilitaryBase : MonoBehaviour
 {
     [SerializeField] private Button militaryBaseButton;
-    [SerializeField] private Image selectionIndicator;
     [Space]
     [SerializeField] private GameEvent somethingSelectedEvent;
 
@@ -28,13 +27,11 @@ public class MilitaryBase : MonoBehaviour
     public void SelectMilitaryBase()
     {
         somethingSelectedEvent.Raise();
-        selectionIndicator.enabled = true;
         OnMilitaryBaseSelected?.Invoke();
     }
 
     public void DeselectMilitaryBase()
     {
-        selectionIndicator.enabled = false;
         OnMilitaryBaseDeselected?.Invoke();
     }
 }

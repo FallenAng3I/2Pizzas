@@ -18,6 +18,8 @@ public class BuildingMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI buildingNameText;
     [SerializeField] private TextMeshProUGUI buildingDescriptionText;
     [SerializeField] private TextMeshProUGUI productionText;
+    [SerializeField] private ResourcesCountTab productionInputTab;
+    [SerializeField] private ResourcesCountTab productionOutputTab;
 
     [Header("Building Control Buttons")]
     [SerializeField] private Button upgradeButton;
@@ -47,6 +49,8 @@ public class BuildingMenu : MonoBehaviour
         buildingImage.sprite = building.BuildingData.BuildingIcon;
         buildingNameText.text = building.BuildingData.BuildingName;
         buildingDescriptionText.text = building.BuildingData.BuildingDescription;
+        productionInputTab.FillInData(building.BuildingData.ProductionInput);
+        productionOutputTab.FillInData(building.BuildingData.ProductionOutput);
         UpdateProductionText();
 
         menuWindowObject.SetActive(true);
@@ -64,6 +68,8 @@ public class BuildingMenu : MonoBehaviour
         buildingNameText.text = "";
         buildingDescriptionText.text = "";
         productionText.text = "";
+        productionInputTab.ClearData();
+        productionOutputTab.ClearData();
 
         buildingMenuClosedEvent.Invoke();
     }
@@ -72,10 +78,10 @@ public class BuildingMenu : MonoBehaviour
     {
         if (building == null) return;
 
-        productionText.text = $"{building.BuildingData.CurrentClickProductionQuantity} standart clicks / click \r\n";
+        productionText.text = $"{building.BuildingData.CurrentClickProductionQuantity} cycles / click \r\n";
         if (building.BuildingData.PassiveProductionUpgraded)
         {
-            productionText.text += "auto click upgraded";
+            productionText.text += "auto click";
         }
     }
 

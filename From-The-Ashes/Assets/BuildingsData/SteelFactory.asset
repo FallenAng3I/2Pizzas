@@ -47,7 +47,7 @@ MonoBehaviour:
     costIncrease: 10
   productionInput:
   - resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
-    quantity: 2
+    quantity: 3
   productionOutput:
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
     quantity: 1

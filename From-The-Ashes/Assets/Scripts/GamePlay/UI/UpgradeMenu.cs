@@ -13,6 +13,7 @@ public class UpgradeMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI clickUpgradeDescriptionText;
     [SerializeField] private ResourcesCountTab clickUpgradeCostTab;
     [SerializeField] private Button clickUpgradeButton;
+    [SerializeField] private GameObject passiveUpgradeTab;
     [SerializeField] private TextMeshProUGUI passiveUpgradeDescriptionText;
     [SerializeField] private ResourcesCountTab passiveUpgradeCostTab;
     [SerializeField] private Button passiveUpgradeButton;
@@ -40,6 +41,9 @@ public class UpgradeMenu : MonoBehaviour
         
         buildingData = newBuildingInformation;
 
+        if (buildingData.PassiveProductionUpgraded)
+            passiveUpgradeTab.SetActive(false);
+
         clickUpgradeDescriptionText.text = $"+{buildingData.ClickProductionQuantityIncrease} resource / click for:";
         passiveUpgradeDescriptionText.text = $"auto click / {buildingData.PassiveProductionTime} sec for:";
 
@@ -55,6 +59,8 @@ public class UpgradeMenu : MonoBehaviour
     public void CloseMenu()
     {
         buildingData = null;
+
+        passiveUpgradeTab.SetActive(true);
 
         clickUpgradeDescriptionText.text = "";
         passiveUpgradeDescriptionText.text = "";
@@ -118,6 +124,8 @@ public class UpgradeMenu : MonoBehaviour
                 buildingUpgradedEvent.Invoke();
 
                 passiveUpgradeCostTab.FillInData(buildingData.PassiveUpgradeCost.ToList());
+
+                passiveUpgradeTab.SetActive(false);
             }
         }
     }

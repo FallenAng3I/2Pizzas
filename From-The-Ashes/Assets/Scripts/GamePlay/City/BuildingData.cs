@@ -47,10 +47,10 @@ public class BuildingData : ScriptableObject
     public int PassiveProductionTime { get => passiveProductionTime; }
     public bool PassiveProductionUpgraded { get => passiveProductionUpgraded; }
 
-    public event Action OnBuildingProduced;
+    public event Action<int> OnBuildingProduced;
     public void BuildingProduced()
     {
-        OnBuildingProduced?.Invoke();
+        OnBuildingProduced?.Invoke(CurrentClickProductionQuantity);
     }
 
     // Это событие сообщает соответствующему скрипту Production, что по зданию кликнули
