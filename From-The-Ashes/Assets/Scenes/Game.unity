@@ -6333,15 +6333,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storageSlots:
   - resource: {fileID: 11400000, guid: b8949b0d47fcda542a7c618ac49cf171, type: 2}
-    quantity: 90
+    quantity: 0
   - resource: {fileID: 11400000, guid: 98a62b9c05f59444d921d1696cdd4ca6, type: 2}
     quantity: 0
   - resource: {fileID: 11400000, guid: 17d1b208c4308d345a9b2dedb414935b, type: 2}
-    quantity: 100
+    quantity: 0
   - resource: {fileID: 11400000, guid: 160206e0e39f50e4f9ce1c439f07bad8, type: 2}
     quantity: 0
   - resource: {fileID: 11400000, guid: 0e3b709ef63b75f4d9f7c61bcdeb37c0, type: 2}
-    quantity: 10
+    quantity: 0
   - resource: {fileID: 11400000, guid: d175d2d5a3f169e40959380d568430f0, type: 2}
     quantity: 0
   - resource: {fileID: 11400000, guid: 36c742882134c3644b2234fed645f387, type: 2}
