@@ -1038,8 +1038,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: From the Ashes
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+  m_sharedMaterial: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1951,6 +1951,54 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3200546462155252830, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 3200546462155252830, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200546462155252830, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 3200546462155252830, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758122264468758994, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 3758122264468758994, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3758122264468758994, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 3758122264468758994, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628319111807458713, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 4628319111807458713, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4628319111807458713, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 4628319111807458713, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5052982061600951383, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2057,6 +2105,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7178191805303239541, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340507743057653328, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 8340507743057653328, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_fontStyle
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340507743057653328, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+    - target: {fileID: 8340507743057653328, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8428212077748636008, guid: 6abb791375ca2f14abad592208fc42f4, type: 3}
@@ -2378,8 +2442,8 @@ MonoBehaviour:
     Evgeniy\n\n  Konoplich Sergey\n\n  Matvey Mironov\n\n\n  Andrey Bobin\n\n\n\n 
     Karl Casey @ White Bat Audio\n  Mark Morgan"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+  m_sharedMaterial: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2409,7 +2473,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 33
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2588,8 +2652,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2Pizzas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+  m_sharedMaterial: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2758,8 +2822,8 @@ MonoBehaviour:
     Music
     by:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
+  m_sharedMaterial: {fileID: -5467874362750517345, guid: 982e5740c970d2c4e9a04ecad040ad51, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2789,7 +2853,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 33
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 256
   m_textAlignment: 65535

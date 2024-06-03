@@ -85,7 +85,7 @@ public class MilitaryBaseConstructionArea : MonoBehaviour, ISelectHandler, IDese
                 militaryBaseConstructed = true;
 
                 selectionIndicator.enabled = false;
-                slotImage.enabled = false;
+                slotImage.gameObject.SetActive(false);
                 CloseMenu();
             }
         }
